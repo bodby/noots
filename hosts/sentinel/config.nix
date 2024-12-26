@@ -51,6 +51,57 @@
       # Use Alt+Caps Lock to toggle Caps Lock.
       xkb.options = "grp:caps_switch";
     };
+
+    # This is just overkill.
+    blocky = {
+      enable = true;
+      settings = {
+        ports.dns = 53;
+        upstreams.groups.default = [ "https://one.one.one.one/dns-query" ];
+
+        bootstrapDns = {
+          upstream = "https://one.one.one.one/dns-query";
+          ips = [
+            "1.1.1.1"
+            "1.0.0.1"
+          ];
+        };
+        blocking = {
+          blackLists = {
+            ads = [
+              "https://raw.githubusercontent.com/StevenBlack/hosts/hosts"
+              "https://raw.githubusercontent.com/shreyasminocha/shady-hosts/a5647df22b0dc5ff6c866f21ee2d8b588682626a/hosts"
+              "https://blocklistproject.github.io/Lists/tiktok.txt"
+              "https://blocklistproject.github.io/Lists/tracking.txt"
+            ];
+
+            # I hope I don't ever need this.
+            haram = [
+              "https://blocklistproject.github.io/Lists/porn.txt"
+              "https://blocklistproject.github.io/Lists/abuse.txt"
+              "https://blocklistproject.github.io/Lists/drugs.txt"
+              "https://blocklistproject.github.io/Lists/fraud.txt"
+              "https://blocklistproject.github.io/Lists/gambling.txt"
+              "https://blocklistproject.github.io/Lists/malware.txt"
+              "https://blocklistproject.github.io/Lists/phishing.txt"
+              "https://blocklistproject.github.io/Lists/piracy.txt"
+              "https://blocklistproject.github.io/Lists/ransomware.txt"
+              "https://blocklistproject.github.io/Lists/redirect.txt"
+              "https://blocklistproject.github.io/Lists/scam.txt"
+              "https://raw.githubusercontent.com/StevenBlack/hosts/alternates/fakenews-gambling-porn/hosts"
+
+              # :)
+              "https://blocklistproject.github.io/Lists/adobe.txt"
+            ];
+          };
+
+          clientGroupBlocks.default = [
+            "ads"
+            "haram"
+          ];
+        };
+      };
+    };
   };
 
   programs = {
