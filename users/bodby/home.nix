@@ -20,6 +20,8 @@ in
 
       defaultSopsFile = ../../secrets/secrets.yaml;
       defaultSopsFormat = "yaml";
+
+      secrets.git_signature = { };
     };
 
     programs = {
