@@ -12,12 +12,14 @@ in
 {
   home-manager.users.bodby = {
     sops = {
-      age.keyFile = "/home/bodby/.config/sops/age/keys.txt";
+      age = {
+        keyFile = "/home/bodby/.config/sops/age/keys.txt";
+        sshKeyPaths = [ "/home/bodby/.ssh/id_ed25519" ];
+        generateKey = true;
+      };
+
       defaultSopsFile = ../../secrets/secrets.yaml;
       defaultSopsFormat = "yaml";
-      secrets."this_is_awesome/really" = {
-        path = "/home/bodby/temp/itworks.txt";
-      };
     };
 
     programs = {
@@ -29,14 +31,39 @@ in
         userEmail = "baraa.homsi@proton.me";
         extraConfig = {
           init.defaultBranch = "master";
+
+          gpg.format = "ssh";
+          user.signingKey = config.sops.secrets.git_signature.path;
+          commit.gpgsign = true;
+          merge.verifySignatures = true;
+
+          core.symlinks = false;
+          transfer.fsckobjects = true;
+          fetch.fsckobjects = true;
+          receive.fsckobjects = true;
+
           url = {
-            "git@github.com:".insteadOf = [
+            "ssh://git@github.com:".insteadOf = [
               "github:"
               "https://github.com/"
             ];
 
             "https://gitlab.com/".insteadOf = "gitlab:";
           };
+        };
+      };
+
+      # Funny. I only have one SSH key. This is useless.
+      # https://github.com/FiloSottile/whoami.filippo.io
+      ssh.matchBlocks = {
+        "github.com" = lib.hm.dag.entryBefore [ "*" ] {
+          extraOptions.PubkeyAuthentication = true;
+          identityFile = "/home/bodby/.ssh/id_ed25519";
+        };
+
+        "*" = {
+          extraOptions.PubkeyAuthentication = false;
+          identitiesOnly = true;
         };
       };
 
