@@ -171,13 +171,15 @@ in
         size = 24;
       };
 
-      sessionVariables = {
-        SUDO_PROMPT = "Enter sudo password (%p@%h as %U): ";
-      };
-
       username = "bodby";
       homeDirectory = "/home/bodby";
       stateVersion = config.system.stateVersion;
+    };
+
+    manual = {
+      html.enable = false;
+      json.enable = false;
+      manpages.enable = false;
     };
   };
 }
