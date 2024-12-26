@@ -23,6 +23,7 @@ in
       defaultSopsFormat = "yaml";
 
       # Still figuring this out.
+      # Will move everything to sops once I actually have a workijg
       # secrets.git_signature = { };
     };
 
@@ -37,7 +38,8 @@ in
           init.defaultBranch = "master";
 
           gpg.format = "ssh";
-          "gpg \"ssh\"".allowedSignersFile = ".git/allowedSignatures";
+          # TODO: Move to sops or a file inside the actual NixOS configuration.
+          gpg.ssh.allowedSignersFile = "/home/bodby/.config/git/allowed_signers";
           user.signingKey = "/home/bodby/.ssh/id_ed25519.pub"; # sopsSecrets.git_signature.path
           commit.gpgsign = false;
           merge.verifySignatures = true;
