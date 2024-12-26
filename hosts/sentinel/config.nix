@@ -39,7 +39,7 @@
         Defaults insults
         Defaults pwfeedback
         Defaults lecture=never
-        Defaults passprompt="Password (%p): "
+        Defaults passprompt="Enter passphrase for user '%p': "
       '';
     };
 
