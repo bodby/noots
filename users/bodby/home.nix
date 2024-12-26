@@ -8,6 +8,7 @@
 }:
 let
   cfg = config.modules.users.bodby;
+  sopsSecrets = config.home-manager.users.bodby.sops.secrets;
 in
 {
   home-manager.users.bodby = {
@@ -35,7 +36,7 @@ in
           init.defaultBranch = "master";
 
           gpg.format = "ssh";
-          user.signingKey = config.sops.secrets.git_signature.path;
+          user.signingKey = sopsSecrets.git_signature.path;
           commit.gpgsign = true;
           merge.verifySignatures = true;
 
