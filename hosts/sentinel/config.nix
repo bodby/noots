@@ -69,17 +69,10 @@
       enable = true;
       settings = {
         ports.dns = 53;
-        upstreams.groups.default = [ "https://one.one.one.one/dns-query" ];
+        upstreams.groups.default = [ "1.1.1.1" ];
 
-        bootstrapDns = {
-          upstream = "https://one.one.one.one/dns-query";
-          ips = [
-            "1.1.1.1"
-            "1.0.0.1"
-          ];
-        };
         blocking = {
-          blackLists = {
+          denylists = {
             ads = [
               "https://raw.githubusercontent.com/StevenBlack/hosts/hosts"
               "https://raw.githubusercontent.com/shreyasminocha/shady-hosts/a5647df22b0dc5ff6c866f21ee2d8b588682626a/hosts"
