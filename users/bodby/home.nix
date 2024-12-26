@@ -37,6 +37,7 @@ in
           init.defaultBranch = "master";
 
           gpg.format = "ssh";
+          "gpg \"ssh\"".allowedSignersFile = ".git/allowedSignatures";
           user.signingKey = "/home/bodby/.ssh/id_ed25519.pub"; # sopsSecrets.git_signature.path
           commit.gpgsign = false;
           merge.verifySignatures = true;
