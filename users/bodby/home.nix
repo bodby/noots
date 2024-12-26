@@ -47,7 +47,7 @@ in
           receive.fsckobjects = true;
 
           url = {
-            "ssh://git@github.com:".insteadOf = [
+            "git@github.com:".insteadOf = [
               "github:"
               "https://github.com/"
             ];
