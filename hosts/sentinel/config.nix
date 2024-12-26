@@ -39,7 +39,6 @@
         Defaults insults
         Defaults pwfeedback
         Defaults lecture=never
-        Defaults env_keep += "EDITOR PATH"
       '';
     };
 
