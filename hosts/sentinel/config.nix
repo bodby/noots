@@ -37,7 +37,6 @@
       package = pkgs.sudo';
       extraConfig = ''
         Defaults insults
-        Defaults pwfeedback
         Defaults lecture=never
         Defaults passprompt="Enter passphrase for user '%p': "
       '';
