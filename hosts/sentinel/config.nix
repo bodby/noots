@@ -31,10 +31,19 @@
   i18n.defaultLocale = "en_US.UTF-8";
   console.useXkbConfig = true;
 
-  security.sudo = {
-    enable = true;
-    package = pkgs.sudo';
-    extraConfig = "Defaults insults";
+  security = {
+    sudo = {
+      enable = true;
+      package = pkgs.sudo';
+      extraConfig = ''
+        Defaults insults
+        Defaults pwfeedback
+        Defaults lecture=never
+        Defaults env_keep += "EDITOR PATH"
+      '';
+    };
+
+    rtkit.enable = config.services.pipewire.enable;
   };
 
   systemd.coredump.enable = false;
@@ -42,8 +51,11 @@
   services = {
     openssh.enable = false;
 
-    pipewire.enable = true;
-    pipewire.pulse.enable = true;
+    pipewire = {
+      enable = true;
+      pulse.enable = true;
+      alsa.enable = true;
+    };
 
     xserver = {
       enable = false;
@@ -116,6 +128,12 @@
     };
 
     git.enable = true;
+    command-not-found.enable = false;
+
+    ssh.knownHosts.github = {
+      hostNames = [ "github.com" ];
+      publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl";
+    };
   };
 
   environment = {
@@ -169,6 +187,14 @@
       registry = lib.mapAttrs (_: flake: { inherit flake; }) flakeInputs;
       nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
     };
+
+  documentation = {
+    enable = true;
+    man.enable = true;
+    doc.enable = false;
+    nixos.enable = true;
+    info.enable = false;
+  };
 
   system.stateVersion = "24.05";
 }

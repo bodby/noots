@@ -171,6 +171,10 @@ in
         size = 24;
       };
 
+      sessionVariables = {
+        SUDO_PROMPT = "Enter sudo password (%p@%h as %U): ";
+      };
+
       username = "bodby";
       homeDirectory = "/home/bodby";
       stateVersion = config.system.stateVersion;
