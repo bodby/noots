@@ -30,7 +30,11 @@ in
         extraConfig = {
           init.defaultBranch = "master";
           url = {
-            "git@github.com:".insteadOf = "github:";
+            "git@github.com:".insteadOf = [
+              "github:"
+              "https://github.com/"
+            ];
+
             "https://gitlab.com/".insteadOf = "gitlab:";
           };
         };
