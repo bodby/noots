@@ -23,7 +23,6 @@ with lib;
 
         age
         sops
-        minisign
 
         inputs.nvim-btw.packages.${system}.default
       ]
