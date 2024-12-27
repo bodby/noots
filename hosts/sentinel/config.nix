@@ -63,6 +63,8 @@
       xkb.options = "grp:caps_switch";
     };
 
+    getty.greetingLine = "";
+
     # This is just overkill.
     blocky = {
       enable = true;
@@ -99,7 +101,7 @@
             ];
           };
 
-          clientGroupBlocks.default = [
+          clientGroupsBlock.default = [
             "ads"
             "haram"
           ];
