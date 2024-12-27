@@ -25,7 +25,10 @@
   networking = {
     wireless.enable = true;
     wireless.userControlled.enable = false;
+
+    # I don't even have these configured; they are useless right now.
     firewall.enable = true;
+    nftables.enable = true;
   };
 
   i18n.defaultLocale = "en_US.UTF-8";
