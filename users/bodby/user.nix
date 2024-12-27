@@ -27,7 +27,7 @@ with lib;
         inputs.nvim-btw.packages.${system}.default
       ]
       ++ optionals cfg.desktop.enable [
-        inputs.ghostty.packages.${system}.default
+        # inputs.ghostty.packages.${system}.default
         # vesktop
         webcord-vencord
         wl-clipboard

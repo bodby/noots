@@ -16,8 +16,8 @@
     iosevka-custom.url = "github:bodby/iosevka-custom";
     iosevka-custom.inputs.nixpkgs.follows = "nixpkgs";
 
-    ghostty.url = "github:ghostty-org/ghostty";
-    ghostty.inputs.nixpkgs.follows = "nixpkgs";
+    # ghostty.url = "github:ghostty-org/ghostty";
+    # ghostty.inputs.nixpkgs-unstable.follows = "nixpkgs";
   };
 
   outputs =
