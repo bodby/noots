@@ -13,11 +13,8 @@
     nvim-btw.url = "github:bodby/nvim-btw";
     nvim-btw.inputs.nixpkgs.follows = "nixpkgs";
 
-    iosevka-custom.url = "github:bodby/iosevka-custom";
-    iosevka-custom.inputs.nixpkgs.follows = "nixpkgs";
-
-    # ghostty.url = "github:ghostty-org/ghostty";
-    # ghostty.inputs.nixpkgs-unstable.follows = "nixpkgs";
+    # iosevka-custom.url = "github:bodby/iosevka-custom";
+    # iosevka-custom.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
