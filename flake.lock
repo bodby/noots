@@ -71,46 +71,26 @@
         ]
       },
       "locked": {
-        "lastModified": 1735053786,
-        "narHash": "sha256-Gm+0DcbUS338vvkwyYWms5jsWlx8z8MeQBzcnIDuIkw=",
+        "lastModified": 1735381016,
+        "narHash": "sha256-CyCZFhMUkuYbSD6bxB/r43EdmDE7hYeZZPTCv0GudO4=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "35b98d20ca8f4ca1f6a2c30b8a2c8bb305a36d84",
+        "rev": "10e99c43cdf4a0713b4e81d90691d22c6a58bdf2",
         "type": "github"
       },
       "original": {
         "owner": "nix-community",
         "repo": "home-manager",
-        "type": "github"
-      }
-    },
-    "iosevka-custom": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1734880355,
-        "narHash": "sha256-b6qHH9BWjKdyu4t3RkcYhZUIoaOnIVsXsfKNA/TVi/4=",
-        "owner": "bodby",
-        "repo": "iosevka-custom",
-        "rev": "3bd71f111b502684ad01e6e7bfe188dd439464a0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "bodby",
-        "repo": "iosevka-custom",
         "type": "github"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1734649271,
-        "narHash": "sha256-4EVBRhOjMDuGtMaofAIqzJbg4Ql7Ai0PSeuVZTHjyKQ=",
+        "lastModified": 1735471104,
+        "narHash": "sha256-0q9NGQySwDQc7RhAV2ukfnu7Gxa5/ybJ2ANT8DQrQrs=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "d70bd19e0a38ad4790d3913bf08fcbfc9eeca507",
+        "rev": "88195a94f390381c6afcdaa933c2f6ff93959cb4",
         "type": "github"
       },
       "original": {
@@ -140,11 +120,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1735143323,
-        "narHash": "sha256-8L7c2EwGFDpveiFSRFAKznRjtppRj+hnXkyU354l69A=",
+        "lastModified": 1735573720,
+        "narHash": "sha256-6gF5PDvMZ88KCYWroUjyifcowVUt+sM/NsBTDuGFztw=",
         "owner": "bodby",
         "repo": "nvim-btw",
-        "rev": "a14047343042b91c2f276098f4f1f07d3577811f",
+        "rev": "e251938b387ec24ef0281ed499cb4a0e8ab38504",
         "type": "github"
       },
       "original": {
@@ -156,7 +136,6 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "iosevka-custom": "iosevka-custom",
         "nixpkgs": "nixpkgs",
         "nvim-btw": "nvim-btw",
         "sops-nix": "sops-nix"
@@ -186,11 +165,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1734546875,
-        "narHash": "sha256-6OvJbqQ6qPpNw3CA+W8Myo5aaLhIJY/nNFDk3zMXLfM=",
+        "lastModified": 1735468296,
+        "narHash": "sha256-ZjUjbvS06jf4fElOF4ve8EHjbpbRVHHypStoY8HGzk8=",
         "owner": "Mic92",
         "repo": "sops-nix",
-        "rev": "ed091321f4dd88afc28b5b4456e0a15bd8374b4d",
+        "rev": "bcb8b65aa596866eb7e5c3e1a6cccbf5d1560b27",
         "type": "github"
       },
       "original": {
