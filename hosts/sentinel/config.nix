@@ -99,8 +99,6 @@
 
     homeBinInPath = true;
     variables.NIX_SHELL_PRESERVE_PROMPT = 1;
-
-    etc.inputrc.source = ./inputrc;
   };
 
   home-manager.useGlobalPkgs = true;

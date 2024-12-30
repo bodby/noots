@@ -11,6 +11,8 @@ let
   # sopsSecrets = config.home-manager.users.bodby.sops.secrets;
 in
 {
+  imports = [ ./modules ];
+
   home-manager.users.bodby = {
     sops = {
       age = {
@@ -23,9 +25,14 @@ in
       defaultSopsFormat = "yaml";
 
       # Still figuring this out.
-      # Will move everything to sops once I actually have a workijg
+      # Will move everything to sops once I actually have it working.
       # secrets.git_signature = { };
     };
+
+    # TODO: This is ugly; I need to move this elsewhere.
+    xdg.configFile."git/signers".text = ''
+      bodby@sentinel ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMzyc5JE0+ZHPBUba1lEw0crucPcy4reXwod1hyWTUf+ baraa.homsi@proton.me
+    '';
 
     programs = {
       home-manager.enable = true;
@@ -39,7 +46,7 @@ in
 
           gpg.format = "ssh";
           # TODO: Move to sops or a file inside the actual NixOS configuration.
-          gpg.ssh.allowedSignersFile = "/home/bodby/.config/git/allowed_signers";
+          gpg.ssh.allowedSignersFile = "/home/bodby/.config/git/signers";
           user.signingKey = "/home/bodby/.ssh/id_ed25519.pub"; # sopsSecrets.git_signature.path
           commit.gpgsign = false;
           merge.verifySignatures = true;
@@ -73,27 +80,6 @@ in
           identitiesOnly = true;
         };
       };
-
-      # bash = {
-      #   enable = false;
-      #   enableCompletion = true;
-      #   historyControl = [ "erasedups" ];
-      #   shellAliases.ls = "ls --color=always -h -A -p --time-style=long-iso";
-      #   initExtra = "set -o vi";
-      # };
-
-      # dircolors = {
-      #   enable = true;
-      #   enableBashIntegration = true;
-      #   enableZshIntegration = false;
-      #   enableFishIntegration = false;
-      #   settings = {
-      #     DIR = "00;37";
-      #     LINK = "00;35";
-      #     EXEC = "01;97";
-      #     RESET = "00;97";
-      #   };
-      # };
 
       librewolf = {
         enable = cfg.desktop.enable;
