@@ -19,8 +19,7 @@ window#waybar {
 #battery,
 #memory,
 #network,
-#wireplumber,
-#user { color: #9393a2; }
+#wireplumber { color: #9393a2; }
 
 #workspaces button {
   color: #51505f;
@@ -29,3 +28,11 @@ window#waybar {
   background: none;
 }
 
+#workspaces button:hover { color: #51505f; }
+#workspaces button.active {
+  color: #d2d2dc;
+  font-weight: 900;
+}
+
+#clock.date { color: #9393a2; }
+#clock.time { color: #d2d2dc; }
