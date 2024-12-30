@@ -2,6 +2,7 @@
   home-manager.users.bodby.programs.foot = {
     enable = true;
     server.enable = false;
+
     settings = {
       mouse.hide-when-typing = true;
 
