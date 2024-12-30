@@ -45,7 +45,7 @@ in
           init.defaultBranch = "master";
 
           gpg.format = "ssh";
-          # TODO: Move to sops or a file inside the actual NixOS configuration.
+          # TODO: Change this too along with 'xdg.configFile."git/signers"'.
           gpg.ssh.allowedSignersFile = "/home/bodby/.config/git/signers";
           user.signingKey = "/home/bodby/.ssh/id_ed25519.pub"; # sopsSecrets.git_signature.path
           commit.gpgsign = false;
@@ -99,26 +99,6 @@ in
       };
     };
 
-    wayland.windowManager.hyprland = {
-      enable = cfg.desktop.enable;
-      xwayland.enable = cfg.desktop.enable;
-      plugins = [ pkgs.hyprlandPlugins.hyprscroller ];
-
-      settings = {
-        monitor = [
-          "DP-2, 2560x1440@239.96Hz, 0x0, 1"
-          ", preferred, auto, 1"
-        ];
-        source = [
-          "./programs.conf"
-          "./input.conf"
-          "./layout.conf"
-          "./rules.conf"
-          "./theme.conf"
-        ] ++ lib.optional (builtins.elem "nvidia" config.services.xserver.videoDrivers) "./nvidia.conf";
-      };
-    };
-
     xdg.userDirs = {
       enable = true;
       createDirectories = true;
@@ -144,7 +124,7 @@ in
 
     home = {
       packages = with pkgs; [
-        inputs.iosevka-custom.packages.${system}.default
+        # inputs.iosevka-custom.packages.${system}.default
         ubuntu-sans
         jetbrains-mono
       ];

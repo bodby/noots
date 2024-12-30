@@ -29,6 +29,22 @@ with lib;
       description = "Extra groups the user is a part of";
       default = [ ];
     };
+
+    # TODO: Functionality for all of these options.
+    desktop = {
+      animations.enable = mkEnabledByDefault "Hyprland animations";
+
+      hwmonPath = mkOption {
+        type = types.str;
+        description = "Absolute path to the CPU hwmon, used by Waybar";
+        default = "/sys/devices/pci0000:00/0000:00:18.3/hwmon";
+      };
+      hwmonInputFile = mkOption {
+        type = types.str;
+        description = "Name of the input file inside 'hyprland.hwmonPath' read by Waybar, e.g. 'temp3_input'";
+        default = "temp3_input";
+      };
+    };
   };
 
   config =
