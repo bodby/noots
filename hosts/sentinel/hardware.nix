@@ -42,12 +42,12 @@
 
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-uuid/8af6bb5a-d671-4228-b75c-90d2e2c72ba7";
+      device = "/dev/disk/by-label/root";
       fsType = "xfs";
     };
 
     "/boot" = {
-      device = "/dev/disk/by-uuid/1366-CD50";
+      device = "/dev/disk/by-label/boot";
       fsType = "vfat";
       options = [
         "fmask=0077"
@@ -56,12 +56,12 @@
     };
 
     "/home" = {
-      device = "/dev/disk/by-uuid/3e01d0a1-16d8-480a-b096-4d2389230529";
+      device = "/dev/disk/by-label/home";
       fsType = "xfs";
     };
   };
 
-  swapDevices = [ { device = "/dev/disk/by-uuid/0abbd7fe-081d-431a-9744-f25f5463ccec"; } ];
+  swapDevices = [ { device = "/dev/disk/by-label/swap"; } ];
 
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp8s0.useDHCP = lib.mkDefault true;
