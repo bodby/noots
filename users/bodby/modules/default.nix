@@ -1,7 +1,7 @@
 {
   imports = [
     ./bash
-    # ./waybar
+    ./waybar
     ./wallpapers
 
     ./foot.nix

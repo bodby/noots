@@ -24,7 +24,7 @@ __bash_prompt() {
   if [ "$PWD" = "$HOME" ]; then
     formatted_dir="home/${USER}"
   else
-    formatted_dir="${PWD/$HOME\//\'\'}"
+    formatted_dir="${PWD/$HOME\//''}"
   fi
 
   local cwd="${dir_col}${formatted_dir}${reset}"

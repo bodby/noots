@@ -17,9 +17,7 @@
       settings = {
         DIR = "00;37";
         LINK = "00;35";
-        # FIXME: I think it's RESET, at least; with Bash I set 'ec=' to this.
-        #        If not, then maybe just export in prompt.bash?
-        RESET = "\033[00;97\m";
+        RESET = "\\033[00;97";
         EXEC = "01;97";
       };
     };

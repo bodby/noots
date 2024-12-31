@@ -1,6 +1,13 @@
 {
+  config,
+  ...
+}:
+let
+  cfg = config.modules.users.bodby;
+in
+{
   home-manager.users.bodby.programs.foot = {
-    enable = true;
+    enable = cfg.desktop.enable;
     server.enable = false;
 
     settings = {
@@ -8,9 +15,9 @@
 
       main = {
         shell = "bash";
-        font = "JetBrains Mono:size=13.5:fontfeatures=cv06";
-        line-height = 20;
-        font-size-adjustment = 1;
+        font = "JetBrains Mono:pixelsize=18:fontfeatures=cv06";
+        line-height = "27px";
+        font-size-adjustment = "1px";
         pad = "24x24 center";
       };
 
@@ -48,18 +55,18 @@
       };
 
       key-bindings = {
-        scrollback-up-page = null;
-        scrollback-up-line = null;
-        scrollback-down-page = null;
-        scrollback-down-line = null;
-        scrollback-home = null;
-        primary-paste = null;
-        search-start = null;
-        spawn-terminal = null;
-        show-urls-launch = null;
-        prompt-prev = null;
-        prompt-next = null;
-        unicode-input = null;
+        scrollback-up-page = "none";
+        scrollback-up-line = "none";
+        scrollback-down-page = "none";
+        scrollback-down-line = "none";
+        scrollback-home = "none";
+        primary-paste = "none";
+        search-start = "none";
+        spawn-terminal = "none";
+        show-urls-launch = "none";
+        prompt-prev = "none";
+        prompt-next = "none";
+        unicode-input = "none";
 
         scrollback-end = "Control+Shift+g";
 
@@ -75,13 +82,13 @@
       };
 
       mouse-bindings = {
-        primary-paste = null;
-        font-increase = null;
-        font-decrease = null;
+        primary-paste = "none";
+        font-increase = "none";
+        font-decrease = "none";
       };
 
       tweak.font-monospace-warn = false;
-      scrollback.indicator-position = null;
+      scrollback.indicator-position = "none";
     };
   };
 }

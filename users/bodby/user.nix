@@ -29,7 +29,8 @@ with lib;
       ++ optionals cfg.desktop.enable [
         # inputs.ghostty.packages.${system}.default
         # vesktop
-        webcord-vencord
+	# Electron takes longer to compile than the rest of my system. Fun.
+        # webcord-vencord
         wl-clipboard
         alsa-utils
         grim

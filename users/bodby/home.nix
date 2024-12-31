@@ -2,8 +2,6 @@
   config,
   lib,
   pkgs,
-  inputs,
-  system,
   ...
 }:
 let
@@ -32,6 +30,7 @@ in
     # TODO: This is ugly; I need to move this elsewhere.
     xdg.configFile."git/signers".text = ''
       bodby@sentinel ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMzyc5JE0+ZHPBUba1lEw0crucPcy4reXwod1hyWTUf+ baraa.homsi@proton.me
+      bodby@scout ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC/l3GyPRNDoC1J0yJS00UXj1qhiTvuqChzBgmOhB4mO baraa.homsi@proton.me
     '';
 
     programs = {
@@ -85,7 +84,7 @@ in
         enable = cfg.desktop.enable;
         package = pkgs.librewolf';
         settings = {
-          "layout.css.devPixelsPerPx" = "1.125";
+          "layout.css.devPixelsPerPx" = cfg.desktop.libreWolfScaleFactor;
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
 
           "webgl.disabled" = true;

@@ -34,6 +34,16 @@ with lib;
     desktop = {
       animations.enable = mkEnabledByDefault "Hyprland animations";
 
+      libreWolfScaleFactor = mkOption {
+        type = types.str;
+        description = "LibreWolf's 'DevPixelsPerPix'";
+        default = "1.125";
+      };
+      sensitivity = mkOption {
+        type = types.float;
+        default = -0.2;
+      };
+
       hwmonPath = mkOption {
         type = types.str;
         description = "Absolute path to the CPU hwmon, used by Waybar";

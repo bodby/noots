@@ -17,6 +17,7 @@ in
     settings = {
       monitor = [
         "desc:Samsung Electric Company LC32G7xT HNATC00129, 2560x1440@239.96Hz, 0x0, 1"
+        "desc:VXN VisN236HUZ15 0x199DA69F, preferred, 0x0, 1.6"
         ", preferred, auto, 1"
       ];
 
@@ -33,6 +34,7 @@ in
         active_opacity = 1.0;
         inactive_opacity = 0.9;
 
+        shadow.enabled = false;
         blur = {
           enabled = true;
           size = 12;
@@ -68,9 +70,20 @@ in
         kb_options = "grp:caps_switch";
         repeat_rate = 30;
         repeat_delay = 250;
-        sensitivity = -0.2;
+        sensitivity = cfg.desktop.sensitivity;
         accel_profile = "flat";
         follow_mouse = 2;
+
+        touchpad = {
+          natural_scroll = true;
+          scroll_factor = 0.9;
+          tap-to-click = true;
+        };
+      };
+
+      gestures = {
+        workspace_swipe = true;
+        workspace_swipe_touch = true;
       };
 
       cursor.hide_on_key_press = true;
@@ -183,6 +196,7 @@ in
         "XCURSOR_SIZE,24"
         "HYPRCURSOR_THEME,Bibata-Modern-Classic"
         "HYPRCURSOR_SIZE,24"
+        "MOZ_USE_XINPUT2,1"
       ]
       ++ lib.optionals (builtins.elem "nvidia" config.services.xserver.videoDrivers) [
         "LIBVA_DRIVER_NAME,nvidia"
