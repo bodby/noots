@@ -2,7 +2,7 @@
 
 NixOS configuration files for my desktop, laptop, and home server.
 
-There are a lot of files currently missing, especially my `.config` files and a `flake.lock`. Plus, I don't have a laptop or my home server fully setup yet.
+I don't have a home server that doesn't have a locked BIOS, so that isn't here right now (do not sue pls).
 
 ## Features
 
