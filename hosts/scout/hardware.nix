@@ -11,10 +11,10 @@
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
     # https://discourse.nixos.org/t/sound-not-working/12585/5
-    # Forums make me happy.
-    extraModprobeConfig = ''
-      options snd-intel-dspcfg dsp_driver=1
-    '';
+    # FIXME: This disables the built-in microphone. This is the legacy driver.
+    # extraModprobeConfig = ''
+    #   options snd-intel-dspcfg dsp_driver=1
+    # '';
     loader = {
       efi.canTouchEfiVariables = true;
       grub = {
@@ -70,7 +70,10 @@
     printing.enable = false;
   };
 
-  hardware.graphics.enable = true;
+  hardware = {
+    graphics.enable = true;
+    firmware = with pkgs; [ sof-firmware ];
+  };
 
   nixpkgs.hostPlatform = "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
