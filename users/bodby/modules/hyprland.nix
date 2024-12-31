@@ -81,10 +81,8 @@ in
         };
       };
 
-      gestures = {
-        workspace_swipe = true;
-        workspace_swipe_touch = true;
-      };
+      gestures.workspace_swipe = false;
+      gestures.workspace_swipe_touch = false;
 
       cursor.hide_on_key_press = true;
       cursor.no_warps = true;
