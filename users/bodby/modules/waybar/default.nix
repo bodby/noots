@@ -46,7 +46,7 @@ in
       temperature = {
         interval = 20;
         format = "<span color='#936df3'>TEMP</span> {temperatureC}°C";
-        critical-threshold = 60;
+        critical-threshold = 65;
         format-critical = "<span color='#936df3'>BOILING</span> {temperatureC}°C";
         hwmon-path-abs = cfg.hwmonPath;
         input-filename = cfg.hwmonInputFile;
@@ -75,6 +75,7 @@ in
       battery = {
         interval = 180;
         format = "<span color='#7289fd'>BAT</span> {capacity}%";
+        format-charging = "<span color='#7289fd'>CHARGING</span> {capacity}%";
         tooltip = false;
       };
 
