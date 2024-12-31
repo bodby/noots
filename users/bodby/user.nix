@@ -27,18 +27,12 @@ with lib;
         inputs.nvim-btw.packages.${system}.default
       ]
       ++ optionals cfg.desktop.enable [
-        # inputs.ghostty.packages.${system}.default
-        ghostty
-        # vesktop
         # webcord-vencord
+        # alsa-utils
         wl-clipboard
-        alsa-utils
         grim
         slurp
         swaybg
-        rofi-wayland
-        waybar
-        foot
         mpv
         imv
         imagemagick
