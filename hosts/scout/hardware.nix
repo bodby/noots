@@ -10,6 +10,10 @@
 
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
+    # https://discourse.nixos.org/t/sound-not-working/12585/5
+    boot.extraModprobeConfig = ''
+      options snd-intel-dspcfg dsp_driver=1
+    '';
     loader = {
       efi.canTouchEfiVariables = true;
       grub = {
