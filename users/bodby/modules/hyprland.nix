@@ -148,10 +148,7 @@ in
         ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"
       ];
 
-      exec-once = "swaybg -m fill -i ${dirs.pictures}/wallpapers/house.jpg";
-      # FIXME: Do I need this when I have HM configuring Waybar?
-      # I see that enables systemd units but I've never seen them actually work.
-      # exec-once = "waybar";
+      # exec-once = "swaybg -m fill -i ${dirs.pictures}/wallpapers/house.jpg";
 
       windowrulev2 = [
         "suppressevent maximize, class:.*"
