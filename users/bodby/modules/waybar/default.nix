@@ -9,7 +9,6 @@ in
   home-manager.users.bodby.programs.waybar = {
     enable = true;
     style = ./style.css;
-    # TODO: See if I have to add this to 'exec-once' in hyprland.nix instead.
     systemd.enable = true;
 
     settings = [{
