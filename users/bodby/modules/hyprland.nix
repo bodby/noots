@@ -25,7 +25,7 @@ in
         layout = "scroller";
         no_focus_fallback = true;
         gaps_in = 4;
-        gaps_out = 32;
+        gaps_out = 24;
         border_size = 0;
       };
 
