@@ -102,6 +102,7 @@
       wget
       curl
       file
+      fix-laptop-speakers
     ];
 
     homeBinInPath = true;

@@ -95,6 +95,7 @@
       wget
       curl
       file
+      fix-g6-mic
     ];
 
     homeBinInPath = true;
