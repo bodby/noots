@@ -30,9 +30,9 @@ window#waybar {
 
 #workspaces button:hover { color: #51505f; }
 #workspaces button.active {
-  color: #d2d2dc;
+  color: #d2d2de;
   font-weight: 900;
 }
 
 #clock.date { color: #9393a2; }
-#clock.time { color: #d2d2dc; }
+#clock.time { color: #d2d2de; }

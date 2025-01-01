@@ -29,7 +29,7 @@ in
 
       colors = {
         alpha = 0.9;
-        foreground = "d2d2dc";
+        foreground = "d2d2de";
         background = "080808";
 
         regular0 = "2b2b32";
@@ -48,9 +48,9 @@ in
         bright4 = "8b9efd";
         bright5 = "b294ff";
         bright6 = "82cfff";
-        bright7 = "d2d2dc";
+        bright7 = "d2d2de";
 
-        selection-foreground = "d2d2dc";
+        selection-foreground = "d2d2de";
         selection-background = "2b2b32";
       };
 
