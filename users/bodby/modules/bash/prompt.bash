@@ -11,7 +11,7 @@ __bash_prompt() {
   local diff_col='\[\e[0;37m\]'
   local punc_col='\[\e[0;97m\]'
   local punc_col2='\[\e[0;37m\]'
-  local err_col='\[\e[0;35m\]'
+  local err_col='\[\e[0;33m\]'
   local reset='\[\e[m\]'
 
   local separator_a="${punc_col2} :: ${reset}"
