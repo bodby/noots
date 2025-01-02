@@ -29,7 +29,7 @@ with lib;
       ++ optionals cfg.desktop.enable [
         # webcord-vencord
         # alsa-utils
-        ghostty
+        # ghostty
         wl-clipboard
         grim
         slurp
