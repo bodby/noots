@@ -10,8 +10,7 @@ in
   home-manager.users.bodby.programs.ghostty = {
     enable = cfg.enable;
     package = pkgs.ghostty';
-    # FIXME: This breaks for some reason.
-    # clearDefaultKeybinds = true;
+    clearDefaultKeybinds = true;
     installBatSyntax = false;
 
     settings = {
@@ -25,18 +24,18 @@ in
 
       copy-on-select = false;
       keybind = [
-        "ctrl+shift+c = copy_to_clipboard"
-        "ctrl+shift+v = paste_from_clipboard"
-        "ctrl+shift+plus = increase_font_size"
-        "ctrl+shift+minus = decrease_font_size"
-        "ctrl+shift+0 = reset_font_size"
-        "ctrl+l = clear_screen"
-        "ctrl+g = scroll_to_top"
-        "ctrl+shift+g = scroll_to_bottom"
-        "ctrl+shift+u = scroll_page_up"
-        "ctrl+shift+d = scroll_page_down"
-        "ctrl+shift+k = scroll_to_prompt:-1"
-        "ctrl+shift+j = scroll_to_prompt:+1"
+        "ctrl+shift+c=copy_to_clipboard"
+        "ctrl+shift+v=paste_from_clipboard"
+        "ctrl+shift+plus=increase_font_size"
+        "ctrl+shift+minus=decrease_font_size"
+        "ctrl+shift+0=reset_font_size"
+        "ctrl+l=clear_screen"
+        "ctrl+g=scroll_to_top"
+        "ctrl+shift+g=scroll_to_bottom"
+        "ctrl+shift+u=scroll_page_up"
+        "ctrl+shift+d=scroll_page_down"
+        "ctrl+shift+k=scroll_to_prompt:-1"
+        "ctrl+shift+j=scroll_to_prompt:+1"
       ];
 
       background-opacity = 0.9;
