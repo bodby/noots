@@ -196,15 +196,6 @@ in
       };
     };
 
-    gtk = {
-      enable = true;
-      cursorTheme = {
-        name = "Bibata-Modern-Classic";
-        package = pkgs.bibata-cursors;
-        size = 24;
-      };
-    };
-
     home = {
       packages = with pkgs; [
         # inputs.iosevka-custom.packages.${system}.default

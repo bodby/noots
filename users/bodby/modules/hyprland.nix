@@ -89,8 +89,7 @@ in
       cursor.no_hardware_cursors = lib.mkIf (builtins.elem "nvidia" (config.services.xserver.videoDrivers)) true;
 
       bind = [
-        "$mod, Q, exec, ghostty"
-        "$mod SHIFT, Q, exec, foot"
+        "$mod, Q, exec, foot"
         "$mod, E, exec, librewolf"
         "$mod, C, killactive"
         "$mod SHIFT, M, exit"
