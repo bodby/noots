@@ -2,6 +2,8 @@
   config,
   lib,
   pkgs,
+  inputs,
+  system,
   ...
 }:
 let
@@ -118,7 +120,7 @@ in
               };
             };
           };
-          extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+          extensions = with inputs.nur.legacyPackages.${system}.repos.rycee.firefox-addons; [
             vimium
             ublock-origin
           ];
