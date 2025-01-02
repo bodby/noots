@@ -3,11 +3,11 @@
   ...
 }:
 let
-  cfg = config.modules.users.bodby;
+  cfg = config.modules.users.bodby.desktop;
 in
 {
   home-manager.users.bodby.programs.foot = {
-    enable = cfg.desktop.enable;
+    enable = cfg.enable;
     server.enable = false;
 
     settings = {

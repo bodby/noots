@@ -5,13 +5,13 @@
   ...
 }:
 let
-  cfg = config.modules.users.bodby;
+  cfg = config.modules.users.bodby.desktop;
   dirs = config.home-manager.users.bodby.xdg.userDirs;
 in
 {
   home-manager.users.bodby.wayland.windowManager.hyprland = {
-    enable = cfg.desktop.enable;
-    xwayland.enable = cfg.desktop.enable;
+    enable = cfg.enable;
+    xwayland.enable = cfg.enable;
     plugins = [ pkgs.hyprlandPlugins.hyprscroller ];
 
     settings = {
@@ -70,7 +70,7 @@ in
         kb_options = "grp:caps_switch";
         repeat_rate = 30;
         repeat_delay = 250;
-        sensitivity = cfg.desktop.sensitivity;
+        sensitivity = cfg.sensitivity;
         accel_profile = "flat";
         follow_mouse = 2;
 
@@ -89,7 +89,8 @@ in
       cursor.no_hardware_cursors = lib.mkIf (builtins.elem "nvidia" (config.services.xserver.videoDrivers)) true;
 
       bind = [
-        "$mod, Q, exec, foot"
+        "$mod, Q, exec, ghostty"
+        "$mod SHIFT, Q, exec, foot"
         "$mod, E, exec, librewolf"
         "$mod, C, killactive"
         "$mod SHIFT, M, exit"

@@ -5,7 +5,8 @@
     ./wallpapers
 
     ./foot.nix
-    ./iamb.nix
+    ./ghostty.nix
     ./hyprland.nix
+    ./iamb.nix
   ];
 }

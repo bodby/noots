@@ -7,7 +7,7 @@ let
 in
 {
   home-manager.users.bodby.programs.waybar = {
-    enable = true;
+    enable = cfg.enable;
     style = ./style.css;
     systemd.enable = true;
 
