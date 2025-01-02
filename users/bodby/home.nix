@@ -2,6 +2,8 @@
   config,
   lib,
   pkgs,
+  inputs,
+  system,
   ...
 }:
 let
@@ -112,15 +114,11 @@ in
             "https://design.penpot.app"
           ];
 
+          # This doesn't work.
           ExtensionSettings = {
             "*" = {
               installation_mode = "blocked";
               blocked_install_message = "Noooooo! My purity!";
-            };
-
-            "uBlock0@raymondhill.net" = {
-              install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
-              installation_mode = "force_installed";
             };
 
             "{d7742d87-e61d-4b78-b8a1-b469842139fa}" = {
@@ -133,6 +131,11 @@ in
         # TODO: Custom CSS.
         profiles.bodby = {
           isDefault = true;
+          extensions = with inputs.nur.legacyPackages.${system}.repos.rycee.firefox-addons; [
+            ublock-origin
+            vimium
+          ];
+
           search = {
             default = "DuckDuckGo";
             force = true;
