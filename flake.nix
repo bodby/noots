@@ -13,9 +13,6 @@
     nvim-btw.url = "github:bodby/nvim-btw";
     nvim-btw.inputs.nixpkgs.follows = "nixpkgs";
 
-    nur.url = "github:nix-community/NUR";
-    nur.inputs.nixpkgs.follows = "nixpkgs";
-
     # iosevka-custom.url = "github:bodby/iosevka-custom";
     # iosevka-custom.inputs.nixpkgs.follows = "nixpkgs";
   };

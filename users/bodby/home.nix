@@ -106,17 +106,20 @@ in
           DontCheckDefaultBrowser = true;
           DisplayBookmarksToolbar = "newtab";
           DisplayMenuBar = "default-off";
-          # "unified" or "separate".
-          SearchBar = "unified";
+          # "unified" (URL and search in same bar) or "separate".
+          SearchBar = "separate";
 
-          "3rdparty".Extensions = {
+          ExtensionSettings = {
+            "*".installation_mode = "blocked";
+
+            "uBlock0@raymondhill.net" = {
+              install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
+              installation_mode = "force_installed";
+            };
+
             "{d7742d87-e61d-4b78-b8a1-b469842139fa}" = {
-                scrollStepSize = 2000;
-                smoothScroll = false;
-                grabBackFocus = true;
-                searchUrl = "https://duckduckgo.com/?q=";
-                settingsVersion = "2.1.2";
-                userDefinedLinkHintCss = "div > .vimiumHintMarker {\n  background: #0d0d0f;\n  border: none;\n  padding: 6px;\n  border-radius: 0;\n  box-shadow: none;\n}\n\ndiv > .vimiumHintMarker span {\n  font-family: monospace !important;\n  color: #9393a2;\n  font-weight: normal;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n  color: #d2d2df;\n  font-weight: bold;\n}\n\n#vomnibar {\n  background: #0b0b0d;\n  color: #d2d2df;\n  border-radius: 12px;\n  box-shadow: none;\n  border: none;\n}\n\n#vomnibar input {\n  font-family: monospace !important;\n  color: #d2d2df;\n  font-size: 24px;\n  height: auto;\n  margin-bottom: 0;\n  padding: 15px;\n  background-color: unset;\n  border-radius: 12px;\n  border: none;\n  box-shadow: none;\n}\n\n#vomnibar .vomnibarSearchArea {\n  padding: 0;\n  background-color: unset;\n  border-radius: 12px 12px 0 0;\n  border-bottom: none;\n}\n\n#vomnibar ul {\n  background-color: rgba(76, 86, 106, 0.8);\n}\n\n#vomnibar li {\n  border-bottom: 1px solid rgba(255,255,255,0.1);\n  color: #E5E9F0;\n}\n\n#vomnibar li.vomnibarSelected {\n  background-color: rgba(136, 192, 208, 1);\n}\n\n#vomnibar li .vomnibarSource {\n  color: #D8DEE9;\n}\n\n#vomnibar li em, #vomnibar li .vomnibarTitle {\n  color: #ECEFF4;\n}\n\n#vomnibar li .vomnibarUrl {\n  color: #88C0D0;\n}\n\n#vomnibar li .vomnibarMatch {\n  color: #EBCB8B;\n}\n\n#vomnibar li em .vomnibarMatch, #vomnibar li .vomnibarTitle .vomnibarMatch {\n  color: #EBCB8B;\n}\n\n#vomnibar li.vomnibarSelected .vomnibarSource {\n  color: #4C566A;\n}\n\n#vomnibar li.vomnibarSelected em, #vomnibar li.vomnibarSelected .vomnibarTitle {\n  color: #3B424F;\n}\n\n#vomnibar li.vomnibarSelected .vomnibarUrl {\n  color: #4C566A;\n}\n\n#vomnibar li.vomnibarSelected .vomnibarMatch {\n  color: #2E3440;\n}";
+              install_url = "https://addons.mozilla.org/firefox/downloads/latest/vimium-ff/latest.xpi";
+              installation_mode = "force_installed";
             };
           };
         };
@@ -142,14 +145,11 @@ in
               };
             };
           };
-          extensions = with inputs.nur.legacyPackages.${system}.repos.rycee.firefox-addons; [
-            vimium
-            ublock-origin
-          ];
 
           settings = {
             "layout.css.devPixelsPerPx" = cfg.desktop.libreWolfScaleFactor;
-            "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
+            # "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
+            "browser.theme.content-theme" = 0;
             "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
 
             "webgl.disabled" = true;

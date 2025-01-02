@@ -29,7 +29,7 @@ in
         "ctrl+shift+plus=increase_font_size:1"
         "ctrl+shift+minus=decrease_font_size:1"
         "ctrl+shift+0=reset_font_size"
-        "ctrl+l=clear_screen"
+        "ctrl+shift+l=clear_screen"
         "ctrl+g=scroll_to_top"
         "ctrl+shift+g=scroll_to_bottom"
         "ctrl+shift+u=scroll_page_up"
