@@ -48,13 +48,19 @@ __bash_prompt() {
 
     while read line; do
       local file_status=${line:0:1}
+      echo $file_status
       local added=$(echo $file_status | grep -c 'A')
       local modified=$(echo $file_status | grep -c 'M')
       local removed=$(echo $file_status | grep -c 'D')
-      if [ "$added" != 0 ]; then git_add=" +$added"; fi
-      if [ "$modified" != 0 ]; then git_mod=" ~$modified"; fi
-      if [ "$removed" != 0 ]; then git_rm=" -$removed"; fi
+
+      if [ "$added" != 0 ]; then ((git_add=git_add+1)); fi
+      if [ "$modified" != 0 ]; then ((git_mod=git_mod+1)); fi
+      if [ "$removed" != 0 ]; then ((git_rm=git_rm+1)); fi
     done <<< $(git diff --name-status HEAD 2>/dev/null)
+
+    if [ "$git_add" != "" ]; then git_add=" +$git_add"; fi
+    if [ "$git_mod" != "" ]; then git_mod=" ~$git_mod"; fi
+    if [ "$git_rm" != "" ]; then git_rm=" -$git_rm"; fi
 
     if [ -n "$git_add" ] || [ -n "$git_mod" ] || [ -n "$git_rm" ]; then
       git="${git}${diff_col}${git_add}${git_mod}${git_rm}"
