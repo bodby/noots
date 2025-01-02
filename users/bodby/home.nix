@@ -22,8 +22,7 @@ in
       defaultSopsFile = ../../secrets/secrets.yaml;
       defaultSopsFormat = "yaml";
 
-      # Still figuring this out.
-      # Will move everything to sops once I actually have it working.
+      # Will move everything to sops once I actually need it.
       # secrets.git_signature = { };
     };
 
@@ -114,15 +113,18 @@ in
           ];
 
           ExtensionSettings = {
-            "*".installation_mode = "blocked";
+            "*" = {
+              installation_mode = "blocked";
+              blocked_install_message = "Noooooo! My purity!";
+            };
 
             "uBlock0@raymondhill.net" = {
               install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
               installation_mode = "force_installed";
             };
 
-            "d7742d87-e61d-4b78-b8a1-b469842139fa" = {
-              install_url = "https://addons.mozilla.org/firefox/downloads/latest/vimium-ff/latest.xpi";
+            "{d7742d87-e61d-4b78-b8a1-b469842139fa}" = {
+              # install_url = "https://addons.mozilla.org/firefox/downloads/latest/vimium-ff/latest.xpi";
               installation_mode = "force_installed";
             };
           };
@@ -152,7 +154,7 @@ in
 
           settings = {
             "layout.css.devPixelsPerPx" = cfg.desktop.libreWolfScaleFactor;
-            # "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
+            "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
             "browser.theme.content-theme" = 0;
             "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
 
