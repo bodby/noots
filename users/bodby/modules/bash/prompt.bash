@@ -90,8 +90,8 @@ __bash_prompt() {
     end="${separator_d}"
   fi
 
-  PS1="${user}${separator_a}${cwd}${git}${nix_shell}${end}\n${prompt_status}${arrow}"
+  export PS1="${user}${separator_a}${cwd}${git}${nix_shell}${end}\n${prompt_status}${arrow}"
 }
 
-PROMPT_COMMAND='__bash_prompt'
-PS2='\[\e[0;97m\]> \[\e[m\]'
+export PROMPT_COMMAND='__bash_prompt'
+export PS2='\[\e[0;97m\]> \[\e[m\]'

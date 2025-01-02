@@ -38,6 +38,8 @@
     sudo = {
       enable = true;
       package = pkgs.sudo';
+      execWheelOnly = true;
+
       extraConfig = ''
         Defaults insults
         Defaults lecture=never
@@ -49,7 +51,23 @@
     rtkit.enable = config.services.pipewire.enable;
   };
 
-  systemd.coredump.enable = false;
+  systemd = {
+    coredump.enable = false;
+    coredump.extraConfig = ''
+      Storage=none
+    '';
+    tmpfiles.settings = {
+      "restricthome"."/home/*".Z.mode = lib.mkDefault "~0700";
+      "restrictetcnixos"."/etc/nixos/*".Z = {
+        mode = lib.mkDefault "0000";
+        user = lib.mkDefault "root";
+        group = lib.mkDefault "root";
+      };
+    };
+  };
+
+  security.pam.services.su.requireWheel = true;
+  security.pam.services.su-l.requireWheel = true;
 
   services = {
     openssh.enable = false;
@@ -100,6 +118,26 @@
 
     homeBinInPath = false;
     variables.NIX_SHELL_PRESERVE_PROMPT = 1;
+
+    etc."modprobe.d/nm-disable-bluetooth.conf".text = ''
+      install bluetooth /usr/bin/disabled-bluetooth-by-security-misc
+      install bluetooth_6lowpan  /usr/bin/disabled-bluetooth-by-security-misc
+      install bt3c_cs /usr/bin/disabled-bluetooth-by-security-misc
+      install btbcm /usr/bin/disabled-bluetooth-by-security-misc
+      install btintel /usr/bin/disabled-bluetooth-by-security-misc
+      install btmrvl /usr/bin/disabled-bluetooth-by-security-misc
+      install btmrvl_sdio /usr/bin/disabled-bluetooth-by-security-misc
+      install btmtk /usr/bin/disabled-bluetooth-by-security-misc
+      install btmtksdio /usr/bin/disabled-bluetooth-by-security-misc
+      install btmtkuart /usr/bin/disabled-bluetooth-by-security-misc
+      install btnxpuart /usr/bin/disabled-bluetooth-by-security-misc
+      install btqca /usr/bin/disabled-bluetooth-by-security-misc
+      install btrsi /usr/bin/disabled-bluetooth-by-security-misc
+      install btrtl /usr/bin/disabled-bluetooth-by-security-misc
+      install btsdio /usr/bin/disabled-bluetooth-by-security-misc
+      install btusb /usr/bin/disabled-bluetooth-by-security-misc
+      install virtio_bt /usr/bin/disabled-bluetooth-by-security-misc
+    '';
   };
 
   home-manager.useGlobalPkgs = true;
@@ -135,6 +173,7 @@
         auto-optimise-store = true;
         # https://github.com/NixOS/nix/issues/9574
         nix-path = config.nix.nixPath;
+        allowed-users = [ "@users" ];
       };
 
       registry = lib.mapAttrs (_: flake: { inherit flake; }) flakeInputs;

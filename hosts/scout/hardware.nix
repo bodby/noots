@@ -32,12 +32,25 @@
 
     kernelModules = [ "kvm-intel" ];
     extraModulePackages = [ ];
+
+    # I'm completely lost.
+    kernel.sysctl."fs.binfmt_misc.status" = "0";
+
+    specialFileSystems = {
+      "/dev/shm".options = [ "noexec" ];
+      "/run".options = [ "noexec" ];
+      "/dev".options = [ "noexec" ];
+    };
   };
 
   fileSystems = {
     "/" = {
       device = "/dev/disk/by-label/root";
       fsType = "xfs";
+      options = [
+        "nodev"
+        "nosuid"
+      ];
     };
 
     "/boot" = {
@@ -52,10 +65,24 @@
     "/home" = {
       device = "/dev/disk/by-label/home";
       fsType = "xfs";
+      options = [
+        "nodev"
+        "nosuid"
+        # "noexec"
+      ];
     };
   };
 
-  swapDevices = [ { device = "/dev/disk/by-label/swap"; } ];
+  zramSwap = {
+    enable = true;
+    memoryPercent = 50;
+    priority = 200;
+  };
+
+  swapDevices = [{
+    device = "/dev/disk/by-label/swap";
+    priority = 100;
+  }];
 
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp0s20f3.useDHCP = lib.mkDefault true;

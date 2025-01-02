@@ -185,6 +185,12 @@ in
       music = "/home/bodby/docs/music";
       pictures = "/home/bodby/docs/images";
       videos = "/home/bodby/docs/videos";
+
+      extraConfig = {
+        screenshots = "/home/bodby/docs/images/screenshots";
+        projects = "/home/bodby/dev";
+        vault = "/home/bodby/vault";
+      };
     };
 
     fonts.fontconfig = {
