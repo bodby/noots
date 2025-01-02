@@ -2,8 +2,6 @@
   config,
   lib,
   pkgs,
-  inputs,
-  system,
   ...
 }:
 let
@@ -109,6 +107,12 @@ in
           # "unified" (URL and search in same bar) or "separate".
           SearchBar = "separate";
 
+          Cookies.Allow = [
+            "https://github.com"
+            "https://discord.com"
+            "https://design.penpot.app"
+          ];
+
           ExtensionSettings = {
             "*".installation_mode = "blocked";
 
@@ -117,7 +121,7 @@ in
               installation_mode = "force_installed";
             };
 
-            "{d7742d87-e61d-4b78-b8a1-b469842139fa}" = {
+            "d7742d87-e61d-4b78-b8a1-b469842139fa" = {
               install_url = "https://addons.mozilla.org/firefox/downloads/latest/vimium-ff/latest.xpi";
               installation_mode = "force_installed";
             };
