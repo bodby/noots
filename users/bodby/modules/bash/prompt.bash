@@ -48,7 +48,6 @@ __bash_prompt() {
 
     while read line; do
       local file_status=${line:0:1}
-      echo $file_status
       local added=$(echo $file_status | grep -c 'A')
       local modified=$(echo $file_status | grep -c 'M')
       local removed=$(echo $file_status | grep -c 'D')

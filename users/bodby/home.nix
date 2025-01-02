@@ -87,14 +87,36 @@ in
         package = pkgs.librewolf';
 
         policies = {
+          DisableTelemetry = true;
+          DisableFirefoxStudies = true;
+
+          EnableTrackingProtection = {
+            Value = true;
+            Locked = true;
+            Cryptomining = true;
+            Fingerprinting = true;
+          };
+
+          DisablePocket = true;
+          DisableFirefoxAccounts = true;
+          DisableAccounts = true;
+          DisableFirefoxScreenshots = true;
+          OverrideFirstRunPage = "";
+          OverridePostUpdatePage = "";
+          DontCheckDefaultBrowser = true;
+          DisplayBookmarksToolbar = "newtab";
+          DisplayMenuBar = "default-off";
+          # "unified" or "separate".
+          SearchBar = "unified";
+
           "3rdparty".Extensions = {
-            "{d7742d87-e61d-4b78-b8a1-b469842139fa}".adminSettings = {
-              scrollStepSize = 120;
-              smoothScroll = false;
-              grabBackFocus = true;
-              searchUrl = "https://duckduckgo.com/?q=";
-              settingsVersion = "2.1.2";
-              userDefinedLinkHintCss = "div > .vimiumHintMarker {\n  background: #0d0d0f;\n  border: none;\n  padding: 6px;\n  border-radius: 0;\n  box-shadow: none;\n}\n\ndiv > .vimiumHintMarker span {\n  font-family: monospace !important;\n  color: #9393a2;\n  font-weight: normal;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n  color: #d2d2df;\n  font-weight: bold;\n}\n\n#vomnibar {\n  background: #0b0b0d;\n  color: #d2d2df;\n  border-radius: 12px;\n  box-shadow: none;\n  border: none;\n}\n\n#vomnibar input {\n  font-family: monospace !important;\n  color: #d2d2df;\n  font-size: 24px;\n  height: auto;\n  margin-bottom: 0;\n  padding: 15px;\n  background-color: unset;\n  border-radius: 12px;\n  border: none;\n  box-shadow: none;\n}\n\n#vomnibar .vomnibarSearchArea {\n  padding: 0;\n  background-color: unset;\n  border-radius: 12px 12px 0 0;\n  border-bottom: none;\n}\n\n#vomnibar ul {\n  background-color: rgba(76, 86, 106, 0.8);\n}\n\n#vomnibar li {\n  border-bottom: 1px solid rgba(255,255,255,0.1);\n  color: #E5E9F0;\n}\n\n#vomnibar li.vomnibarSelected {\n  background-color: rgba(136, 192, 208, 1);\n}\n\n#vomnibar li .vomnibarSource {\n  color: #D8DEE9;\n}\n\n#vomnibar li em, #vomnibar li .vomnibarTitle {\n  color: #ECEFF4;\n}\n\n#vomnibar li .vomnibarUrl {\n  color: #88C0D0;\n}\n\n#vomnibar li .vomnibarMatch {\n  color: #EBCB8B;\n}\n\n#vomnibar li em .vomnibarMatch, #vomnibar li .vomnibarTitle .vomnibarMatch {\n  color: #EBCB8B;\n}\n\n#vomnibar li.vomnibarSelected .vomnibarSource {\n  color: #4C566A;\n}\n\n#vomnibar li.vomnibarSelected em, #vomnibar li.vomnibarSelected .vomnibarTitle {\n  color: #3B424F;\n}\n\n#vomnibar li.vomnibarSelected .vomnibarUrl {\n  color: #4C566A;\n}\n\n#vomnibar li.vomnibarSelected .vomnibarMatch {\n  color: #2E3440;\n}";
+            "{d7742d87-e61d-4b78-b8a1-b469842139fa}" = {
+                scrollStepSize = 2000;
+                smoothScroll = false;
+                grabBackFocus = true;
+                searchUrl = "https://duckduckgo.com/?q=";
+                settingsVersion = "2.1.2";
+                userDefinedLinkHintCss = "div > .vimiumHintMarker {\n  background: #0d0d0f;\n  border: none;\n  padding: 6px;\n  border-radius: 0;\n  box-shadow: none;\n}\n\ndiv > .vimiumHintMarker span {\n  font-family: monospace !important;\n  color: #9393a2;\n  font-weight: normal;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n  color: #d2d2df;\n  font-weight: bold;\n}\n\n#vomnibar {\n  background: #0b0b0d;\n  color: #d2d2df;\n  border-radius: 12px;\n  box-shadow: none;\n  border: none;\n}\n\n#vomnibar input {\n  font-family: monospace !important;\n  color: #d2d2df;\n  font-size: 24px;\n  height: auto;\n  margin-bottom: 0;\n  padding: 15px;\n  background-color: unset;\n  border-radius: 12px;\n  border: none;\n  box-shadow: none;\n}\n\n#vomnibar .vomnibarSearchArea {\n  padding: 0;\n  background-color: unset;\n  border-radius: 12px 12px 0 0;\n  border-bottom: none;\n}\n\n#vomnibar ul {\n  background-color: rgba(76, 86, 106, 0.8);\n}\n\n#vomnibar li {\n  border-bottom: 1px solid rgba(255,255,255,0.1);\n  color: #E5E9F0;\n}\n\n#vomnibar li.vomnibarSelected {\n  background-color: rgba(136, 192, 208, 1);\n}\n\n#vomnibar li .vomnibarSource {\n  color: #D8DEE9;\n}\n\n#vomnibar li em, #vomnibar li .vomnibarTitle {\n  color: #ECEFF4;\n}\n\n#vomnibar li .vomnibarUrl {\n  color: #88C0D0;\n}\n\n#vomnibar li .vomnibarMatch {\n  color: #EBCB8B;\n}\n\n#vomnibar li em .vomnibarMatch, #vomnibar li .vomnibarTitle .vomnibarMatch {\n  color: #EBCB8B;\n}\n\n#vomnibar li.vomnibarSelected .vomnibarSource {\n  color: #4C566A;\n}\n\n#vomnibar li.vomnibarSelected em, #vomnibar li.vomnibarSelected .vomnibarTitle {\n  color: #3B424F;\n}\n\n#vomnibar li.vomnibarSelected .vomnibarUrl {\n  color: #4C566A;\n}\n\n#vomnibar li.vomnibarSelected .vomnibarMatch {\n  color: #2E3440;\n}";
             };
           };
         };
@@ -126,9 +148,9 @@ in
           ];
 
           settings = {
-            # "layout.css.devPixelsPerPx" = cfg.desktop.libreWolfScaleFactor;
+            "layout.css.devPixelsPerPx" = cfg.desktop.libreWolfScaleFactor;
+            "extensions.activeThemeId" = "firefox-compact-dark@mozilla.org";
             "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-            "extensions.autoDisableScopes" = 0;
 
             "webgl.disabled" = true;
             "privacy.clearOnShutdown.history" = false;

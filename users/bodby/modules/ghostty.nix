@@ -10,7 +10,8 @@ in
   home-manager.users.bodby.programs.ghostty = {
     enable = cfg.enable;
     package = pkgs.ghostty';
-    clearDefaultKeybinds = true;
+    # FIXME: This breaks for some reason.
+    # clearDefaultKeybinds = true;
     installBatSyntax = false;
 
     settings = {
@@ -55,6 +56,7 @@ in
 
       title = "Ghostty";
       auto-update = "off";
+      confirm-close-surface = false;
       shell-integration = "bash";
       shell-integration-features = "no-cursor, no-title";
       gtk-single-instance = true;
