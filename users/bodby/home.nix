@@ -149,7 +149,7 @@ in
 
           settings = {
             "layout.css.devPixelsPerPx" = cfg.desktop.libreWolfScaleFactor;
-            "extensions.activeThemeId" = "firefox-compact-dark@mozilla.org";
+            "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
             "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
 
             "webgl.disabled" = true;

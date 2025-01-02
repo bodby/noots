@@ -26,16 +26,16 @@ in
       keybind = [
         "ctrl+shift+c=copy_to_clipboard"
         "ctrl+shift+v=paste_from_clipboard"
-        "ctrl+shift+plus=increase_font_size"
-        "ctrl+shift+minus=decrease_font_size"
+        "ctrl+shift+plus=increase_font_size:1"
+        "ctrl+shift+minus=decrease_font_size:1"
         "ctrl+shift+0=reset_font_size"
         "ctrl+l=clear_screen"
         "ctrl+g=scroll_to_top"
         "ctrl+shift+g=scroll_to_bottom"
         "ctrl+shift+u=scroll_page_up"
         "ctrl+shift+d=scroll_page_down"
-        "ctrl+shift+k=scroll_to_prompt:-1"
-        "ctrl+shift+j=scroll_to_prompt:+1"
+        "ctrl+shift+k=jump_to_prompt:-1"
+        "ctrl+shift+j=jump_to_prompt:1"
       ];
 
       background-opacity = 0.9;
