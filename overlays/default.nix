@@ -11,6 +11,10 @@ final: prev: {
     binaryPlugins = [ prev.pkgs.krita-plugin-gmic ];
   };
 
+  ghostty' = prev.ghostty.override {
+    withAdwaita = false;
+  };
+
   steam' =
     let
       extraCompatPackages = [ final.proton-ge-bin ];
