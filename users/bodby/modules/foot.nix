@@ -89,6 +89,8 @@ in
 
       tweak.font-monospace-warn = false;
       scrollback.indicator-position = "none";
+
+      csd.preferred = "none";
     };
   };
 }
