@@ -16,7 +16,7 @@ let
       final.symlinkJoin {
         inherit name;
         paths = pkgs ++ [ script ];
-        buildInputs = final.makeWrapper;
+        buildInputs = [ final.makeWrapper ];
         postBuild = "wrapProgram $out/bin/${name} --prefix PATH : $out/bin";
       };
 in
