@@ -47,6 +47,7 @@ in
       window-padding-balance = true;
       window-padding-color = "background";
       window-decoration = false;
+      window-theme = "dark";
 
       cursor-text = "#2b2b32";
       cursor-style = "block";
@@ -57,9 +58,12 @@ in
       auto-update = "off";
       confirm-close-surface = false;
       shell-integration = "bash";
-      shell-integration-features = "no-cursor, no-title";
+      shell-integration-features = "no-cursor";
+      # I assume this is what forces the horrendous default GTK cursor.
+      # Or maybe I just need to reboot?
       gtk-single-instance = true;
       gtk-adwaita = false;
+      gtk-titlebar = false;
       resize-overlay = "never";
     };
 
