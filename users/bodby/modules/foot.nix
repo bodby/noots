@@ -51,7 +51,7 @@ in
         bright7 = "d2d2df";
 
         selection-foreground = "d2d2df";
-        selection-background = "2b2b32";
+        selection-background = "1e1e24";
       };
 
       key-bindings = {
