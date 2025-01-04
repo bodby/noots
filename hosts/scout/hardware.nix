@@ -74,8 +74,8 @@
       "net.ipv6.conf.default.accept_source_route" = 0;
       "net.ipv6.conf.all.accept_ra" = 0;
       "net.ipv6.conf.default.accept_ra" = 0;
-      "net.ipv6.conf.all.use_tempaddr" = 2;
-      "net.ipv6.conf.default.use_tempaddr" = 2;
+      "net.ipv6.conf.all.use_tempaddr" = lib.mkForce 2;
+      "net.ipv6.conf.default.use_tempaddr" = lib.mkForce 2;
       # ??
       "net.ipv4.tcp_sack" = 0;
       "net.ipv4.tcp_dsack" = 0;
