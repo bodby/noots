@@ -9,7 +9,7 @@
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest_hardened;
+    kernelPackages = pkgs.linuxPackages_6_12_hardened;
     loader = {
       efi.canTouchEfiVariables = true;
       grub = {
