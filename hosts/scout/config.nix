@@ -61,6 +61,10 @@
     };
 
     rtkit.enable = config.services.pipewire.enable;
+
+    # TODO: Actually setup policies and get LibreWolf sandboxing working again.
+    apparmor.enable = true;
+    apparmor.killUnconfinedConfinables = true;
   };
 
   systemd = {

@@ -41,19 +41,20 @@
       "kernel.kptr_restrict" = 1;
       "kernel.dmesg_restrict" = 1;
       "kernel.printk" = "3 3 3 3";
-      # "kernel.unprivileged_bpf_disabled" = 1;
+      "kernel.unprivileged_bpf_disabled" = 1;
       "net.core.bpf_jit_harden" = 2;
       "dev.tty.ldisc_autoload" = 0;
-      # "vm.unprivileged_userfaultfd" = 0;
+      "vm.unprivileged_userfaultfd" = 0;
       # Lowest this should go is 1. Default is 60.
       "vm.swappiness" = 10;
       "kernel.kexec_load_disabled" = 1;
       # Or 4 if you want this enabled.
       "kernel.sysrq" = 0;
       # TODO: Get AppArmor to enable namespaces only for LibreWolf.
-      # "kernel.unprivileged_userns_clone" = 0;
+      "kernel.unprivileged_userns_clone" = 0;
       # If above doesn't work:
-      # "user.max_user_namespaces" = 0;
+      "user.max_user_namespaces" = 0;
+
       "kernel.perf_event_paranoid" = 2;
 
       "net.ipv4.tcp_syncookies" = 1;
@@ -103,6 +104,7 @@
       # https://madaidans-insecurities.github.io/guides/linux-hardening.html
       # Apparently this improves allocation performance?
       "page_alloc.shuffle=1"
+      "page_poison=1"
       "pti=on"
       "randomize_kstack_offset=on"
       "vsyscalls=none"
