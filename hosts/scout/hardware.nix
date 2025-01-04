@@ -9,7 +9,9 @@
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
   boot = {
-    kernelPackages = pkgs.linuxPackages_6_12_hardened;
+    # TODO: Partition boot to use more than just 200MB.
+    #       I have a Windows recovery partition I was afraid to remove.
+    kernelPackages = pkgs.linuxPackages_latest;
     loader = {
       efi.canTouchEfiVariables = true;
       grub = {
