@@ -27,16 +27,12 @@ with lib;
         inputs.nvim-btw.packages.${system}.default
       ]
       ++ optionals cfg.desktop.enable [
-        # webcord-vencord
-        # alsa-utils
-        # ghostty
         wl-clipboard
         grim
         slurp
         swaybg
         mpv
         imv
-        imagemagick
       ]
       ++ optionals cfg.gaming.enable [
         steam'
