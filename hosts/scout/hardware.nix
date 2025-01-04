@@ -84,9 +84,10 @@
       "net.ipv4.tcp_fack" = 0;
 
       # Or 3 to disable 'ptrace' entirely.
-      "kernel.yama.ptrace_scope" = 2;
-      "vm.mmap_rnd_bits" = 64;
-      "vm.mmap_rnd_compat_bits" = 32;
+      # 2 to restrict it to a capability.
+      "kernel.yama.ptrace_scope" = 3;
+      "vm.mmap_rnd_bits" = 32;
+      "vm.mmap_rnd_compat_bits" = 16;
       # Would this break HM?
       "fs.protected_symlinks" = 1;
       "fs.protected_hardlinks" = 1;
