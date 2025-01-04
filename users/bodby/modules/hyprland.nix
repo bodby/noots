@@ -68,7 +68,7 @@ in
         borders-plus-plus = {
           add_borders = 1;
           # Normal 'col.*' ends up with 'col { * }'.
-          "col.border1" = "rgba(ffffff08)";
+          "col.border_1" = "rgba(ffffff08)";
           border_size_1 = 1;
           natural_rounding = "no";
         };
