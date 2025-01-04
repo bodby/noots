@@ -129,13 +129,15 @@
       "/dev/shm".options = [ "noexec" ];
       "/run".options = [ "noexec" ];
       "/dev".options = [ "noexec" ];
-      "/var".options = [ "nosuid" ];
 
-      "/tmp".options = [
-        "nosuid"
-        "noexec"
-        "nodev"
-      ];
+      # These prevent rebuilds.
+      # "/var".options = [ "nosuid" ];
+
+      # "/tmp".options = [
+      #   "nosuid"
+      #   "noexec"
+      #   "nodev"
+      # ];
 
       # See https://madaidans-insecurities.github.io/guides/linux-hardening.html#hidepid.
       # I don't know if I use systemd-login.
