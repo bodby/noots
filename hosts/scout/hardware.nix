@@ -9,9 +9,8 @@
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
   boot = {
-    # TODO: Partition boot to use more than just 200MB.
-    #       I have a Windows recovery partition I was afraid to remove.
-    kernelPackages = pkgs.linuxPackages_latest;
+    # I'm dumb; just 'nix-collect-garbage -d'. I forgot the '-d'.
+    kernelPackages = pkgs.linuxPackages_6_12_hardened;
     loader = {
       efi.canTouchEfiVariables = true;
       grub = {
