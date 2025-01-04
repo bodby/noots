@@ -5,6 +5,12 @@
   inputs,
   ...
 }:
+
+# TODO:
+# - AppArmor.
+# - No root login, use https://madaidans-insecurities.github.io/guides/linux-hardening.html#accessing-root-securely.
+# - UsbGuard.
+
 {
   imports = [
     ../../modules
@@ -62,12 +68,13 @@
     coredump.extraConfig = ''
       Storage=none
     '';
+
     tmpfiles.settings = {
-      "restricthome"."/home/*".Z.mode = lib.mkDefault "~0700";
+      "restricthome"."/home/*".Z.mode = "~0700";
       "restrictetcnixos"."/etc/nixos/*".Z = {
-        mode = lib.mkDefault "0000";
-        user = lib.mkDefault "root";
-        group = lib.mkDefault "root";
+        mode = "0000";
+        user = "root";
+        group = "root";
       };
     };
   };
@@ -123,25 +130,178 @@
     homeBinInPath = false;
     variables.NIX_SHELL_PRESERVE_PROMPT = 1;
 
-    etc."modprobe.d/nm-disable-bluetooth.conf".text = ''
-      install bluetooth /usr/bin/disabled-bluetooth-by-security-misc
-      install bluetooth_6lowpan  /usr/bin/disabled-bluetooth-by-security-misc
-      install bt3c_cs /usr/bin/disabled-bluetooth-by-security-misc
-      install btbcm /usr/bin/disabled-bluetooth-by-security-misc
-      install btintel /usr/bin/disabled-bluetooth-by-security-misc
-      install btmrvl /usr/bin/disabled-bluetooth-by-security-misc
-      install btmrvl_sdio /usr/bin/disabled-bluetooth-by-security-misc
-      install btmtk /usr/bin/disabled-bluetooth-by-security-misc
-      install btmtksdio /usr/bin/disabled-bluetooth-by-security-misc
-      install btmtkuart /usr/bin/disabled-bluetooth-by-security-misc
-      install btnxpuart /usr/bin/disabled-bluetooth-by-security-misc
-      install btqca /usr/bin/disabled-bluetooth-by-security-misc
-      install btrsi /usr/bin/disabled-bluetooth-by-security-misc
-      install btrtl /usr/bin/disabled-bluetooth-by-security-misc
-      install btsdio /usr/bin/disabled-bluetooth-by-security-misc
-      install btusb /usr/bin/disabled-bluetooth-by-security-misc
-      install virtio_bt /usr/bin/disabled-bluetooth-by-security-misc
-    '';
+    # TODO: Copy 'boot.blacklistedKernelModules' but for this.
+    etc."modprobe.d/nm-disable-bluetooth.conf".text =
+      let
+        binFalse = "${pkgs.coreutils}/bin/false";
+      in
+      ''
+        install bluetooth ${binFalse}
+        install bluetooth_6lowpan ${binFalse}
+        install bt3c_cs ${binFalse}
+        install btbcm ${binFalse}
+        install btintel ${binFalse}
+        install btmrvl ${binFalse}
+        install btmrvl_sdio ${binFalse}
+        install btmtk ${binFalse}
+        install btmtksdio ${binFalse}
+        install btmtkuart ${binFalse}
+        install btnxpuart ${binFalse}
+        install btqca ${binFalse}
+        install btrsi ${binFalse}
+        install btrtl ${binFalse}
+        install btsdio ${binFalse}
+        install btusb ${binFalse}
+        install virtio_bt ${binFalse}
+
+        install asus_acpi ${binFalse}
+        install bcm43xx ${binFalse}
+        install de4x5 ${binFalse}
+        install prism54 ${binFalse}
+
+        install vivid ${binFalse}
+        install floppy ${binFalse}
+        install hamradio ${binFalse}
+
+        install aty128fb ${binFalse}
+        install atyfb ${binFalse}
+        install cirrusfb ${binFalse}
+        install cyber2000fb ${binFalse}
+        install cyblafb ${binFalse}
+        install gx1fb ${binFalse}
+        install hgafb ${binFalse}
+        install i810fb ${binFalse}
+        install intelfb ${binFalse}
+        install kyrofb ${binFalse}
+        install lxfb ${binFalse}
+        install matroxfb_base ${binFalse}
+        install neofb ${binFalse}
+        install nvidiafb ${binFalse}
+        install pm2fb ${binFalse}
+        install radeonfb ${binFalse}
+        install rivafb ${binFalse}
+        install s1d13xxxfb ${binFalse}
+        install savagefb ${binFalse}
+        install sisfb ${binFalse}
+        install sstfb ${binFalse}
+        install tdfxfb ${binFalse}
+        install tridentfb ${binFalse}
+        install vesafb ${binFalse}
+        install vfb ${binFalse}
+        install viafb ${binFalse}
+        install vt8623fb ${binFalse}
+        install udlfb ${binFalse}
+
+        install sctp ${binFalse}
+        install sctp_diag ${binFalse}
+
+        install rds ${binFalse}
+        install rds_rdma ${binFalse}
+        install rds_tcp ${binFalse}
+
+        install tipc ${binFalse}
+        install tipc_diag ${binFalse}
+
+        install c_can ${binFalse}
+        install c_can_pci ${binFalse}
+        install c_can_platform ${binFalse}
+        install can ${binFalse}
+        install can-bcm ${binFalse}
+        install can-dev ${binFalse}
+        install can-gw ${binFalse}
+        install can-isotp ${binFalse}
+        install can-raw ${binFalse}
+        install can-j1939 ${binFalse}
+        install can327 ${binFalse}
+        install ifi_canfd ${binFalse}
+        install janz-ican3 ${binFalse}
+        install m_can ${binFalse}
+        install m_can_pci ${binFalse}
+        install m_can_platform ${binFalse}
+        install phy-can-transceiver ${binFalse}
+        install slcan ${binFalse}
+        install ucan ${binFalse}
+        install vxcan ${binFalse}
+        install vcan ${binFalse}
+
+        # TODO: Breaks VC?? Maybe???
+        install atm ${binFalse}
+        install ueagle-atm ${binFalse}
+        install usbatm ${binFalse}
+        install xusbatm ${binFalse}
+
+        install af_802154 ${binFalse}
+        install appletalk ${binFalse}
+        install ax25 ${binFalse}
+        install decnet ${binFalse}
+        install dccp ${binFalse}
+        install econet ${binFalse}
+        install eepro100 ${binFalse}
+        install eth1394 ${binFalse}
+        install ipx ${binFalse}
+        install n-hdlc ${binFalse}
+        install netrom ${binFalse}
+        install p8022 ${binFalse}
+        install p8023 ${binFalse}
+        install psnap ${binFalse}
+        install rose ${binFalse}
+        install x25 ${binFalse}
+
+        install gfs2 ${binFalse}
+        install ksmbd ${binFalse}
+
+        install cifs ${binFalse}
+        install cifs_arc4 ${binFalse}
+        install cifs_md4 ${binFalse}
+
+        install cramfs ${binFalse}
+        install freevxfs ${binFalse}
+        # TODO: Maybe don't remove hfs?
+        install hfs ${binFalse}
+        install hfsplus ${binFalse}
+        install jffs2 ${binFalse}
+        install jfs ${binFalse}
+        install reiserfs ${binFalse}
+        install udf ${binFalse}
+
+        # Python kernel module.
+        # ??????
+        install pmt_class ${binFalse}
+        install pmt_crashlog ${binFalse}
+        install pmt_telemetry ${binFalse}
+
+        # TODO: Maybe don't disable GPS.
+        install garmin_gps ${binFalse}
+        install gnss ${binFalse}
+        install gnss-mtk ${binFalse}
+        install gnss-serial ${binFalse}
+        install gnss-sirf ${binFalse}
+        install gnss-ubx ${binFalse}
+        install gnss-usb ${binFalse}
+
+        # Or wait until 2029 for FireWire to no longer be supported.
+        install dv1394 ${binFalse}
+        install firewire-core ${binFalse}
+        install firewire-ohci ${binFalse}
+        install firewire-net ${binFalse}
+        install firewire-sbp2 ${binFalse}
+        install ohci1394 ${binFalse}
+        install raw1394 ${binFalse}
+        install sbp2 ${binFalse}
+        install video1394 ${binFalse}
+
+        # FIXME: Disable once I have a NAS server.
+        install cifs ${binFalse}
+        install nfs ${binFalse}
+        install nfsv3 ${binFalse}
+        install nfsv4 ${binFalse}
+        install ksmbd ${binFalse}
+        install gfs2 ${binFalse}
+
+        # FIXME: I don't normally use my webcam, but remove this if you need it.
+        #        UEFI firmware also has an option to disable it, and I have a physical switch.
+        install uvcvideo ${binFalse}
+      '';
   };
 
   home-manager.useGlobalPkgs = true;
