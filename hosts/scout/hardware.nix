@@ -49,8 +49,9 @@
       "kernel.kexec_load_disabled" = 1;
       # Or 4 if you want this enabled.
       "kernel.sysrq" = 0;
-      # I don't know if I have this patch.
-      "kernel.unprivileged_userns_clone" = 0;
+      # Breaks LibreWolf sandboxing.
+      # TODO: Get AppArmor to enable namespaces only for LibreWolf.
+      # "kernel.unprivileged_userns_clone" = 0;
       # If above doesn't work:
       # "user.max_user_namespaces" = 0;
       "kernel.perf_event_paranoid" = 2;
@@ -128,7 +129,14 @@
       "/dev/shm".options = [ "noexec" ];
       "/run".options = [ "noexec" ];
       "/dev".options = [ "noexec" ];
-      # May break desktops.
+      "/var".options = [ "nosuid" ];
+
+      "/tmp".options = [
+        "nosuid"
+        "noexec"
+        "nodev"
+      ];
+
       # See https://madaidans-insecurities.github.io/guides/linux-hardening.html#hidepid.
       # I don't know if I use systemd-login.
       "/proc".options = [
@@ -136,7 +144,6 @@
         "noexec"
         "nodev"
         "hidepid=2"
-        "gid=${toString config.users.groups.proc.gid}"
       ];
     };
   };
@@ -145,16 +152,15 @@
     "/" = {
       device = "/dev/disk/by-label/root";
       fsType = "xfs";
-      options = [
-        "nodev"
-        "nosuid"
-      ];
     };
 
     "/boot" = {
       device = "/dev/disk/by-label/boot";
       fsType = "vfat";
       options = [
+        "nodev"
+        "nosuid"
+        "noexec"
         "fmask=0077"
         "dmask=0077"
       ];

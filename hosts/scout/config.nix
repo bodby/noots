@@ -32,8 +32,6 @@
     };
   };
 
-  users.groups.proc = { };
-
   time.timeZone = "UTC";
 
   networking = {
