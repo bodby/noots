@@ -119,6 +119,7 @@
       "loglevel=0"
 
       # TODO: Anything on 'swapgs'?
+      #       Also, does this render the params under it useless?
       "mitigations=auto,nosmt"
       # TODO: These are CPU-specific. How should I modularize these?
       "spectre_v1=on"

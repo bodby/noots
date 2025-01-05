@@ -23,6 +23,9 @@ with lib;
     # TODO: vvv
     scudo.enable = mkEnableOption "hardened memory allocator";
     nas.enable = mkEnabledByDefault "network filesystems for NAS";
+    panicOnOops = mkEnableOption "kernel panics on oops";
+    moduleSignatures.enable = mkEnableOption "checking kernel module signatures";
+    fileSystems.enable = mkEnabledByDefault "hardened mount options";
   };
 
   config = mkIf cfg.enable { };
