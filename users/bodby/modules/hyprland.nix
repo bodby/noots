@@ -64,8 +64,8 @@ in
       "$mod" = "SUPER";
 
       # TODO: Impure.
-      "$grimscr" = "grim -t png ${dirs.pictures}/screenshots/$(date -dnow +%Y-%m-%d_%H-%M-%S).png";
-      "$grimsec" = "grim -g \"$(slurp)\" -t png ${dirs.pictures}/screenshots/$(date -dnow +%Y-%m-%d_%H-%M-%S).png";
+      "$grimscr" = "${pkgs.grim}/bin/grim -t png ${dirs.pictures}/screenshots/$(date -dnow +%Y-%m-%d_%H-%M-%S).png";
+      "$grimsec" = "${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp)\" -t png ${dirs.pictures}/screenshots/$(date -dnow +%Y-%m-%d_%H-%M-%S).png";
 
       input = {
         kb_layout = "us";

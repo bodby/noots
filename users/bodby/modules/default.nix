@@ -3,6 +3,7 @@
     ./bash
     ./waybar
     ./wallpapers
+    ./librewolf
 
     ./foot.nix
     ./hyprland.nix

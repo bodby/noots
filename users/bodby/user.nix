@@ -28,9 +28,9 @@ with lib;
       ]
       ++ optionals cfg.desktop.enable [
         wl-clipboard
-        grim
-        slurp
-        swaybg
+        # grim
+        # slurp
+        # swaybg
         mpv
         imv
       ]

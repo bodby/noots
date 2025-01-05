@@ -1,0 +1,8 @@
+html { background: transparent !important; }
+
+#main-window {
+  background: transparent !important;
+  -moz-appearance: transparent !important;
+}
+
+#tabbrowser-tabpanels { background: transparent !important; }
