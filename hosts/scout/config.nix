@@ -142,7 +142,7 @@
 
       issue.text = ''
 
-        [1;35m;https://xkcd.com/272/[0m
+        [1;31mhttps://xkcd.com/272/[0m
 
       '';
 
