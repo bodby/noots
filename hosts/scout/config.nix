@@ -100,7 +100,8 @@
       xkb.options = "grp:caps_switch";
     };
 
-    getty.greetingLine = "haha haker!!";
+    # See 'etc.issue'.
+    # getty.greetingLine = "haha haker!!";
 
     resolved.dnssec = "true";
   };
@@ -139,7 +140,11 @@
     etc = {
       machine-id.text = "b08dfa6083e7567a1921a715000001fb";
 
-      issue.text = "https://xkcd.com/272/";
+      issue.text = ''
+
+        https://xkcd.com/272/
+
+      '';
 
       # From Kicksecure/security-misc.
       gitconfig.text = ''
