@@ -116,8 +116,11 @@
       "lockdown=confidentiality"
       # I don't want to open my laptop and check.
       "mce=0"
-      # TODO: Anything on 'swapgs'?
       "loglevel=0"
+
+      # TODO: Anything on 'swapgs'?
+      "mitigations=auto,nosmt"
+      # TODO: These are CPU-specific. How should I modularize these?
       "spectre_v1=on"
       "spectre_v2=on"
       "spectre_v2_user=on"
@@ -125,8 +128,39 @@
       "spec_store_bypass_disable=on"
 
       "intel_iommu=on"
-      # TODO: ???
       "efi=disable_early_pci_dma"
+      "iommu.passthrough=0"
+      "iommu=force"
+      "iommu.strict=1"
+
+      # TODO: Override to allow 32-bit applications (this disables it).
+      "ia32_emulation=0"
+    ];
+
+    blacklistedKernelModules = [
+      "amd76x_edac"
+      "ath_pci"
+      "evbug"
+      "pcspkr"
+      "snd_aw2"
+      "snd_intel8x0m"
+      "snd_pcsp"
+      "usbkbd"
+      "usbmouse"
+
+      # Breaks VirtualBox audio.
+      # https://github.com/Kicksecure/security-misc/issues/271
+      "snd_intel8x0"
+      "tls"
+      "virtio_balloon"
+      "virtio_console"
+
+      "cfg80211"
+      "intel_agp"
+      "ip_tables"
+      "joydev"
+      "mousedev"
+      "psmouse"
     ];
 
     specialFileSystems = {
