@@ -175,7 +175,7 @@
         install gx1fb ${binFalse}
         install hgafb ${binFalse}
         install i810fb ${binFalse}
-        install intelfb ${binFalse}
+        # install intelfb ${binFalse}
         install kyrofb ${binFalse}
         install lxfb ${binFalse}
         install matroxfb_base ${binFalse}

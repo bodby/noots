@@ -12,7 +12,7 @@ in
     systemd.enable = true;
 
     settings = [{
-      # width = 1920;
+      width = 1920;
       height = 48;
       position = "bottom";
       exclusive = true;

@@ -51,9 +51,10 @@
       # Or 4 if you want this enabled.
       "kernel.sysrq" = 0;
       # TODO: Get AppArmor to enable namespaces only for LibreWolf.
-      "kernel.unprivileged_userns_clone" = 0;
+      "kernel.unprivileged_userns_clone" = 1;
+      "kernel.userns_restrict" = 0;
       # If above doesn't work:
-      "user.max_user_namespaces" = 0;
+      # "user.max_user_namespaces" = 0;
 
       "kernel.perf_event_paranoid" = 2;
 
