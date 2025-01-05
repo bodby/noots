@@ -157,6 +157,7 @@ in
 
           settings = {
             "layout.css.devPixelsPerPx" = cfg.desktop.libreWolfScaleFactor;
+            "browser.tabs.allow_transparent_browser" = true;
             "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
             "browser.theme.content-theme" = 0;
             "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
