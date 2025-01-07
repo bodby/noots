@@ -8,5 +8,6 @@
     ./foot.nix
     ./hyprland.nix
     ./iamb.nix
+    ./cabal.nix
   ];
 }
