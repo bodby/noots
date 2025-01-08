@@ -9,7 +9,7 @@
 # TODO:
 # - AppArmor.
 # - No root login, use https://madaidans-insecurities.github.io/guides/linux-hardening.html#accessing-root-securely.
-# - UsbGuard.
+# - USBGuard.
 
 {
   imports = [

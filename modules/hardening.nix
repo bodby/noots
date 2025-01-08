@@ -9,7 +9,7 @@ let
     desc:
     lib.mkOption {
       type = lib.types.bool;
-      description = "Whether to enable " + desc;
+      description = "Whether to " + desc;
       default = true;
     };
 in
@@ -19,13 +19,24 @@ with lib;
     # NOTE: You do have to manually change your kernel to a hardened one.
     enable = mkEnableOption "hardened kernel params";
 
-    bluetooth.enable = mkEnableOption "bluetooth support";
-    # TODO: vvv
-    scudo.enable = mkEnableOption "hardened memory allocator";
-    nas.enable = mkEnabledByDefault "network filesystems for NAS";
-    panicOnOops = mkEnableOption "kernel panics on oops";
-    moduleSignatures.enable = mkEnableOption "checking kernel module signatures";
-    fileSystems.enable = mkEnabledByDefault "hardened mount options";
+    multilib.enable = mkEnableOption "32-bit support";
+    bluetooth.enable = mkEnableOption "bluetooth";
+    userns.enable = mkEnabledByDefault "enable unprivileged user namespaces";
+
+    fileSystems = {
+      networkStorage.enable = mkEnableOption "NAS filesystems";
+      noExecHome = mkEnabledByDefault "disable executables in home dirs";
+      restrictHomePerms = mkEnabledByDefault "set 0700 perms for home dirs and files";
+    };
+
+    memory.swappiness = mkOption {
+      type = types.int;
+      description = ''
+        How readily memory should be copied to swap.
+        Lower values mean a lesser likelyhood
+      '';
+      default = 10;
+    };
   };
 
   config = mkIf cfg.enable { };

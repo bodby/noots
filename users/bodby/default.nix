@@ -20,7 +20,6 @@ with lib;
   ];
 
   options.modules.users.bodby = {
-    desktop.enable = mkEnabledByDefault "desktop programs and fonts";
     gaming.enable = mkEnableOption "gaming software";
     creative.enable = mkEnableOption "creative software and drivers";
 
@@ -32,16 +31,30 @@ with lib;
 
     # TODO: Functionality for all of these options.
     desktop = {
-      animations.enable = mkEnabledByDefault "Hyprland animations";
+      enable = mkEnabledByDefault "desktop programs and fonts";
+      hyprland = {
+        animations.enable = mkEnabledByDefault "Hyprland animations";
+        scale = mkOption {
+          type = types.float;
+          description = ''
+            Scale used for fractional scaling.
+            LibreWolf's 'DevPixelsPerPix' adds an extra 0.2 to this.
+          '';
+          default = 1.0;
+        };
 
-      libreWolfScaleFactor = mkOption {
-        type = types.str;
-        description = "LibreWolf's 'DevPixelsPerPix'";
-        default = "1.125";
+        sensitivity = mkOption {
+          type = types.float;
+          default = -0.2;
+        };
       };
-      sensitivity = mkOption {
-        type = types.float;
-        default = -0.2;
+
+      waybar.cpuTemp = mkOptions {
+        type = types.listOf types.path;
+        default = [
+          "/sys/devices/pci0000:00/0000:00:18.3/hwmon"
+          "temp3_input"
+        ];
       };
 
       hwmonPath = mkOption {
