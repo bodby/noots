@@ -9,7 +9,8 @@
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
   boot = {
-    # I'm dumb; just 'nix-collect-garbage -d'. I forgot the '-d'.
+    # Apparently 'nix-collect-garbage -d' doesn't remove old kernels in /boot.
+    # You have to remove them manually.
     kernelPackages = pkgs.linuxPackages_6_12_hardened;
     loader = {
       efi.canTouchEfiVariables = true;
