@@ -74,8 +74,8 @@
     '';
 
     tmpfiles.settings = {
-      "restricthome"."/home/*".Z.mode = "~0700";
-      "restrictetcnixos"."/etc/nixos/*".Z = {
+      restricthome."/home/*".Z.mode = "~0700";
+      restrictetcnixos."/etc/nixos/*".Z = {
         mode = "0000";
         user = "root";
         group = "root";
