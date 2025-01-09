@@ -28,7 +28,7 @@ in
       search.force = true;
 
       settings = {
-        "layout.css.devPixelsPerPx" = (cfg.hyprland.scale + 0.25);
+        "layout.css.devPixelsPerPx" = cfg.hyprland.browserScale;
         "browser.tabs.allow_transparent_browser" = true;
         "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
         "browser.theme.content-theme" = 0;

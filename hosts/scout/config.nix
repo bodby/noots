@@ -26,8 +26,11 @@
     desktop = {
       enable = true;
 
-      hyprland.scale = 1.6;
-      hyprland.sensitivity = 0.5;
+      hyprland = {
+        scale = 1.6;
+        browserScale = 2.25;
+        sensitivity = 0.5;
+      };
 
       waybar.cpuTemp = "/sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input";
     };

@@ -28,10 +28,13 @@ with lib;
       hyprland = {
         scale = mkOption {
           type = types.float;
-          description = ''
-            Scale used for fractional scaling.
-            LibreWolf's 'DevPixelsPerPix' adds an extra 0.2 to this.
-          '';
+          description = "Fractional scaling amount";
+          default = 1.0;
+        };
+
+        browserScale = mkOption {
+          type = types.float;
+          description = "LibreWolf's 'DevPixelsPerPix'";
           default = 1.0;
         };
 
