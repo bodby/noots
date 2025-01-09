@@ -17,7 +17,9 @@ in
     settings = {
       monitor = [
         "desc:Samsung Electric Company LC32G7xT HNATC00129, 2560x1440@239.96Hz, 0x0, 1"
-        "desc:VXN VisN236HUZ15 0x199DA69F, preferred, 0x0, ${cfg.hyprland.scale}"
+        "desc:VXN VisN236HUZ15 0x199DA69F, preferred, 0x0, ${
+          lib.strings.floatToString cfg.hyprland.scale
+        }"
         ", preferred, auto, 1"
       ];
 
