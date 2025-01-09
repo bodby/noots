@@ -44,7 +44,7 @@ in
 
       temperature = {
         interval = 20;
-        format = "{temperatureC}°C";
+        format = "{temperatureC}°";
         # critical-threshold = 65;
         # format-critical = "{temperatureC}°C";
         hwmon-path = cfg.waybar.cpuTemp;
@@ -53,7 +53,7 @@ in
 
       memory = {
         interval = 20;
-        format = "{used} GiB";
+        format = "{used}G";
         tooltip = false;
       };
 
