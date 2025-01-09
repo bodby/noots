@@ -8,6 +8,7 @@
     user-install:         False
     -- installdir: /home/bodby/.local/bin
     jobs:                 $ncpus
+    cabal-version:        3.4
 
     build-summary:          /home/bodby/.cache/cabal/logs/build.log
     remote-repo-cache:      /home/bodby/.cache/cabal/packages
