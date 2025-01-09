@@ -21,7 +21,7 @@ window#waybar {
 #network,
 #wireplumber { color: #9393a2; }
 
-#network,
+#wireplumber,
 #cpu {
   font-weight: bold;
   color: #d2d2df;

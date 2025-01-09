@@ -31,9 +31,9 @@ in
       ];
 
       modules-right = [
-        "wireplumber"
-        "battery"
         "network"
+        "battery"
+        "wireplumber"
       ];
 
       cpu = {
