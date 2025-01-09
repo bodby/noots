@@ -27,6 +27,7 @@ with lib;
         inputs.nvim-btw.packages.${system}.default
       ]
       ++ optionals cfg.desktop.enable [
+        xdg-desktop-portal-hyprland
         wl-clipboard
         # grim
         # slurp
@@ -49,6 +50,6 @@ with lib;
       "wheel"
       "audio"
       "video"
-    ] ++ cfg.extraGroups;
+    ];
   };
 }

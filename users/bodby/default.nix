@@ -23,17 +23,9 @@ with lib;
     gaming.enable = mkEnableOption "gaming software";
     creative.enable = mkEnableOption "creative software and drivers";
 
-    extraGroups = mkOption {
-      type = types.listOf types.str;
-      description = "Extra groups the user is a part of";
-      default = [ ];
-    };
-
-    # TODO: Functionality for all of these options.
     desktop = {
       enable = mkEnabledByDefault "desktop programs and fonts";
       hyprland = {
-        animations.enable = mkEnabledByDefault "Hyprland animations";
         scale = mkOption {
           type = types.float;
           description = ''
@@ -50,22 +42,9 @@ with lib;
       };
 
       waybar.cpuTemp = mkOptions {
-        type = types.listOf types.path;
-        default = [
-          "/sys/devices/pci0000:00/0000:00:18.3/hwmon"
-          "temp3_input"
-        ];
-      };
-
-      hwmonPath = mkOption {
-        type = types.str;
-        description = "Absolute path to the CPU hwmon, used by Waybar";
-        default = "/sys/devices/pci0000:00/0000:00:18.3/hwmon";
-      };
-      hwmonInputFile = mkOption {
-        type = types.str;
-        description = "Name of the input file inside 'hyprland.hwmonPath' read by Waybar, e.g. 'temp3_input'";
-        default = "temp3_input";
+        type = types.path;
+        description = "Absolute path to the hwmon CPU temp file";
+        default = "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp3_input";
       };
     };
   };

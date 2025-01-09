@@ -7,7 +7,7 @@
 }
 
 window#waybar {
-  background: rgba(8, 8, 8, 0.9);
+  background: #000000;
   border-radius: 12px 12px 0 0;
 }
 
@@ -20,6 +20,12 @@ window#waybar {
 #memory,
 #network,
 #wireplumber { color: #9393a2; }
+
+#network,
+#cpu {
+  font-weight: bold;
+  color: #d2d2df;
+}
 
 #workspaces button {
   color: #51505f;
@@ -35,4 +41,4 @@ window#waybar {
 }
 
 #clock.date { color: #9393a2; }
-#clock.time { color: #d2d2df; }
+#clock.time { font-weight: bold; color: #d2d2df; }

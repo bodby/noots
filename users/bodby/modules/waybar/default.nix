@@ -12,7 +12,7 @@ in
     systemd.enable = true;
 
     settings = [{
-      width = 1440;
+      width = 960;
       height = 48;
       position = "bottom";
       exclusive = true;
@@ -38,23 +38,22 @@ in
 
       cpu = {
         interval = 20;
-        format = "<span color='#936df3'>CPU</span> {usage}%";
+        format = "{usage}%";
         tooltip = false;
       };
 
       temperature = {
         interval = 20;
-        format = "<span color='#936df3'>TEMP</span> {temperatureC}°C";
-        critical-threshold = 65;
-        format-critical = "<span color='#936df3'>BOILING</span> {temperatureC}°C";
-        hwmon-path-abs = cfg.hwmonPath;
-        input-filename = cfg.hwmonInputFile;
+        format = "{temperatureC}°C";
+        # critical-threshold = 65;
+        # format-critical = "{temperatureC}°C";
+        hwmon-path = cfg.waybar.cpuTemp;
         tooltip = false;
       };
 
       memory = {
         interval = 20;
-        format = "<span color='#936df3'>RAM</span> {used} GiB";
+        format = "{used} GiB";
         tooltip = false;
       };
 
@@ -73,13 +72,13 @@ in
 
       battery = {
         interval = 180;
-        format = "<span color='#7289fd'>BAT</span> {capacity}%";
-        format-charging = "<span color='#7289fd'>CHARGING</span> {capacity}%";
+        format = "-{capacity}%";
+        format-charging = "+{capacity}%";
         tooltip = false;
       };
 
       wireplumber = {
-        format = "<span color='#7289fd'>VOL</span> {volume}%";
+        format = "{volume}%";
         max-volume = 60;
         scroll-step = 2;
         tooltip = false;
@@ -87,8 +86,9 @@ in
 
       network = {
         interval = 240;
-        format = "<span color='#7289fd'>NET</span> {essid}";
-        format-disconnected = "<span color='#7289fd'>NET</span> down";
+        # format = "{essid}";
+        format = "";
+        format-disconnected = "down";
         tooltip = false;
       };
     }];
