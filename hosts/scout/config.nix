@@ -25,10 +25,11 @@
     creative.enable = false;
     desktop = {
       enable = true;
-      sensitivity = 0.5;
-      libreWolfScaleFactor = "2.4";
-      hwmonPath = "/sys/devices/platform/coretemp.0/hwmon";
-      hwmonInputFile = "temp1_input";
+
+      hyprland.scale = 1.6;
+      hyprland.sensitivity = 0.5;
+
+      waybar.cpuTemp = "/sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input";
     };
   };
 

@@ -17,7 +17,7 @@ in
     settings = {
       monitor = [
         "desc:Samsung Electric Company LC32G7xT HNATC00129, 2560x1440@239.96Hz, 0x0, 1"
-        "desc:VXN VisN236HUZ15 0x199DA69F, preferred, 0x0, 1.6"
+        "desc:VXN VisN236HUZ15 0x199DA69F, preferred, 0x0, ${cfg.hyprland.scale}"
         ", preferred, auto, 1"
       ];
 
@@ -72,7 +72,7 @@ in
         kb_options = "grp:caps_switch";
         repeat_rate = 30;
         repeat_delay = 250;
-        sensitivity = cfg.sensitivity;
+        sensitivity = cfg.hyprland.sensitivity;
         accel_profile = "flat";
         follow_mouse = 2;
 
