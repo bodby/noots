@@ -12,7 +12,9 @@ in
     systemd.enable = true;
 
     settings = [{
-      width = 960;
+      # width = 960;
+      margin-left = 360;
+      margin-right = 360;
       height = 48;
       position = "bottom";
       exclusive = true;
@@ -20,20 +22,19 @@ in
       spacing = 10;
 
       modules-left = [
+        "clock#date"
         "cpu"
         "temperature"
         "memory"
       ];
 
-      modules-center = [
-        "clock#date"
-        "clock#time"
-      ];
+      modules-center = [ "hyprland/workspaces" ];
 
       modules-right = [
         "network"
         "battery"
         "wireplumber"
+        "clock#time"
       ];
 
       cpu = {
@@ -72,6 +73,7 @@ in
 
       battery = {
         interval = 180;
+        # TODO: Add '{time}' and "time-format".
         format = "-{capacity}%";
         format-charging = "+{capacity}%";
         tooltip = false;
@@ -89,6 +91,14 @@ in
         # format = "{essid}";
         format = "";
         format-disconnected = "down";
+        tooltip = false;
+      };
+
+      "hyprland/workspaces" = {
+        format = "{name}";
+        format-icons.default = "◦";
+        format-icons.active = "◉";
+        persistent-workspaces."*" = 5;
         tooltip = false;
       };
     }];

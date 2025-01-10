@@ -11,6 +11,15 @@ window#waybar {
   border-radius: 12px 12px 0 0;
 }
 
+.modules-left,
+.modules-right,
+.modules-center {
+  padding: 0 12px;
+  margin: 6px 0;
+  border: 1px solid #0b0b0d;
+  border-radius: 18px;
+}
+
 .modules-left { margin-left: 24px; }
 .modules-right { margin-right: 24px; }
 
@@ -20,12 +29,6 @@ window#waybar {
 #memory,
 #network,
 #wireplumber { color: #9393a2; }
-
-#wireplumber,
-#cpu {
-  font-weight: bold;
-  color: #d2d2df;
-}
 
 #workspaces button {
   color: #51505f;
@@ -40,5 +43,8 @@ window#waybar {
   font-weight: 900;
 }
 
-#clock.date { color: #9393a2; }
-#clock.time { font-weight: bold; color: #d2d2df; }
+#clock.date,
+#clock.time {
+  color: #d2d2df;
+  font-weight: bold;
+}
