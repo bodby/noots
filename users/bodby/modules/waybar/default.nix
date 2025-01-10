@@ -17,7 +17,7 @@ in
       position = "bottom";
       exclusive = true;
       layer = "top";
-      spacing = 12;
+      spacing = 10;
 
       modules-left = [
         "cpu"
