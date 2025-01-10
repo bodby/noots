@@ -34,7 +34,7 @@ in
       decoration = {
         rounding = 12;
         active_opacity = 1.0;
-        inactive_opacity = 0.9;
+        inactive_opacity = 0.8;
 
         shadow.enabled = false;
         blur = {
