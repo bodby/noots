@@ -68,6 +68,7 @@ with lib;
       xdg.portal = mkIf cfg.desktop.enable {
         enable = true;
         extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+        config.common.default = "hyprland";
         # xdgOpenUsePortal = true;
       };
     };
