@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 let
@@ -63,5 +64,11 @@ with lib;
       };
 
       services.xserver.wacom.enable = mkIf cfg.creative.enable true;
+
+      xdg.portal = mkIf cfg.desktop.enable {
+        enable = true;
+        extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+        # xdgOpenUsePortal = true;
+      };
     };
 }

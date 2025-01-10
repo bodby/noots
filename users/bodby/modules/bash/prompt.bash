@@ -4,20 +4,19 @@ __bash_prompt() {
   local status="$?"
   local first_separator=1
 
-  local user_col='\[\e[0;35m\]'
+  local user_col='\[\e[0;33m\]'
   local dir_col='\[\e[0;34m\]'
   local git_col='\[\e[1;97m\]'
-  local nix_col='\[\e[0;37m\]'
+  local nix_col='\[\e[0;97m\]'
   local diff_col='\[\e[0;37m\]'
   local punc_col='\[\e[0;97m\]'
-  local punc_col2='\[\e[0;37m\]'
-  local err_col='\[\e[0;33m\]'
+  local err_col='\[\e[0;35m\]'
   local reset='\[\e[m\]'
 
-  local separator_a="${punc_col2} :: ${reset}"
-  local separator_b="${punc_col} (${reset}"
-  local separator_c=" "
-  local separator_d="${punc_col})${reset}"
+  local separator_a="${punc_col}::${reset}"
+  local separator_b=" ${reset}"
+  local separator_c=""
+  local separator_d="${reset}"
 
   local user="${user_col}\u${clear}"
 
@@ -69,13 +68,7 @@ __bash_prompt() {
   local nix_shell=""
   # [ -n "$name" ] ||
   if [ -n "$IN_NIX_SHELL" ]; then
-    local prefix="$separator_c"
-
-    if [ "$first_separator" = 1 ]; then
-      prefix="$separator_b"
-      first_separator=0
-    fi
-    nix_shell="${prefix}${nix_col}${IN_NIX_SHELL}${reset}"
+    nix_shell="${nix_col}!${reset}"
   fi
 
   local prompt_status=""
@@ -90,7 +83,7 @@ __bash_prompt() {
     end="${separator_d}"
   fi
 
-  export PS1="${user}${separator_a}${cwd}${git}${nix_shell}${end}\n${prompt_status}${arrow}"
+  export PS1="${user}${separator_a}${cwd}${nix_shell}${git}${end}\n${prompt_status}${arrow}"
 }
 
 export PROMPT_COMMAND='__bash_prompt'
