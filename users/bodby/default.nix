@@ -35,7 +35,7 @@ with lib;
         browserScale = mkOption {
           type = types.float;
           description = "LibreWolf's 'DevPixelsPerPix'";
-          default = 1.0;
+          default = 1.125;
         };
 
         sensitivity = mkOption {
