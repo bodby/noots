@@ -95,7 +95,7 @@ in
       };
 
       "hyprland/workspaces" = {
-        format = "{name}";
+        format = "{icon}";
         format-icons.default = "◦";
         format-icons.active = "◉";
         persistent-workspaces."*" = 5;
