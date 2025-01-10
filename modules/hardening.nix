@@ -16,8 +16,9 @@ in
 with lib;
 {
   options.modules.hardening = {
-    # NOTE: You do have to manually change your kernel to a hardened one.
     enable = mkEnableOption "hardened kernel params";
+
+    kernel.enable = mkEnabledByDefault "hardened kernel patches";
 
     multilib.enable = mkEnableOption "32-bit support";
     bluetooth.enable = mkEnableOption "bluetooth";
