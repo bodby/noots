@@ -72,10 +72,10 @@ in
       };
 
       battery = {
-        interval = 180;
-        # TODO: Add '{time}' and "time-format".
-        format = "-{capacity}%";
-        format-charging = "+{capacity}%";
+        interval = 60;
+        format = "{time} -{capacity}%";
+        format-time = "<span font_weight='bold' color='#d2d2df'>{H}h {m}m</span>";
+        format-charging = "{time} +{capacity}%";
         tooltip = false;
       };
 
