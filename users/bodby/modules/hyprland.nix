@@ -65,7 +65,6 @@ in
 
       "$mod" = "SUPER";
 
-      # TODO: Impure.
       "$grimscr" = "${pkgs.grim}/bin/grim -t png ${dirs.pictures}/screenshots/$(date -dnow +%Y-%m-%d_%H-%M-%S).png";
       "$grimsec" = "${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp)\" -t png ${dirs.pictures}/screenshots/$(date -dnow +%Y-%m-%d_%H-%M-%S).png";
 
@@ -82,6 +81,7 @@ in
           natural_scroll = true;
           scroll_factor = 0.9;
           tap-to-click = true;
+          clickfinger_behavior = true;
         };
       };
 
