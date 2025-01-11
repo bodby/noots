@@ -226,6 +226,8 @@
           install vt8623fb ${binFalse}
           install udlfb ${binFalse}
 
+          install i2c_1801 ${binFalse}
+
           install sctp ${binFalse}
           install sctp_diag ${binFalse}
 
