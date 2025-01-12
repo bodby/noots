@@ -78,8 +78,9 @@
     '';
 
     tmpfiles.settings = {
-      "99-home-mode"."/home/*".Z.mode = "~0700";
-      "99-nixos-mode"."/etc/nixos/*".Z = {
+      # TODO: Does 00 or 99 have a higher precedence?
+      "00-home-mode"."/home/*".Z.mode = "~0700";
+      "00-nixos-mode"."/etc/nixos/*".Z = {
         mode = "0000";
         user = "root";
         group = "root";
