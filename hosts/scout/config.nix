@@ -1,8 +1,6 @@
 {
   config,
-  lib,
   pkgs,
-  inputs,
   ...
 }:
 
@@ -81,7 +79,7 @@
       # NOTE: I love consistency.
       #       tmpfiles(5) takes the earliest alphanumeric character (e.g. 00)
       #       while other services take the latest (e.g. 99)
-      "00-home-mode"."/home/*".Z.mode = "~0700";
+      # "00-home-mode"."/home/*".Z.mode = "~0700";
       "00-nixos-mode"."/etc/nixos/*".Z = {
         mode = "0000";
         user = "root";

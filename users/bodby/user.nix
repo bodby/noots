@@ -45,6 +45,8 @@ with lib;
       ];
 
     isNormalUser = true;
+    createHome = true;
+    homeMode = "700";
     extraGroups = [
       "wheel"
       "audio"

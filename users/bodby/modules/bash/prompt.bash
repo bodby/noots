@@ -13,7 +13,7 @@ __bash_prompt() {
   local err_col='\[\e[0;35m\]'
   local reset='\[\e[m\]'
 
-  local separator_a="${punc_col}::${reset}"
+  local separator_a="${punc_col} : ${reset}"
   local separator_b=" ${reset}"
   local separator_c=""
   local separator_d="${reset}"
