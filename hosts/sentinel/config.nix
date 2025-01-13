@@ -57,7 +57,8 @@
       Storage=none
     '';
     tmpfiles.settings = {
-      "restricthome"."/home/*".Z.mode = lib.mkDefault "~0700";
+      # "restricthome"."/home/*".Z.mode = lib.mkDefault "~0700";
+      # TODO: Rename this.
       "restrictetcnixos"."/etc/nixos/*".Z = {
         mode = lib.mkDefault "0000";
         user = lib.mkDefault "root";
