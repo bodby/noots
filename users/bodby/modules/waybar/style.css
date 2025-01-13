@@ -1,5 +1,4 @@
 * {
-  font-family: "JetBrains Mono";
   font-size: 18px;
   box-shadow: none;
   text-shadow: none;
@@ -16,35 +15,19 @@ window#waybar {
 .modules-center {
   padding: 0 16px;
   margin: 6px 0;
-  border: 1px solid #1a1a20;
   border-radius: 18px;
 }
 
 .modules-left { margin-left: 24px; }
 .modules-right { margin-right: 24px; }
 
-#temperature,
-#cpu,
-#battery,
-#memory,
-#network,
-#wireplumber { color: #9393a2; }
-
 #workspaces button {
-  color: #51505f;
   padding: 0 4px;
   border: none;
   background: none;
 }
 
-#workspaces button:hover { color: #51505f; }
-#workspaces button.active {
-  color: #d2d2df;
-  font-weight: 900;
-}
+#workspaces button.active { font-weight: 900; }
 
 #clock.date,
-#clock.time {
-  color: #d2d2df;
-  font-weight: bold;
-}
+#clock.time { font-weight: bold; }

@@ -6,6 +6,7 @@
 }:
 let
   cfg = config.modules.users.bodby;
+  theme = import ./modules/theme.nix { inherit lib pkgs; };
   # sopsSecrets = config.home-manager.users.bodby.sops.secrets;
 in
 {
@@ -103,19 +104,14 @@ in
     fonts.fontconfig = {
       enable = cfg.desktop.enable;
       defaultFonts = {
-        serif = [ "Ubuntu Sans" ];
-        sansSerif = [ "Ubuntu Sans" ];
-        monospace = [ "JetBrains Mono" ];
+        serif = [ theme.fonts.sans ];
+        sansSerif = [ theme.fonts.sans ];
+        monospace = [ theme.fonts.monospace ];
       };
     };
 
     home = {
-      packages = with pkgs; [
-        # inputs.iosevka-custom.packages.${system}.default
-        ubuntu-sans
-        jetbrains-mono
-      ];
-
+      packages = theme.fonts.packages;
       pointerCursor = {
         gtk.enable = cfg.desktop.enable;
         x11.enable = cfg.desktop.enable;

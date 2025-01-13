@@ -1,15 +1,35 @@
 {
   config,
+  lib,
+  pkgs,
   ...
 }:
 let
   cfg = config.modules.users.bodby.desktop;
+  theme = import ../theme.nix { inherit lib pkgs; };
 in
 {
   home-manager.users.bodby.programs.waybar = {
     enable = cfg.enable;
-    style = ./style.css;
     systemd.enable = true;
+
+    style = (builtins.readFile ./style.css)
+      + /* css */ ''
+        * { font-family: ${theme.fonts.monospace}; }
+
+        .modules-left, .modules-right, .modules-center {
+          border: 1px solid #${theme.palette.border};
+        }
+
+        #temperature, #cpu, #battery, #memory, #network, #wireplumber {
+          color: #${theme.palette.base08};
+        }
+
+        #workspaces button { color: #${theme.palette.base09}; }
+        #workspaces button:hover { color: #${theme.palette.base08}; }
+        #workspaces button.active { color: #${theme.palette.base16}; }
+        #clock.date, #clock.time { color: #${theme.palette.base16}; }
+      '';
 
     settings = [{
       # width = 960;
@@ -74,7 +94,7 @@ in
       battery = {
         interval = 60;
         format = "{time}-{capacity}%";
-        format-time = "<span font_weight='bold' color='#d2d2df'>{H}h {m}m</span> ";
+        format-time = "<span font_weight='bold' color='#${theme.palette.base16}'>{H}h {m}m</span> ";
         format-charging = "{time} +{capacity}%";
         tooltip = false;
       };

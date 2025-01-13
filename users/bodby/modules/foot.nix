@@ -1,9 +1,12 @@
 {
   config,
+  lib,
+  pkgs,
   ...
 }:
 let
   cfg = config.modules.users.bodby.desktop;
+  theme = import ./theme.nix{ inherit lib pkgs; };
 in
 {
   home-manager.users.bodby.programs.foot = {
@@ -15,7 +18,7 @@ in
 
       main = {
         shell = "bash";
-        font = "JetBrains Mono:pixelsize=18:fontfeatures=cv06";
+        font = "${theme.fonts.monospace}:pixelsize=18:fontfeatures=cv06";
         line-height = "27px";
         font-size-adjustment = "1px";
         pad = "24x24 center";
@@ -29,29 +32,28 @@ in
 
       colors = {
         alpha = 0.95;
-        foreground = "d2d2df";
-        background = "080808";
+        foreground = theme.palette.base16;
+        background = theme.palette.bg;
 
-        regular0 = "2b2b32";
-        regular1 = "d16556";
-        regular2 = "44ae6e";
-        regular3 = "d79b48";
-        regular4 = "7289fd";
-        regular5 = "936df3";
-        regular6 = "82cfff";
-        regular7 = "9393a2";
+        regular0 = theme.palette.base01;
+        regular1 = theme.palette.base02;
+        regular2 = theme.palette.base03;
+        regular3 = theme.palette.base04;
+        regular4 = theme.palette.base05;
+        regular5 = theme.palette.base06;
+        regular6 = theme.palette.base07;
+        regular7 = theme.palette.base08;
+        bright0 = theme.palette.base09;
+        bright1 = theme.palette.base10;
+        bright2 = theme.palette.base11;
+        bright3 = theme.palette.base12;
+        bright4 = theme.palette.base13;
+        bright5 = theme.palette.base14;
+        bright6 = theme.palette.base15;
+        bright7 = theme.palette.base16;
 
-        bright0 = "51505f";
-        bright1 = "d16556";
-        bright2 = "44ae6e";
-        bright3 = "edb15b";
-        bright4 = "8b9efd";
-        bright5 = "b294ff";
-        bright6 = "82cfff";
-        bright7 = "d2d2df";
-
-        selection-foreground = "d2d2df";
-        selection-background = "1e1e24";
+        selection-foreground = theme.palette.base16;
+        selection-background = theme.palette.border;
       };
 
       key-bindings = {
