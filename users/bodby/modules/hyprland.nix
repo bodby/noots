@@ -50,10 +50,10 @@ in
           xray = true;
         };
 
-        layerrule = [
-          "blur, waybar"
-          "ignorezero, waybar"
-        ];
+        # layerrule = [
+        #   "blur, waybar"
+        #   "ignorezero, waybar"
+        # ];
       };
 
       plugin.scroller = {
