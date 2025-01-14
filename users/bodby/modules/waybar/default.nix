@@ -17,6 +17,8 @@ in
       + /* css */ ''
         * { font-family: ${theme.fonts.monospace}; }
 
+        window#waybar { background: #${theme.palette.bg}; }
+
         .modules-left, .modules-right, .modules-center {
           border: 1px solid #${theme.palette.border};
         }
