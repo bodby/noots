@@ -53,7 +53,7 @@ in
         bright7 = theme.palette.base16;
 
         selection-foreground = theme.palette.base16;
-        selection-background = theme.palette.border;
+        selection-background = theme.palette.base01;
       };
 
       key-bindings = {

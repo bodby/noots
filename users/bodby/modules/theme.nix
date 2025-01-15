@@ -15,7 +15,6 @@
 
   palette = {
     bg = "000000";
-    border = "1c1c21";
 
     # TODO: Actual colors.
     base01 = "1c1c21";
@@ -26,7 +25,7 @@
     base06 = "936df3";
     base07 = "82cfff";
     base08 = "8f8f9d";
-    base09 = "29292d";
+    base09 = "52525d";
     base10 = "d16556";
     base11 = "44ae6e";
     base12 = "edb15b";

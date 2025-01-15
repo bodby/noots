@@ -15,9 +15,9 @@
       hl = "bright-black:bold";
       selected-hl = "white:bold";
       # TODO: Where are these applied?
-      # current-fg = "red:bold";
-      # current-bg = "red:bold";
-      # current-hl = "red:bold";
+      current-fg = "bright-white:bold";
+      current-bg = "-1";
+      current-hl = "bright-white:bold";
       query = "white";
       disabled = "bright-black";
       border = "black";
@@ -33,6 +33,7 @@
       "--wrap"
       "--no-mouse"
       "--no-info"
+      "--no-scrollbar"
 
       "--no-multi-line"
       "--layout=default"
@@ -50,7 +51,7 @@
       "--ellipsis=''"
 
       "--height=32"
-      "--scroll-off=8"
+      "--scroll-off=0"
     ];
   };
 }
