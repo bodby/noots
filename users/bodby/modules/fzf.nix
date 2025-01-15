@@ -8,21 +8,49 @@
     enableZshIntegration = false;
 
     colors = {
-      fg = "-1";
+      fg = "bright-black";
+      selected-fg = "bright-white:bold";
       bg = "-1";
-      hl = "white:bold";
+      selected-bg = "-1";
+      hl = "bright-black:bold";
+      selected-hl = "white:bold";
+      # TODO: Where are these applied?
+      current-fg = "red:bold";
+      current-bg = "red:bold";
+      current-hl = "red:bold";
+      query = "white";
+      disabled = "bright-black";
+      border = "black";
+      separator = "black";
+      marker = "white";
+      # TODO: Does this work?
+      spinner = "-1";
     };
 
     defaultOptions = [
       "--multi"
-      "--layout=reverse"
-      "--height=16"
+      "--cycle"
+      "--wrap"
       "--no-mouse"
+      "--no-info"
+
+      "--no-multi-line"
+      "--layout=default"
+      "--padding=1"
+      "--tabstop=4"
+
       "--border=rounded"
-      "--no-unicode"
-      # "--info=hidden"
+      "--wrap-sign='+'"
+      "--separator='─"
+      "--prompt=''"
+      "--pointer=''"
+      "--marker='+'"
+      # TODO: This.
+      "--marker-multi-line='+++'"
+      "--ellipsis=''"
+
+      "--height=32"
       "--scroll-off=8"
-      "--separator="
     ];
   };
 }
