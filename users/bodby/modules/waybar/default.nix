@@ -37,7 +37,7 @@ in
       # width = 960;
       margin-left = 360;
       margin-right = 360;
-      height = 48;
+      height = 56;
       position = "bottom";
       exclusive = true;
       layer = "top";
