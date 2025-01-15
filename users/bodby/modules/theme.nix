@@ -16,7 +16,7 @@
   palette = {
     bg = "000000";
     bgAlt = "0d0d0f";
-    border = "1a1a20";
+    border = "1c1c22";
 
     base01 = "22222a";
     base02 = "d16556";
