@@ -9,5 +9,6 @@
     ./hyprland.nix
     ./iamb.nix
     ./cabal.nix
+    ./fzf.nix
   ];
 }
