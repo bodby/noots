@@ -20,7 +20,7 @@ in
         window#waybar { background: #${theme.palette.bg}; }
 
         .modules-left, .modules-right, .modules-center {
-          border: 1px solid #${theme.palette.border};
+          border: 2px solid #${theme.palette.border};
         }
 
         #temperature, #cpu, #battery, #memory, #network, #wireplumber {

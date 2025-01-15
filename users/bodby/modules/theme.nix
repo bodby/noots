@@ -15,25 +15,25 @@
 
   palette = {
     bg = "000000";
-    bgAlt = "0d0d0f";
-    border = "1c1c22";
+    border = "1c1c21";
 
-    base01 = "22222a";
+    # TODO: Actual colors.
+    base01 = "29292d";
     base02 = "d16556";
     base03 = "44ae6e";
     base04 = "d79b48";
     base05 = "7289fd";
     base06 = "936df3";
     base07 = "82cfff";
-    base08 = "9393a2";
-    base09 = "51505f";
+    base08 = "8f8f9d";
+    base09 = "52525d";
     base10 = "d16556";
     base11 = "44ae6e";
     base12 = "edb15b";
     base13 = "8b9efd";
     base14 = "b294ff";
     base15 = "82cfff";
-    base16 = "d2d2df";
+    base16 = "d2d2e0";
   };
 
   hexToRgb =
