@@ -41,7 +41,7 @@
 
       "--border=rounded"
       "--wrap-sign='+'"
-      "--separator='─"
+      "--separator='─'"
       "--prompt=''"
       "--pointer=''"
       "--marker='+'"
