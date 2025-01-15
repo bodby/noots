@@ -18,7 +18,7 @@
     border = "1c1c21";
 
     # TODO: Actual colors.
-    base01 = "29292d";
+    base01 = "1c1c21";
     base02 = "d16556";
     base03 = "44ae6e";
     base04 = "d79b48";
@@ -26,7 +26,7 @@
     base06 = "936df3";
     base07 = "82cfff";
     base08 = "8f8f9d";
-    base09 = "52525d";
+    base09 = "29292d";
     base10 = "d16556";
     base11 = "44ae6e";
     base12 = "edb15b";

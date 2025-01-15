@@ -15,16 +15,16 @@
       hl = "bright-black:bold";
       selected-hl = "white:bold";
       # TODO: Where are these applied?
-      current-fg = "red:bold";
-      current-bg = "red:bold";
-      current-hl = "red:bold";
+      # current-fg = "red:bold";
+      # current-bg = "red:bold";
+      # current-hl = "red:bold";
       query = "white";
       disabled = "bright-black";
       border = "black";
       separator = "black";
       marker = "white";
       # TODO: Does this work?
-      spinner = "-1";
+      # spinner = "-1";
     };
 
     defaultOptions = [
