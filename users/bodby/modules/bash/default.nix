@@ -22,10 +22,9 @@
       };
     };
 
+    # NOTE: FZF Bash integration breaks this.
     readline = {
       enable = true;
-      includeSystemConfig = false;
-
       bindings = {
         "\\C-p" = "history-search-backward";
         "\\C-n" = "history-search-forward";

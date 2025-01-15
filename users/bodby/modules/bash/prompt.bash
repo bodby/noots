@@ -1,6 +1,3 @@
-# https://apple.stackexchange.com/questions/397224/bash-does-not-honor-inputrc
-bind -f ~/.inputrc
-
 set -o vi
 
 __bash_prompt() {
