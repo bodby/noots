@@ -6,7 +6,7 @@
 }:
 let
   cfg = config.modules.users.bodby.desktop;
-  theme = import ./theme.nix{ inherit lib pkgs; };
+  theme = import ./theme.nix { inherit lib pkgs; };
 in
 {
   home-manager.users.bodby.programs.foot = {

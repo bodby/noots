@@ -1,5 +1,5 @@
 {
-  programs.fzf = {
+  home-manager.users.bodby.programs.fzf = {
     enable = true;
 
     colors = {
