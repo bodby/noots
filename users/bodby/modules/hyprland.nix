@@ -68,7 +68,7 @@ in
         };
         borders-plus-plus = {
           add_borders = 1;
-          "col.border1" = "rgb(eeeeff)";
+          "col.border_1" = "rgba(eeeeff40)";
           border_size_1 = 1;
           natural_rounding = false;
         };
