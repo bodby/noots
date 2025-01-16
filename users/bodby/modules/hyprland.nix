@@ -31,7 +31,7 @@ in
         no_focus_fallback = true;
         gaps_in = 4;
         gaps_out = 24;
-        border_size = -2;
+        border_size = -4;
       };
 
       decoration = {
@@ -68,7 +68,7 @@ in
         };
         borders-plus-plus = {
           add_borders = 1;
-          "col.border_1" = "rgba(eeeeff20)";
+          "col.border_1" = "rgba(eeeeff1e)";
           border_size_1 = 1;
           natural_rounding = true;
         };
