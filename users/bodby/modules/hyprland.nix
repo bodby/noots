@@ -31,7 +31,7 @@ in
         no_focus_fallback = true;
         gaps_in = 4;
         gaps_out = 24;
-        border_size = -2;
+        border_size = -3;
       };
 
       decoration = {
