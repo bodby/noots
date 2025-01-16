@@ -51,6 +51,7 @@ in
           vibrancy = 2.0;
           special = false;
           xray = true;
+          popups = false;
         };
 
         # layerrule = [
