@@ -16,8 +16,8 @@
   palette = {
     bg = "000000";
 
-    # TODO: Actual colors.
-    base01 = "29292d";
+    # TODO: Actual ANSI colors (not grays).
+    base01 = "242429";
     base02 = "d16556";
     base03 = "44ae6e";
     base04 = "d79b48";
