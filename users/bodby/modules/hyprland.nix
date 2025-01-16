@@ -68,9 +68,9 @@ in
         };
         borders-plus-plus = {
           add_borders = 1;
-          "col.border_1" = "rgba(eeeeff40)";
+          "col.border_1" = "rgba(eeeeff20)";
           border_size_1 = 1;
-          natural_rounding = false;
+          natural_rounding = true;
         };
       };
 
