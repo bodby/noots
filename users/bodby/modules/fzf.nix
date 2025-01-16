@@ -40,6 +40,8 @@
       "--padding=0"
       "--tabstop=4"
 
+      # "--border-label='fzf'"
+      # "--border-label-pos=2"
       "--border=rounded"
       "--wrap-sign='+'"
       "--separator='─'"

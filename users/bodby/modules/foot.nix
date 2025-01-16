@@ -19,7 +19,9 @@ in
       main = {
         shell = "bash";
         font = "${theme.fonts.monospace}:pixelsize=18:fontfeatures=cv06";
-        line-height = "27px";
+        underline-thickness = "1px";
+        strikeout-thickness = "1px";
+        line-height = "28px";
         font-size-adjustment = "1px";
         pad = "24x24 center";
       };
