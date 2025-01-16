@@ -12,7 +12,10 @@ in
   home-manager.users.bodby.wayland.windowManager.hyprland = {
     enable = cfg.enable;
     xwayland.enable = cfg.enable;
-    plugins = with pkgs.hyprlandPlugins; [ hyprscroller ];
+    plugins = with pkgs.hyprlandPlugins; [
+      hyprscroller
+      borders-plus-plus
+    ];
 
     settings = {
       monitor = [
@@ -28,7 +31,7 @@ in
         no_focus_fallback = true;
         gaps_in = 4;
         gaps_out = 24;
-        border_size = 0;
+        border_size = -1;
       };
 
       decoration = {
@@ -56,11 +59,19 @@ in
         # ];
       };
 
-      plugin.scroller = {
-        column_default_width = "twothirds";
-        focus_wrap = false;
-        center_row_if_space_available = true;
-        column_widths = "onethird onehalf twothirds one";
+      plugin = {
+        scroller = {
+          column_default_width = "twothirds";
+          focus_wrap = false;
+          center_row_if_space_available = true;
+          column_widths = "onethird onehalf twothirds one";
+        };
+        borders-plus-plus = {
+          add_borders = 1;
+          "col.border1" = "rgb(eeeeff)";
+          border_size_1 = 1;
+          natural_rounding = false;
+        };
       };
 
       "$mod" = "SUPER";
