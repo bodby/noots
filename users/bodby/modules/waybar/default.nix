@@ -118,7 +118,7 @@ in
 
       "hyprland/workspaces" = {
         format = "{icon}";
-        format-icons.default = "⚬︎";
+        format-icons.default = "•";
         format-icons.active = "◉";
         persistent-workspaces."*" = 5;
         tooltip = false;
