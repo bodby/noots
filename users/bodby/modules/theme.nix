@@ -17,15 +17,15 @@
     bg = "000000";
 
     # TODO: Actual colors.
-    base01 = "1c1c21";
+    base01 = "29292d";
     base02 = "d16556";
     base03 = "44ae6e";
     base04 = "d79b48";
     base05 = "7289fd";
     base06 = "936df3";
     base07 = "82cfff";
-    base08 = "9999a8";
-    base09 = "52525d";
+    base08 = "9999a4";
+    base09 = "52525a";
     base10 = "d16556";
     base11 = "44ae6e";
     base12 = "edb15b";
