@@ -146,9 +146,9 @@
   xdg = {
     autostart.enable = false;
     sounds.enable = false;
-    icons.enable = false;
-    mime.enable = false;
-    menus.enable = false;
+    # icons.enable = false;
+    # mime.enable = false;
+    # menus.enable = false;
   };
 
   environment = {
