@@ -20,7 +20,7 @@ in
         window#waybar { background: #${theme.palette.bg}; }
 
         .modules-left, .modules-right, .modules-center {
-          border: ${cfg.hyprland.border.size}px solid #${theme.palette.base01};
+          border: ${builtins.toString cfg.hyprland.border.size}px solid #${theme.palette.base01};
         }
 
         #temperature, #cpu, #battery, #memory, #network, #wireplumber {
