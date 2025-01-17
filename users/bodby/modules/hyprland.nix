@@ -39,14 +39,7 @@ in
         active_opacity = 1.0;
         inactive_opacity = 0.85;
 
-        shadow = {
-          enabled = true;
-          range = 2;
-          render_power = 3;
-          ignore_window = true;
-          color = "rgba(00000040)";
-        };
-
+        shadow.enabled = false;
         blur = {
           enabled = true;
           size = 12;
@@ -75,10 +68,12 @@ in
           column_widths = "onethird onehalf twothirds one";
         };
         borders-plus-plus = {
-          add_borders = 1;
-          "col.border_1" = "rgba(eeeeff1e)";
+          add_borders = 2;
+          "col.border_1" = "rgba(efefff20)";
+          "col.border_2" = "rgba(00000060)";
           border_size_1 = cfg.hyprland.border.size;
-          natural_rounding = true;
+          border_size_2 = (cfg.hyprland.border.spacing - cfg.hyprland.border.size + 1);
+          natural_rounding = false;
         };
       };
 
@@ -163,15 +158,15 @@ in
 
       # Move floating windows.
       binde = [
-        "$mod, left, moveactive, -16 0, active"
-        "$mod, right, moveactive, 16 0, active"
-        "$mod, up, moveactive, 0 -16, active"
-        "$mod, down, moveactive, 0 16, active"
+        "$mod, left, moveactive, -16 0"
+        "$mod, right, moveactive, 16 0"
+        "$mod, up, moveactive, 0 -16"
+        "$mod, down, moveactive, 0 16"
 
-        "$mod SHIFT, left, resizeactive, -16 0, active"
-        "$mod SHIFT, right, resizeactive, 16 0, active"
-        "$mod SHIFT, up, resizeactive, 0 -16, active"
-        "$mod SHIFT, down, resizeactive, 0 16, active"
+        "$mod SHIFT, left, resizeactive, -16 0"
+        "$mod SHIFT, right, resizeactive, 16 0"
+        "$mod SHIFT, up, resizeactive, 0 -16"
+        "$mod SHIFT, down, resizeactive, 0 16"
       ];
 
       bindm = [
@@ -190,6 +185,7 @@ in
         "suppressevent maximize, class:.*"
         "rounding 0, class:^(steam)$"
         "noshadow on, class:^(steam)$"
+        "noblur on, floating:1"
         "workspace 4 silent, class:^(steam)$"
         "workspace 3 silent, class:^(WebCord)$"
       ];

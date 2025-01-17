@@ -31,8 +31,8 @@
         browserScale = 2.25;
         sensitivity = 0.5;
         border = {
-          spacing = 1;
-          size = 1;
+          spacing = 3;
+          size = 2;
           radius = 16;
         };
       };
