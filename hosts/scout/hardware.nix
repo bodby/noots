@@ -21,6 +21,9 @@
       };
     };
 
+    # https://nixos.wiki/wiki/NixOS_Containers
+    enableContainers = false;
+
     initrd = {
       availableKernelModules = [
         "xhci_pci"
@@ -39,16 +42,21 @@
     # Very happy to see my system working the exact same as before.
     kernel.sysctl = {
       "fs.binfmt_misc.status" = 0;
-      "kernel.kptr_restrict" = 1;
+      "kernel.kptr_restrict" = 2;
       "kernel.dmesg_restrict" = 1;
       "kernel.printk" = "3 3 3 3";
+      # Disable core dumps. These are so annoying.
+      "kernel.core_pattern" = "|/bin/false";
+      "fs.suid_dumpable" = 0;
       "kernel.unprivileged_bpf_disabled" = 1;
-      "net.core.bpf_jit_harden" = 2;
+      # "net.core.bpf_jit_harden" = 2;
+      "net.core.bpf_jit_enable" = 0;
       "dev.tty.ldisc_autoload" = 0;
       "vm.unprivileged_userfaultfd" = 0;
       # Lowest this should go is 1. Default is 60.
       "vm.swappiness" = 10;
       "kernel.kexec_load_disabled" = 1;
+      "kernel.ftrace_enabled" = 0;
       # Or 4 if you want this enabled.
       "kernel.sysrq" = 0;
       # TODO: Get AppArmor to enable namespaces only for LibreWolf.
@@ -73,6 +81,8 @@
       "net.ipv4.conf.all.send_redirects" = 0;
       "net.ipv4.conf.default.send_redirects" = 0;
       "net.ipv4.icmp_echo_ignore_all" = 1;
+      # FIXME: Is 'ignore_broadcasts' necessary when I have the above?
+      "net.ipv4.icmp_echo_ignore_broadcasts" = 1;
       "net.ipv4.conf.all.accept_source_route" = 0;
       "net.ipv4.conf.default.accept_source_route" = 0;
       "net.ipv6.conf.all.accept_source_route" = 0;
@@ -81,6 +91,8 @@
       "net.ipv6.conf.default.accept_ra" = 0;
       "net.ipv6.conf.all.use_tempaddr" = lib.mkForce 2;
       "net.ipv6.conf.default.use_tempaddr" = lib.mkForce 2;
+      "net.ipv4.conf.all.log_martians" = 1;
+      "net.ipv4.conf.default.log_martians" = 1;
       # ??
       "net.ipv4.tcp_sack" = 0;
       "net.ipv4.tcp_dsack" = 0;
@@ -107,6 +119,7 @@
       # Apparently this improves allocation performance?
       "page_alloc.shuffle=1"
       "page_poison=1"
+      "slab_nomerge"
       "pti=on"
       "randomize_kstack_offset=on"
       "vsyscalls=none"
@@ -237,6 +250,7 @@
   services = {
     xserver.videoDrivers = [ "modesetting" ];
     printing.enable = false;
+    udisks2.enable = false;
   };
 
   hardware = {

@@ -43,6 +43,12 @@ with lib;
           type = types.float;
           default = -0.2;
         };
+
+        borderSpacing = mkOptiton {
+          type = types.int;
+          description = "How far inside the border should be";
+          default = 2;
+        };
       };
 
       waybar.cpuTemp = mkOption {

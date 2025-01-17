@@ -30,6 +30,7 @@
         scale = 1.6;
         browserScale = 2.25;
         sensitivity = 0.5;
+        borderSpacing = 4;
       };
 
       waybar.cpuTemp = "/sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input";
@@ -66,9 +67,12 @@
 
     rtkit.enable = config.services.pipewire.enable;
 
-    # TODO: Actually setup policies and get LibreWolf sandboxing working again.
+    # TODO: vvv
     apparmor.enable = true;
     apparmor.killUnconfinedConfinables = true;
+
+    lockKernelModules = true;
+    protectKernelImage = true;
   };
 
   systemd = {
@@ -131,6 +135,16 @@
       hostNames = [ "github.com" ];
       publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl";
     };
+
+    less.lessopen = null;
+  };
+
+  xdg = {
+    autostart.enable = false;
+    sounds.enable = false;
+    icons.enable = false;
+    mime.enable = false;
+    menus.enable = false;
   };
 
   environment = {
@@ -141,8 +155,19 @@
       fix-laptop-speakers
     ];
 
+    defaultPackages = with pkgs; [
+      rsync
+      strace
+    ];
+
     homeBinInPath = false;
     variables.NIX_SHELL_PRESERVE_PROMPT = 1;
+
+    # TODO: Or try 'graphene-hardened-light'.
+    memoryAllocator.provider = "graphene-hardened";
+
+    # TODO: Should I disable this?
+    stub-ld.enable = false;
 
     etc = {
       machine-id.text = "b08dfa6083e7567a1921a715000001fb";
@@ -298,13 +323,29 @@
           # TODO: Maybe don't remove hfs?
           install hfs ${binFalse}
           install hfsplus ${binFalse}
+          install hpfs ${binFalse}
           install jffs2 ${binFalse}
           install jfs ${binFalse}
           install reiserfs ${binFalse}
           install udf ${binFalse}
+          install adfs ${binFalse}
+          install affs ${binFalse}
+          install bfs ${binFalse}
+          install befs ${binFalse}
+          install efs ${binFalse}
+          install erofs ${binFalse}
+          install exofs ${binFalse}
+          install f2fs ${binFalse}
+          install minix ${binFalse}
+          install nilfs2 ${binFalse}
+          # TODO: Should I disable NTFS?
+          install ntfs ${binFalse}
+          install omfs ${binFalse}
+          install qnx4 ${binFalse}
+          install qnx6 ${binFalse}
+          install sysv ${binFalse}
+          install ufs ${binFalse}
 
-          # Python kernel module.
-          # ??????
           install pmt_class ${binFalse}
           install pmt_crashlog ${binFalse}
           install pmt_telemetry ${binFalse}
