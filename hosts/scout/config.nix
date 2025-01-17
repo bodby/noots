@@ -168,7 +168,7 @@
     variables.NIX_SHELL_PRESERVE_PROMPT = 1;
 
     # TODO: Or try 'graphene-hardened-light'. I think this breaks LW.
-    memoryAllocator.provider = "graphene-hardened";
+    # memoryAllocator.provider = "graphene-hardened";
 
     # TODO: Should I disable this?
     stub-ld.enable = false;
