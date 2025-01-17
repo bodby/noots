@@ -44,7 +44,7 @@ with lib;
           default = -0.2;
         };
 
-        borderSpacing = mkOptiton {
+        borderSpacing = mkOption {
           type = types.int;
           description = "How far inside the border should be";
           default = 2;
