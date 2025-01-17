@@ -49,8 +49,8 @@
       "kernel.core_pattern" = "|/bin/false";
       "fs.suid_dumpable" = 0;
       "kernel.unprivileged_bpf_disabled" = 1;
-      # "net.core.bpf_jit_harden" = 2;
-      "net.core.bpf_jit_enable" = 0;
+      "net.core.bpf_jit_harden" = 2;
+      # "net.core.bpf_jit_enable" = 0;
       "dev.tty.ldisc_autoload" = 0;
       "vm.unprivileged_userfaultfd" = 0;
       # Lowest this should go is 1. Default is 60.

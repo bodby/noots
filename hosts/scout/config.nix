@@ -144,7 +144,7 @@
   };
 
   xdg = {
-    autostart.enable = false;
+    # autostart.enable = false;
     sounds.enable = false;
     # icons.enable = false;
     # mime.enable = false;
@@ -167,8 +167,8 @@
     homeBinInPath = false;
     variables.NIX_SHELL_PRESERVE_PROMPT = 1;
 
-    # NOTE: I think the not '-light' variant breaks LW.
-    memoryAllocator.provider = "graphene-hardened-light";
+    # TODO: Or try 'graphene-hardened-light'. I think this breaks LW.
+    memoryAllocator.provider = "graphene-hardened";
 
     # TODO: Should I disable this?
     stub-ld.enable = false;
