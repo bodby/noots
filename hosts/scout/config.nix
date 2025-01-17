@@ -167,8 +167,8 @@
     homeBinInPath = false;
     variables.NIX_SHELL_PRESERVE_PROMPT = 1;
 
-    # TODO: Or try 'graphene-hardened-light'.
-    memoryAllocator.provider = "graphene-hardened";
+    # NOTE: I think the not '-light' variant breaks LW.
+    memoryAllocator.provider = "graphene-hardened-light";
 
     # TODO: Should I disable this?
     stub-ld.enable = false;
