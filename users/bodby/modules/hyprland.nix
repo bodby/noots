@@ -7,7 +7,6 @@
 let
   cfg = config.modules.users.bodby.desktop;
   dirs = config.home-manager.users.bodby.xdg.userDirs;
-  theme = import ./theme.nix { inherit lib pkgs; };
 in
 {
   home-manager.users.bodby.wayland.windowManager.hyprland = {
@@ -40,7 +39,14 @@ in
         active_opacity = 1.0;
         inactive_opacity = 0.85;
 
-        shadow.enabled = false;
+        shadow = {
+          enabled = true;
+          range = 2;
+          render_power = 3;
+          ignore_window = true;
+          color = "rgba(00000040)";
+        };
+
         blur = {
           enabled = true;
           size = 12;
@@ -67,12 +73,6 @@ in
           focus_wrap = false;
           center_row_if_space_available = true;
           column_widths = "onethird onehalf twothirds one";
-
-          jump_labels_font = theme.fonts.monospace + " Bold";
-          jump_labels_color = "rgb(d2d2e0)";
-          jump_labels_scale = 0.2;
-          # Taken from Vimium.
-          jump_labels_keys = "sadfjklewcmpgh";
         };
         borders-plus-plus = {
           add_borders = 1;
@@ -148,8 +148,6 @@ in
 
         "$mod, U, workspace, e-1"
         "$mod, D, workspace, e+1"
-
-        "$mod, N, scroller:jump"
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"

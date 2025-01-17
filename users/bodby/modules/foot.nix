@@ -33,7 +33,7 @@ in
       };
 
       colors = {
-        alpha = 0.9;
+        alpha = 0.85;
         foreground = theme.palette.base16;
         background = theme.palette.bg;
 
