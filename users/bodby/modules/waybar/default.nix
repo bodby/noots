@@ -67,9 +67,9 @@ in
 
       temperature = {
         interval = 20;
-        format = "{temperatureC}C";
+        format = "{temperatureC}° C";
         # critical-threshold = 65;
-        # format-critical = "{temperatureC}°C";
+        # format-critical = "{temperatureC}° C";
         hwmon-path = cfg.waybar.cpuTemp;
         tooltip = false;
       };
