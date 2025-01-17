@@ -7,6 +7,7 @@
 let
   cfg = config.modules.users.bodby.desktop;
   dirs = config.home-manager.users.bodby.xdg.userDirs;
+  theme = import ./theme.nix { inherit lib pkgs; };
 in
 {
   home-manager.users.bodby.wayland.windowManager.hyprland = {
@@ -66,6 +67,12 @@ in
           focus_wrap = false;
           center_row_if_space_available = true;
           column_widths = "onethird onehalf twothirds one";
+
+          jump_labels_font = theme.fonts.monospace + " Bold";
+          jump_labels_color = "rgb(d2d2e0)";
+          jump_labels_scale = 0.2;
+          # Taken from Vimium.
+          jump_labels_keys = "sadfjklewcmpgh";
         };
         borders-plus-plus = {
           add_borders = 1;
@@ -142,6 +149,8 @@ in
         "$mod, U, workspace, e-1"
         "$mod, D, workspace, e+1"
 
+        "$mod, N, scroller:jump"
+
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
         "$mod, 3, workspace, 3"
@@ -156,15 +165,15 @@ in
 
       # Move floating windows.
       binde = [
-        "$mod, left, movewindowpixel, -16 0, active"
-        "$mod, right, movewindowpixel, 16 0, active"
-        "$mod, up, movewindowpixel, 0 -16, active"
-        "$mod, down, movewindowpixel, 0 16, active"
+        "$mod, left, moveactive, -16 0, active"
+        "$mod, right, moveactive, 16 0, active"
+        "$mod, up, moveactive, 0 -16, active"
+        "$mod, down, moveactive, 0 16, active"
 
-        "$mod SHIFT, left, resizewindowpixel, -16 0, active"
-        "$mod SHIFT, right, resizewindowpixel, 16 0, active"
-        "$mod SHIFT, up, resizewindowpixel, 0 -16, active"
-        "$mod SHIFT, down, resizewindowpixel, 0 16, active"
+        "$mod SHIFT, left, resizeactive, -16 0, active"
+        "$mod SHIFT, right, resizeactive, 16 0, active"
+        "$mod SHIFT, up, resizeactive, 0 -16, active"
+        "$mod SHIFT, down, resizeactive, 0 16, active"
       ];
 
       bindm = [
