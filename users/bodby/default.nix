@@ -44,10 +44,22 @@ with lib;
           default = -0.2;
         };
 
-        borderSpacing = mkOption {
-          type = types.int;
-          description = "How far inside the border should be";
-          default = 2;
+        border = {
+          spacing = mkOption {
+            type = types.int;
+            description = "How far inside the border should be";
+            default = 2;
+          };
+          size = mkOption {
+            type = types.int;
+            description = "How thick the border is";
+            default = 1;
+          };
+          radius = mkOption {
+            type = types.int;
+            description = "Border rounding";
+            default = 12;
+          };
         };
       };
 

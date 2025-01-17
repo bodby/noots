@@ -30,7 +30,11 @@
         scale = 1.6;
         browserScale = 2.25;
         sensitivity = 0.5;
-        borderSpacing = 4;
+        border = {
+          spacing = 4;
+          size = 2;
+          radius = 16;
+        };
       };
 
       waybar.cpuTemp = "/sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input";

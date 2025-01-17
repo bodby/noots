@@ -29,13 +29,13 @@ in
       general = {
         layout = "scroller";
         no_focus_fallback = true;
-        gaps_in = 4;
-        gaps_out = 24;
-        border_size = -cfg.hyprland.borderSpacing;
+        gaps_in = (4 + cfg.hyprland.border.spacing);
+        gaps_out = (24 + cfg.hyprland.border.spacing);
+        border_size = -cfg.hyprland.border.spacing;
       };
 
       decoration = {
-        rounding = 12;
+        rounding = cfg.hyprland.border.radius;
         active_opacity = 1.0;
         inactive_opacity = 0.85;
 
@@ -70,7 +70,7 @@ in
         borders-plus-plus = {
           add_borders = 1;
           "col.border_1" = "rgba(eeeeff1e)";
-          border_size_1 = 1;
+          border_size_1 = cfg.hyprland.border.size;
           natural_rounding = true;
         };
       };
@@ -152,6 +152,19 @@ in
         "$mod SHIFT, 3, movetoworkspace, 3"
         "$mod SHIFT, 4, movetoworkspace, 4"
         "$mod SHIFT, 5, movetoworkspace, 5"
+      ];
+
+      # Move floating windows.
+      binde = [
+        "$mod, left, movewindowpixel, -16 0, active"
+        "$mod, right, movewindowpixel, 16 0, active"
+        "$mod, up, movewindowpixel, 0 -16, active"
+        "$mod, down, movewindowpixel, 0 16, active"
+
+        "$mod SHIFT, left, resizewindowpixel, -16 0, active"
+        "$mod SHIFT, right, resizewindowpixel, 16 0, active"
+        "$mod SHIFT, up, resizewindowpixel, 0 -16, active"
+        "$mod SHIFT, down, resizewindowpixel, 0 16, active"
       ];
 
       bindm = [
