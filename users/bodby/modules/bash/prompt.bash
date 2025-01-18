@@ -7,7 +7,7 @@ __bash_prompt() {
   local user_col='\[\e[0;34m\]'
   local dir_col='\[\e[0;35m\]'
   local git_col='\[\e[1;97m\]'
-  local nix_col='\[\e[0;97m\]'
+  local nix_col='\[\e[0;96m\]'
   local diff_col='\[\e[0;37m\]'
   local punc_col='\[\e[0;96m\]'
   local punc_col2='\[\e[0;97m\]'
