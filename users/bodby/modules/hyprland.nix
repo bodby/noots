@@ -70,7 +70,7 @@ in
         borders-plus-plus = {
           add_borders = 2;
           "col.border_1" = "rgba(efefff20)";
-          "col.border_2" = "rgba(00000060)";
+          "col.border_2" = "rgba(00000050)";
           border_size_1 = cfg.hyprland.border.size;
           border_size_2 = (cfg.hyprland.border.spacing - cfg.hyprland.border.size + 1);
           natural_rounding = false;
