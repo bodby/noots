@@ -108,6 +108,7 @@ in
 
       bind = [
         "$mod, Q, exec, foot"
+        "$mod, V, exec, neovide"
         "$mod, E, exec, librewolf"
         "$mod, C, killactive"
         "$mod SHIFT, M, exit"

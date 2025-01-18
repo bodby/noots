@@ -8,6 +8,7 @@
     ./foot.nix
     ./hyprland.nix
     ./iamb.nix
+    ./neovide.nix
     ./cabal.nix
     ./fzf.nix
   ];

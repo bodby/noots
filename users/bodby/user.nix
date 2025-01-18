@@ -28,6 +28,7 @@ with lib;
       ]
       ++ optionals cfg.desktop.enable [
         wl-clipboard
+        neovide
         # grim
         # slurp
         # swaybg
