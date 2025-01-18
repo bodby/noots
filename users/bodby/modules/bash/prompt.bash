@@ -4,12 +4,13 @@ __bash_prompt() {
   local status="$?"
   local first_separator=1
 
-  local user_col='\[\e[0;33m\]'
-  local dir_col='\[\e[0;34m\]'
+  local user_col='\[\e[0;34m\]'
+  local dir_col='\[\e[0;35m\]'
   local git_col='\[\e[1;97m\]'
   local nix_col='\[\e[0;97m\]'
   local diff_col='\[\e[0;37m\]'
-  local punc_col='\[\e[0;97m\]'
+  local punc_col='\[\e[0;96m\]'
+  local punc_col2='\[\e[0;97m\]'
   local err_col='\[\e[0;35m\]'
   local reset='\[\e[m\]'
 
@@ -76,7 +77,7 @@ __bash_prompt() {
     prompt_status="${err_col}${status} ${reset}"
   fi
 
-  local arrow="${punc_col}>${reset} "
+  local arrow="${punc_col2}>${reset} "
 
   local end=""
   if [ "$first_separator" = 0 ]; then

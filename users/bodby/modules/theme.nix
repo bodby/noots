@@ -23,7 +23,7 @@
     base04 = "d79b48";
     base05 = "7289fd";
     base06 = "936df3";
-    base07 = "82cfff";
+    base07 = "8fd2f9";
     base08 = "9999a4";
     base09 = "52525a";
     base10 = "d16556";
@@ -31,7 +31,7 @@
     base12 = "edb15b";
     base13 = "8b9efd";
     base14 = "b294ff";
-    base15 = "82cfff";
+    base15 = "8fd2f9";
     base16 = "d2d2e0";
   };
 

@@ -42,7 +42,7 @@ in
         shadow.enabled = false;
         blur = {
           enabled = true;
-          size = 12;
+          size = 16;
           passes = 3;
           noise = 0.0;
           contrast = 1.0;
@@ -69,10 +69,10 @@ in
         };
         borders-plus-plus = {
           add_borders = 2;
-          "col.border_1" = "rgba(efefff20)";
-          "col.border_2" = "rgba(00000050)";
+          "col.border_1" = "rgba(efefff25)";
+          "col.border_2" = "rgba(0000004a)";
           border_size_1 = cfg.hyprland.border.size;
-          border_size_2 = (cfg.hyprland.border.spacing - cfg.hyprland.border.size + 1);
+          border_size_2 = (cfg.hyprland.border.spacing - cfg.hyprland.border.size);
           natural_rounding = false;
         };
       };
@@ -185,7 +185,8 @@ in
         "suppressevent maximize, class:.*"
         "rounding 0, class:^(steam)$"
         "noshadow on, class:^(steam)$"
-        "noblur on, floating:1"
+        "noblur, floating:1"
+        "opacity 1.0 override, floating:1"
         "workspace 4 silent, class:^(steam)$"
         "workspace 3 silent, class:^(WebCord)$"
       ];
