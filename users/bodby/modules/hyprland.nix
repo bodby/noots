@@ -109,6 +109,9 @@ in
         zoom_rigid = true;
       };
 
+      # opengl.force_introspection = 1;
+      # render.expand_undersized_textures = false;
+
       bind = [
         "$mod, Q, exec, foot"
         "$mod, V, exec, neovide"
@@ -159,7 +162,7 @@ in
         "$mod SHIFT, 4, movetoworkspace, 4"
         "$mod SHIFT, 5, movetoworkspace, 5"
 
-        "$mod, plus, exec, hyprctl --batch \"keyword cursor:zoom_factor 2.0\""
+        "$mod, equal, exec, hyprctl --batch \"keyword cursor:zoom_factor 2.0\""
         "$mod, minus, exec, hyprctl --batch \"keyword cursor:zoom_factor 1.0\""
       ];
 
