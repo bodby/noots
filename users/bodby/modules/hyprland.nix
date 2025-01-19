@@ -29,8 +29,8 @@ in
       general = {
         layout = "scroller";
         no_focus_fallback = false;
-        gaps_in = 4;
-        gaps_out = 24;
+        gaps_in = 6;
+        gaps_out = 26;
         border_size = -2;
       };
 
