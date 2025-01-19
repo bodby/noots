@@ -70,9 +70,9 @@ in
         borders-plus-plus = {
           add_borders = 2;
           "col.border_1" = "rgba(efefff25)";
-          "col.border_2" = "rgba(0000004a)";
+          "col.border_2" = "rgba(00000060)";
           border_size_1 = cfg.hyprland.border.size;
-          border_size_2 = (cfg.hyprland.border.spacing - cfg.hyprland.border.size);
+          border_size_2 = cfg.hyprland.border.size;
           natural_rounding = true;
         };
       };
