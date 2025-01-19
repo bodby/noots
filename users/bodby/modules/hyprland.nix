@@ -30,7 +30,7 @@ in
         layout = "scroller";
         no_focus_fallback = false;
         gaps_in = 6;
-        gaps_out = "26 26 24 26";
+        gaps_out = 26;
         border_size = -2;
       };
 
