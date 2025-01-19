@@ -102,9 +102,12 @@ in
       gestures.workspace_swipe = false;
       gestures.workspace_swipe_touch = false;
 
-      cursor.hide_on_key_press = true;
-      cursor.no_warps = true;
-      cursor.no_hardware_cursors = lib.mkIf (builtins.elem "nvidia" (config.services.xserver.videoDrivers)) true;
+      cursor = {
+        hide_on_key_press = true;
+        no_warps = true;
+        no_hardware_cursors = lib.mkIf (builtins.elem "nvidia" (config.services.xserver.videoDrivers)) true;
+        zoom_rigid = true;
+      };
 
       bind = [
         "$mod, Q, exec, foot"
@@ -155,6 +158,9 @@ in
         "$mod SHIFT, 3, movetoworkspace, 3"
         "$mod SHIFT, 4, movetoworkspace, 4"
         "$mod SHIFT, 5, movetoworkspace, 5"
+
+        "$mod, plus, exec, hyprctl --batch \"keyword cursor:zoom_factor 2.0\""
+        "$mod, minus, exec, hyprctl --batch \"keyword cursor:zoom_factor 1.0\""
       ];
 
       # Move floating windows.
