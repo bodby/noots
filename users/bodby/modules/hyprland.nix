@@ -73,7 +73,7 @@ in
           "col.border_2" = "rgba(0000004a)";
           border_size_1 = cfg.hyprland.border.size;
           border_size_2 = (cfg.hyprland.border.spacing - cfg.hyprland.border.size);
-          natural_rounding = false;
+          natural_rounding = true;
         };
       };
 
