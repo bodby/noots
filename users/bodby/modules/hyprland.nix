@@ -29,8 +29,8 @@ in
       general = {
         layout = "scroller";
         no_focus_fallback = false;
-        gaps_in = (4 + cfg.hyprland.border.spacing);
-        gaps_out = (24 + cfg.hyprland.border.spacing);
+        gaps_in = 4;
+        gaps_out = 24;
         border_size = -2;
       };
 
