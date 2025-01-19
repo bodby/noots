@@ -31,7 +31,7 @@ in
         no_focus_fallback = false;
         gaps_in = (4 + cfg.hyprland.border.spacing);
         gaps_out = (24 + cfg.hyprland.border.spacing);
-        border_size = -cfg.hyprland.border.spacing;
+        border_size = -2;
       };
 
       decoration = {
@@ -71,8 +71,8 @@ in
           add_borders = 2;
           "col.border_1" = "rgba(efefff25)";
           "col.border_2" = "rgba(00000060)";
-          border_size_1 = cfg.hyprland.border.size;
-          border_size_2 = cfg.hyprland.border.size;
+          border_size_1 = 1;
+          border_size_2 = 1;
           natural_rounding = true;
         };
       };
