@@ -7,22 +7,27 @@ let
       file,
       pkgs,
     }:
-      let
-        script = (final.writeShellScriptBin name (builtins.readFile file)).overrideAttrs (
-          finalAttrs: {
-            buildCommand = "${finalAttrs.buildCommand}\n patchShebangs $out";
-          });
-      in
-      final.symlinkJoin {
-        inherit name;
-        paths = pkgs ++ [ script ];
-        buildInputs = [ final.makeWrapper ];
-        postBuild = "wrapProgram $out/bin/${name} --prefix PATH : $out/bin";
-      };
+    let
+      script = (final.writeShellScriptBin name (builtins.readFile file)).overrideAttrs (
+        finalAttrs: {
+          buildCommand = "${finalAttrs.buildCommand}\n patchShebangs $out";
+        });
+    in
+    final.symlinkJoin {
+      inherit name;
+      paths = pkgs ++ [ script ];
+      buildInputs = [ final.makeWrapper ];
+      postBuild = "wrapProgram $out/bin/${name} --prefix PATH : $out/bin";
+    };
 in
 {
   # foo-bar = final.callPackage ./foo-bar.nix { };
   # shantell-sans = final.callPackage ./shantell-sans.nix { };
+
+  firefox-addons = {
+    vimium = final.callPackage ./vimium.nix { };
+    ublock-origin = final.callPackage ./ublock-origin.nix { };
+  };
 
   fix-laptop-speakers = bashScript {
     name = "fix-laptop-speakers";

@@ -12,12 +12,6 @@
 
     nvim-btw.url = "github:bodby/nvim-btw";
     nvim-btw.inputs.nixpkgs.follows = "nixpkgs";
-
-    nur.url = "github:nix-community/NUR";
-    nur.inputs.nixpkgs.follows = "nixpkgs";
-
-    # iosevka-custom.url = "github:bodby/iosevka-custom";
-    # iosevka-custom.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -28,24 +22,16 @@
       ...
     }@inputs:
     let
-      systems = [
-        "x86_64-linux"
-        "aarch64-linux"
-      ];
-
       mkSystem =
         hostnameSet:
-        nixpkgs.lib.attrsets.mapAttrs' (hostname: system: {
-          name = hostname;
-          value = nixpkgs.lib.nixosSystem {
+        nixpkgs.lib.attrsets.mapAttrs (hostname: system:
+          nixpkgs.lib.nixosSystem {
             inherit system;
-            specialArgs = {
-              inherit system inputs;
-            };
+            specialArgs = { inherit system inputs; };
 
             modules = [
               home-manager.nixosModules.home-manager
-              sops-nix.nixosModules.sops
+              # sops-nix.nixosModules.sops
               {
                 home-manager.sharedModules = [ sops-nix.homeManagerModules.sops ];
                 imports = [
@@ -54,21 +40,15 @@
                 ];
               }
             ];
-          };
-        }) hostnameSet;
+          }) hostnameSet;
     in
     {
-      formatter = nixpkgs.lib.genAttrs systems (
-        system: nixpkgs.legacyPackages.${system}.nixfmt-rfc-style
-      );
-
       nixosConfigurations = mkSystem {
         # Desktop
         sentinel = "x86_64-linux";
         # Laptop
         scout = "x86_64-linux";
-        # NAS server
-        # atlas = "x86_64-linux";
+        # TODO: Home server ('atlas') and ISO.
       };
     };
 }

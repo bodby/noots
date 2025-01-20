@@ -1,6 +1,6 @@
 {
   # TODO: Haddock.
-  home-manager.users.bodby.xdg.configFile."cabal/config".text = ''
+  home-manager.users.bodby.xdg.configFile."cabal/config".text = /* cabal */ ''
     nix:                  True
     executable-dynamic:   False
     executable-stripping: True

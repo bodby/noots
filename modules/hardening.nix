@@ -34,7 +34,7 @@ with lib;
       type = types.int;
       description = ''
         How readily memory should be copied to swap.
-        Lower values mean a lesser likelyhood
+        Lower values mean a lesser likelyhood (?)
       '';
       default = 10;
     };

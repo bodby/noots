@@ -1,8 +1,6 @@
 {
   config,
   pkgs,
-  inputs,
-  system,
   ...
 }:
 let
@@ -15,12 +13,13 @@ in
 
     profiles.bodby = {
       isDefault = true;
-      extensions = with inputs.nur.legacyPackages.${system}.repos.rycee.firefox-addons; [
-        ublock-origin
+      # extensions = with inputs.nur.legacyPackages.${system}.repos.rycee.firefox-addons; [
+      extensions = with pkgs.firefox-addons; [
         vimium
+        ublock-origin
       ];
 
-      # TODO: Transparent title bar and also proper styles for websites.
+      # FIXME: Actually work on this because everything is unreadable right now.
       userContent = builtins.readFile ./userContent.css;
       userChrome = builtins.readFile ./userChrome.css;
 

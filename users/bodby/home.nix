@@ -23,7 +23,8 @@ in
       defaultSopsFile = ../../secrets/secrets.yaml;
       defaultSopsFormat = "yaml";
 
-      # Will move everything to sops once I actually need it.
+      # NOTE: Will move everything to sops once I actually need it.
+      # Quite literally completely useless right now.
       # secrets.git_signature = { };
     };
 
@@ -40,6 +41,7 @@ in
         enable = true;
         userName = "Baraa Homsi";
         userEmail = "baraa.homsi@proton.me";
+
         extraConfig = {
           init.defaultBranch = "master";
 
@@ -66,7 +68,6 @@ in
         };
       };
 
-      # Funny. I only have one SSH key. This is useless.
       # https://github.com/FiloSottile/whoami.filippo.io
       ssh.matchBlocks = {
         "github.com" = lib.hm.dag.entryBefore [ "*" ] {
@@ -81,32 +82,36 @@ in
       };
     };
 
-    xdg.userDirs = {
-      enable = true;
-      createDirectories = true;
+    xdg.userDirs =
+      let
+        h = "/home/${config.home-manager.users.bodby.home.username}";
+      in
+      rec {
+        enable = true;
+        createDirectories = true;
 
-      desktop = "/home/bodby/.desktop";
-      documents = "/home/bodby/docs";
-      download = "/home/bodby/temp";
-      templates = "/home/bodby/.templates";
-      publicShare = "/home/bodby/.public";
-      music = "/home/bodby/docs/music";
-      pictures = "/home/bodby/docs/images";
-      videos = "/home/bodby/docs/videos";
+        desktop = "${h}/.desktop";
+        documents = "${h}/docs";
+        download = "${h}/temp";
+        templates = "${h}/.templates";
+        publicShare = "${h}/.public";
+        music = "${documents}/music";
+        pictures = "${documents}/images";
+        videos = "${documents}/videos";
 
-      extraConfig = {
-        screenshots = "/home/bodby/docs/images/screenshots";
-        projects = "/home/bodby/dev";
-        vault = "/home/bodby/vault";
+        extraConfig = {
+          screenshots = "${documents}/screenshots";
+          projects = "${h}/dev";
+          vault = "${h}/vault";
+        };
       };
-    };
 
     fonts.fontconfig = {
       enable = cfg.desktop.enable;
-      defaultFonts = {
-        serif = [ theme.fonts.sans ];
-        sansSerif = [ theme.fonts.sans ];
-        monospace = [ theme.fonts.monospace ];
+      defaultFonts = with theme.fonts; {
+        serif = [ sans ];
+        sansSerif = [ sans ];
+        monospace = [ monospace ];
       };
     };
 
