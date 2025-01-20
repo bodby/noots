@@ -86,11 +86,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1737379796,
-        "narHash": "sha256-RTZj0096I6l8/zw+s+GufTRehDk7C3ElTLxNe9V/Pg0=",
+        "lastModified": 1737382145,
+        "narHash": "sha256-Uqu8EPoucNKWVluzRzmY30xaOBL/u1yIlqXXYAuOk04=",
         "owner": "bodby",
         "repo": "nvim-btw",
-        "rev": "10bee231afa4f9645a5320c891a30a4caa7fd065",
+        "rev": "3890e68ce40c956eda76c76a625a301bb298413f",
         "type": "github"
       },
       "original": {
