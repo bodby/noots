@@ -25,6 +25,7 @@ in
   # shantell-sans = final.callPackage ./shantell-sans.nix { };
 
   # FIXME: 'meta' prevents system rebuilds.
+  #        Also these don't actually appear in LW.
   firefox-addons = {
     vimium = final.callPackage ./vimium.nix { };
     ublock-origin = final.callPackage ./ublock-origin.nix { };
