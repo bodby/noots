@@ -112,9 +112,11 @@
     };
 
     # See 'etc.issue'.
-    # getty.greetingLine = "haha haker!!";
+    # getty.greetingLine = "";
 
     resolved.dnssec = "true";
+    # My systemd glibc laptop is now 100% secure!1!!
+    jitterentropy-rngd.enable = true;
   };
 
   programs = {
