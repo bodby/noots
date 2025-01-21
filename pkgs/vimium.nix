@@ -29,25 +29,26 @@ stdenv.mkDerivation (finalAttrs: {
     install -D -m644 "$src" "$dst/${finalAttrs.addonId}.xpi"
   '';
 
+  mozPermissions = [
+    "tabs"
+    "bookmarks"
+    "history"
+    "storage"
+    "sessions"
+    "notifications"
+    "scripting"
+    "webNavigation"
+    "clipboardRead"
+    "clipboardWrite"
+    "<all_urls>"
+    "file:///"
+    "file:///*/"
+  ];
+
   meta = {
     homepage = "https://github.com/philc/vimium";
     description = "The Hacker's Browser";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    mozPermissions = [
-      "tabs"
-      "bookmarks"
-      "history"
-      "storage"
-      "sessions"
-      "notifications"
-      "scripting"
-      "webNavigation"
-      "clipboardRead"
-      "clipboardWrite"
-      "<all_urls>"
-      "file:///"
-      "file:///*/"
-    ];
   };
 })

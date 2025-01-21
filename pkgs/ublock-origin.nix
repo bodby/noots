@@ -29,35 +29,36 @@ stdenv.mkDerivation (finalAttrs: {
     install -D -m644 "$src" "$dst/${finalAttrs.addonId}.xpi"
   '';
 
+  mozPermissions = [
+    "alarms"
+    "dns"
+    "menus"
+    "privacy"
+    "storage"
+    "tabs"
+    "unlimitedStorage"
+    "webNavigation"
+    "webRequest"
+    "webRequestBlocking"
+    "<all_urls>"
+    "http://*/*"
+    "https://*/*"
+    "file://*/*"
+    "https://easylist.to/*"
+    "https://*.fanboy.co.nz/*"
+    "https://filterlists.com/*"
+    "https://forums.lanik.us/*"
+    "https://github.com/*"
+    "https://*.github.io/*"
+    "https://github.com/uBlockOrigin/*"
+    "https://ublockorigin.github.io/*"
+    "https://*.reddit.com/r/uBlockOrigin/*"
+  ];
+
   meta = {
     homepage = "https://github.com/gorhill/uBlock";
     description = "An efficient blocker for Chromium and Firefox";
     license = lib.licenses.gpl3;
     platforms = lib.platforms.all;
-    mozPermissions = [
-      "alarms"
-      "dns"
-      "menus"
-      "privacy"
-      "storage"
-      "tabs"
-      "unlimitedStorage"
-      "webNavigation"
-      "webRequest"
-      "webRequestBlocking"
-      "<all_urls>"
-      "http://*/*"
-      "https://*/*"
-      "file://*/*"
-      "https://easylist.to/*"
-      "https://*.fanboy.co.nz/*"
-      "https://filterlists.com/*"
-      "https://forums.lanik.us/*"
-      "https://github.com/*"
-      "https://*.github.io/*"
-      "https://github.com/uBlockOrigin/*"
-      "https://ublockorigin.github.io/*"
-      "https://*.reddit.com/r/uBlockOrigin/*"
-    ];
   };
 })

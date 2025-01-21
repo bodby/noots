@@ -14,7 +14,7 @@ in
     profiles.bodby = {
       isDefault = true;
       # extensions = with inputs.nur.legacyPackages.${system}.repos.rycee.firefox-addons; [
-      extensions = with pkgs.firefox-addons; [
+      extensions = with pkgs; [
         vimium
         ublock-origin
       ];
