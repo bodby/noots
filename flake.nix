@@ -16,6 +16,7 @@
 
   outputs =
     {
+      self,
       nixpkgs,
       home-manager,
       sops-nix,
@@ -43,12 +44,26 @@
           }) hostnameSet;
     in
     {
+      # TODO: GUI for ISOs (I need Neovide).
       nixosConfigurations = mkSystem {
         # Desktop
         sentinel = "x86_64-linux";
         # Laptop
         scout = "x86_64-linux";
-        # TODO: Home server ('atlas') and ISO.
+        # TODO: Home server ("atlas").
+
+        # NOTE: To build ISOs, run the command below or just 'nix build'
+        # 'nix build .#nixosConfigurations.iso-{amd|arm}.config.system.build.isoImage'
+        iso-amd = "x86_64-linux";
+        # iso-arm = "aarch64-linux";
       };
+
+      # https://ash64.eu/blog/2022/building-custom-nixos-isos/
+      # For 'nix build'
+      packages."x86-64_linux".default =
+        self.nixosConfigurations.iso-amd.config.system.build.isoImage;
+
+      # packages."aarch64-linux".default =
+      #   self.nixosConfigurations.iso-arm.config.system.build.isoImage;
     };
 }

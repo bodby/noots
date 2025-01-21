@@ -38,7 +38,7 @@
   };
 
   time.timeZone = "UTC";
-
+  # TODO: Get iwd.
   networking = {
     wireless.enable = true;
     wireless.userControlled.enable = false;
@@ -172,7 +172,8 @@
     stub-ld.enable = false;
 
     etc = {
-      machine-id.text = "b08dfa6083e7567a1921a715000001fb";
+      # FIXME: Do I really need this?
+      # machine-id.text = "b08dfa6083e7567a1921a715000001fb";
 
       issue.text = ''
 
@@ -398,7 +399,7 @@
     config = {
       allowUnfree = true;
       checkMeta = true;
-      cudaSupport = true;
+      cudaSupport = false;
       warnUndeclaredOptions = true;
     };
 
