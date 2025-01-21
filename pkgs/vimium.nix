@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
   buildCommand = /* bash */ ''
     # Why is this weird hash hard-coded?? What does it even do???
     dst="$out/share/mozilla/extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
-    # FIXME: Should I set the mode?
     install -D -m644 "$src" "$dst/${finalAttrs.addonId}.xpi"
   '';
 

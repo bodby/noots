@@ -23,9 +23,10 @@ in
 {
   # foo-bar = final.callPackage ./foo-bar.nix { };
   # shantell-sans = final.callPackage ./shantell-sans.nix { };
+  # vimium = final.callPackage ./vimium.nix { };
+  # ublock-origin = final.callPackage ./ublock-origin.nix { };
 
-  vimium = final.callPackage ./vimium.nix { };
-  ublock-origin = final.callPackage ./ublock-origin.nix { };
+  firefox-addons = final.callPackage ./firefox-addons.nix { };
 
   fix-laptop-speakers = bashScript {
     name = "fix-laptop-speakers";
