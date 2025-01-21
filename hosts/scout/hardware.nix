@@ -244,8 +244,8 @@
     priority = 100;
   }];
 
-  networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp0s20f3.useDHCP = lib.mkDefault true;
+  # networking.useDHCP = lib.mkDefault true;
+  networking.interfaces.wlp0s20f3.useDHCP = true;
 
   services = {
     xserver.videoDrivers = [ "modesetting" ];
