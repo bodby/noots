@@ -47,7 +47,8 @@
     firewall.enable = true;
     nftables.enable = true;
 
-    dhcpcd.wait = "background";
+    # FIXME: 15 second startup time.
+    # dhcpcd.wait = "background";
   };
 
   i18n.defaultLocale = "en_US.UTF-8";
