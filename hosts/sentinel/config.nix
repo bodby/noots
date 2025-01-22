@@ -29,6 +29,8 @@
     # I don't even have these configured; they are useless right now.
     firewall.enable = true;
     nftables.enable = true;
+
+    dhcpcd.wait = "background";
   };
 
   i18n.defaultLocale = "en_US.UTF-8";
