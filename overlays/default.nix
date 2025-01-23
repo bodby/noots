@@ -42,14 +42,4 @@ final: prev: {
   #     ];
   #   }
   # );
-
-  # FIXME: Revert this when NixOS/nixpkgs/pull/375838 gets merged.
-  nvidia-pkgs-beta = prev.linuxPackages_latest.nvidiaPackages.beta.overrideAttrs (
-    {
-      patches ? [ ],
-      ...
-    }:
-    {
-      patches = [ ./patches/fix-for-linux-6.13.patch ];
-    });
 }

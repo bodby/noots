@@ -9,7 +9,9 @@
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
+    # FIXME: Revert this when NixOS/nixpkgs/pull/375838 gets merged.
+    # kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_6_12;
     loader = {
       efi.canTouchEfiVariables = true;
       grub = {
@@ -104,9 +106,7 @@
     nvidia = {
       open = true;
       nvidiaSettings = false;
-      # FIXME: Revert this when NixOS/nixpkgs/pull/375838 gets merged.
-      # package = config.boot.kernelPackages.nvidiaPackages.beta;
-      package = pkgs.nvidia-pkgs-beta;
+      package = config.boot.kernelPackages.nvidiaPackages.beta;
       modesetting.enable = true;
     };
   };
