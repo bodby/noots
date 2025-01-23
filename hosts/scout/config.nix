@@ -48,7 +48,7 @@
     nftables.enable = true;
 
     # FIXME: 15 second startup time.
-    # dhcpcd.wait = "background";
+    dhcpcd.wait = "if-carrier-up";
   };
 
   i18n.defaultLocale = "en_US.UTF-8";

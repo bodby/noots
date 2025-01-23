@@ -90,7 +90,7 @@
     priority = 100;
   }];
 
-  # networking.useDHCP = lib.mkDefault true;
+  # networking.useDHCP = true;
   # networking.interfaces.enp8s0.useDHCP = lib.mkDefault true;
   networking.interfaces.wlp7s0.useDHCP = true;
 

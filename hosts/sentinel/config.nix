@@ -30,7 +30,7 @@
     firewall.enable = true;
     nftables.enable = true;
 
-    dhcpcd.wait = "background";
+    dhcpcd.wait = "if-carrier-up";
   };
 
   i18n.defaultLocale = "en_US.UTF-8";

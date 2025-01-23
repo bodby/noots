@@ -244,7 +244,7 @@
     priority = 100;
   }];
 
-  networking.useDHCP = lib.mkDefault true;
+  networking.useDHCP = true;
   # networking.interfaces.wlp0s20f3.useDHCP = true;
 
   services = {
