@@ -104,7 +104,9 @@
     nvidia = {
       open = true;
       nvidiaSettings = false;
-      package = config.boot.kernelPackages.nvidiaPackages.beta;
+      # FIXME: Revert this when NixOS/nixpkgs/pull/375838 gets merged.
+      # package = config.boot.kernelPackages.nvidiaPackages.beta;
+      package = pkgs.nvidia-pkgs-beta;
       modesetting.enable = true;
     };
   };
