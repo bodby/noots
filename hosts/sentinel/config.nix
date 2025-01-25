@@ -59,12 +59,11 @@
       Storage=none
     '';
     tmpfiles.settings = {
-      # "restricthome"."/home/*".Z.mode = lib.mkDefault "~0700";
-      # TODO: Rename this.
-      "restrictetcnixos"."/etc/nixos/*".Z = {
-        mode = lib.mkDefault "0000";
-        user = lib.mkDefault "root";
-        group = lib.mkDefault "root";
+      "00-home-mode"."/home/*".Z.mode = "~0700";
+      "00-nixos-mode"."/etc/nixos/*".Z = {
+        mode = "0000";
+        user = "root";
+        group = "root";
       };
     };
   };
