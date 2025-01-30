@@ -9,9 +9,7 @@
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
   boot = {
-    # FIXME: Revert this when NixOS/nixpkgs/pull/375838 gets merged.
-    # kernelPackages = pkgs.linuxPackages_latest;
-    kernelPackages = pkgs.linuxPackages_6_12;
+    kernelPackages = pkgs.linuxPackages_latest;
     loader = {
       efi.canTouchEfiVariables = true;
       grub = {
