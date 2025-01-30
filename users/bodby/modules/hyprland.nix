@@ -14,7 +14,7 @@ in
     xwayland.enable = cfg.enable;
     plugins = with pkgs.hyprlandPlugins; [
       hyprscroller
-      borders-plus-plus
+      # borders-plus-plus
     ];
 
     settings = {
@@ -31,7 +31,7 @@ in
         no_focus_fallback = false;
         gaps_in = 4;
         gaps_out = 26;
-        border_size = -2;
+        border_size = 0;
       };
 
       decoration = {
