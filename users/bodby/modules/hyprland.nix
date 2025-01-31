@@ -31,7 +31,7 @@ in
         layout = "scroller";
         no_focus_fallback = false;
         gaps_in = 4;
-        gaps_out = 26;
+        gaps_out = 32;
         border_size = 0;
       };
 
@@ -42,7 +42,7 @@ in
 
         shadow.enabled = false;
         blur = {
-          enabled = true;
+          enabled = false;
           size = 16;
           passes = 3;
           noise = 0.0;
@@ -110,7 +110,6 @@ in
         zoom_rigid = true;
       };
 
-      # opengl.force_introspection = 1;
       # render.expand_undersized_textures = false;
 
       bind = [
@@ -227,6 +226,8 @@ in
         swallow_regex = "^(foot)$";
         middle_click_paste = false;
         disable_hyprland_qtutils_check = true;
+        disable_xdg_env_checks = true;
+        disable_autoreload = true;
         vfr = true;
       };
 
@@ -246,6 +247,8 @@ in
       ];
 
       ecosystem.no_update_news = true;
+      # Sorry, can't donate rn. :(
+      ecosystem.no_donation_nag = true;
     };
   };
 }

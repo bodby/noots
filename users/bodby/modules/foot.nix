@@ -33,7 +33,7 @@ in
       };
 
       colors = {
-        alpha = 0.85;
+        # alpha = 0.85;
         foreground = theme.palette.base16;
         background = theme.palette.bg;
 
@@ -55,7 +55,7 @@ in
         bright7 = theme.palette.base16;
 
         selection-foreground = theme.palette.base16;
-        selection-background = theme.palette.base01;
+        selection-background = theme.palette.base09;
       };
 
       key-bindings = {

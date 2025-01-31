@@ -17,8 +17,6 @@ in
       + /* css */ ''
         * { font-family: ${theme.fonts.monospace}; }
 
-        window#waybar { background: #${theme.palette.bg}; }
-
         .modules-left, .modules-right, .modules-center {
           border: 1px solid #${theme.palette.base01};
         }
@@ -35,8 +33,8 @@ in
 
     settings = [{
       # width = 960;
-      margin-left = 360;
-      margin-right = 360;
+      margin-left = 240;
+      margin-right = 240;
       # https://github.com/hyprwm/hyprland-plugins/issues/280
       margin-top = 1;
       height = 48;

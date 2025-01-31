@@ -14,25 +14,24 @@
   };
 
   palette = {
-    bg = "000000";
+    bg = "131720";
 
-    # TODO: Actual ANSI colors (not grays).
-    base01 = "242429";
-    base02 = "d16556";
-    base03 = "44ae6e";
-    base04 = "d79b48";
-    base05 = "7289fd";
-    base06 = "936df3";
-    base07 = "8acfff";
-    base08 = "9999a4";
-    base09 = "52525a";
-    base10 = "d16556";
-    base11 = "44ae6e";
-    base12 = "edb15b";
-    base13 = "8b9efd";
-    base14 = "b294ff";
-    base15 = "8acfff";
-    base16 = "d2d2e0";
+    base01 = "0c1018";
+    base02 = "f75f7b";
+    base03 = "c4ef86";
+    base04 = "ffba6b";
+    base05 = "809fff";
+    base06 = "b282fa";
+    base07 = "89d8ff";
+    base08 = "aab6c5";
+    base09 = "21262f";
+    base10 = "f75f7b";
+    base11 = "c4ef86";
+    base12 = "ffba6b";
+    base13 = "809fff";
+    base14 = "b282fa";
+    base15 = "89d8ff";
+    base16 = "d8deef";
   };
 
   hexToRgb =
