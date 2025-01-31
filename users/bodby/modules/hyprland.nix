@@ -12,8 +12,9 @@ in
   home-manager.users.bodby.wayland.windowManager.hyprland = {
     enable = cfg.enable;
     xwayland.enable = cfg.enable;
-    plugins = with pkgs.hyprlandPlugins; [
-      hyprscroller
+    # TODO: Fix this after a week.
+    plugins = with pkgs; [
+      hyprscroller'
       # borders-plus-plus
     ];
 
