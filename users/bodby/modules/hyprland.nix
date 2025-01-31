@@ -38,7 +38,7 @@ in
       decoration = {
         rounding = cfg.hyprland.border.radius;
         active_opacity = 1.0;
-        inactive_opacity = 0.85;
+        # inactive_opacity = 0.85;
 
         shadow.enabled = false;
         blur = {

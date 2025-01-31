@@ -10,7 +10,6 @@ __bash_prompt() {
   local nix_col='\[\e[0;96m\]'
   local diff_col='\[\e[0;37m\]'
   local punc_col='\[\e[0;96m\]'
-  local punc_col2='\[\e[0;97m\]'
   local err_col='\[\e[0;35m\]'
   local reset='\[\e[m\]'
 
@@ -77,7 +76,7 @@ __bash_prompt() {
     prompt_status="${err_col}${status} ${reset}"
   fi
 
-  local arrow="${punc_col2}>${reset} "
+  local arrow="${punc_col}>${reset} "
 
   local end=""
   if [ "$first_separator" = 0 ]; then
