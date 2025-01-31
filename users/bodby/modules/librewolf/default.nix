@@ -20,8 +20,8 @@ in
       ];
 
       # FIXME: Actually work on this because everything is unreadable right now.
-      userContent = builtins.readFile ./userContent.css;
-      userChrome = builtins.readFile ./userChrome.css;
+      # userContent = builtins.readFile ./userContent.css;
+      # userChrome = builtins.readFile ./userChrome.css;
 
       search.default = "DuckDuckGo";
       search.force = true;

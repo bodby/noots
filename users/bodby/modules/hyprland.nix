@@ -39,6 +39,8 @@ in
         rounding = cfg.hyprland.border.radius;
         active_opacity = 1.0;
         # inactive_opacity = 0.85;
+        dim_inactive = true;
+        dim_strength = 0.25;
 
         shadow.enabled = false;
         blur = {
