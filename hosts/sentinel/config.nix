@@ -175,6 +175,7 @@
         auto-optimise-store = true;
         # https://github.com/NixOS/nix/issues/9574
         nix-path = config.nix.nixPath;
+        pure-eval = true;
         allowed-users = [ "@users" ];
       };
 
