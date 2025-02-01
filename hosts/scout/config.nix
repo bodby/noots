@@ -48,7 +48,8 @@
     nftables.enable = true;
 
     # FIXME: 15 second startup time.
-    dhcpcd.wait = "if-carrier-up";
+    #        Or just no WiFi entirely if this is set to "background" of "if-carrier-up" then.
+    # dhcpcd.wait = "if-carrier-up";
   };
 
   i18n.defaultLocale = "en_US.UTF-8";
