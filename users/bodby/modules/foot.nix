@@ -29,7 +29,7 @@ in
       cursor = {
         style = "block";
         unfocused-style = "none";
-        color = "2b2b32 9393a2";
+        color = "0c1018 89d8ff";
       };
 
       colors = {
