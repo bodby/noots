@@ -23,7 +23,7 @@
     base05 = "809fff";
     base06 = "b282fa";
     base07 = "89d8ff";
-    base08 = "aab6c5";
+    base08 = "a7b3c3";
     base09 = "21262f";
     base10 = "f75f7b";
     base11 = "c4ef86";
