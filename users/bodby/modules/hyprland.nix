@@ -196,11 +196,11 @@ in
       windowrulev2 = [
         "suppressevent maximize, class:.*"
         "rounding 0, class:^(steam)$"
-        "noshadow on, class:^(steam)$"
-        "noblur, floating:1"
-        "opacity 1.0 override, floating:1"
+        # "noshadow on, class:^(steam)$"
+        "prop noblur, floating:1"
+        # "opacity 1.0 override, floating:1"
         "workspace 4 silent, class:^(steam)$"
-        "workspace 3 silent, class:^(WebCord)$"
+        # "workspace 3 silent, class:^(WebCord)$"
       ];
 
       animations = {

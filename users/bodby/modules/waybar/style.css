@@ -6,7 +6,8 @@
 }
 
 window#waybar {
-  background: #000000;
+  /* Visual artifacts when alpha is 1. :( */
+  background: rgba(0, 0, 0, 0.9999);
   border-radius: 16px 16px 0 0;
 }
 
