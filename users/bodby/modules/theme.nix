@@ -24,14 +24,14 @@
     base06 = "b282fa";
     base07 = "89d8ff";
     base08 = "a7b3c3";
-    base09 = "212632";
+    base09 = "212732";
     base10 = "f75f7b";
     base11 = "c4ef86";
     base12 = "ffba6b";
     base13 = "809fff";
     base14 = "b282fa";
     base15 = "89d8ff";
-    base16 = "d8deef";
+    base16 = "d8e0ef";
   };
 
   hexToRgb =

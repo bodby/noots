@@ -1,3 +1,6 @@
 {
-  imports = [ ./hardening.nix ];
+  imports = [
+    ./hardening.nix
+    ./nix-conf.nix
+  ];
 }

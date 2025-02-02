@@ -10,7 +10,7 @@ __bash_prompt() {
   local nix_col='\[\e[0;96m\]'
   local diff_col='\[\e[0;37m\]'
   local punc_col='\[\e[0;96m\]'
-  local err_col='\[\e[0;35m\]'
+  local err_col='\[\e[0;31m\]'
   local reset='\[\e[m\]'
 
   local separator_a="${punc_col} : ${reset}"
