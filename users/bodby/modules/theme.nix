@@ -16,14 +16,14 @@
   palette = {
     bg = "131720";
 
-    base01 = "0d1118";
+    base01 = "0e1119";
     base02 = "f75f7b";
     base03 = "c4ef86";
     base04 = "ffba6b";
     base05 = "809fff";
     base06 = "b282fa";
     base07 = "89d8ff";
-    base08 = "a7b3c3";
+    base08 = "a7b0c3";
     base09 = "212732";
     base10 = "f75f7b";
     base11 = "c4ef86";
