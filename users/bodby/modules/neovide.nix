@@ -7,7 +7,7 @@
     idle = true;
     tabs = false;
     fork = true;
-    no-multigrid = true;
+    no-multigrid = false;
 
     font = {
       normal = [ "JetBrains Mono" ];
