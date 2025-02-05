@@ -130,8 +130,8 @@
         CPU_MAX_PERF_ON_BAT = 40;
 
         # FIXME: Does this actually help with my battery life?
-        START_CHARGE_THRESH_BAT0 = 40;
-        STOP_CHARGE_THRESH_BAT0 = 80;
+        START_CHARGE_THRESH_BAT0 = 50;
+        STOP_CHARGE_THRESH_BAT0 = 90;
       };
     };
     # See 'etc.issue'.
