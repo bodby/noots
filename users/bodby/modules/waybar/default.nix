@@ -94,7 +94,7 @@ in
       };
 
       battery = {
-        interval = 60;
+        interval = 20;
         format = "{time}-{capacity}%";
         format-time = "<span font_weight='bold' color='#${theme.palette.base16}'>{H}h {m}m</span> ";
         format-charging = "{time}+{capacity}%";
