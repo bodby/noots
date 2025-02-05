@@ -34,6 +34,7 @@ with lib;
         # swaybg
         mpv
         imv
+        brightnessctl
       ]
       ++ optionals cfg.gaming.enable [
         steam'

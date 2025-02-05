@@ -189,6 +189,9 @@ in
       bindel = [
         ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+"
         ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"
+
+        ", XF86MonBrightnessDown, exec, brightnessctl set 10-"
+        ", XF86MonBrightnessUp, exec, brightnessctl set +10"
       ];
 
       # exec-once = "swaybg -m fill -i ${dirs.pictures}/wallpapers/house.jpg";
