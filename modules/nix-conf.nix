@@ -21,9 +21,9 @@
         auto-optimise-store = true;
         # https://github.com/NixOS/nix/issues/9574
         nix-path = config.nix.nixPath;
-        pure-eval = true;
+        # NOTE: This breaks nixd (Nix LSP).
+        pure-eval = false;
         log-lines = 48;
-        # NOTE: vvv
         http2 = false;
         connect-timeout = 30;
         allowed-users = [ "@users" ];

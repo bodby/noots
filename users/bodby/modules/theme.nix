@@ -31,7 +31,7 @@
     base13 = "809fff";
     base14 = "b282fa";
     base15 = "89d8ff";
-    base16 = "d4def3";
+    base16 = "cddffa";
   };
 
   hexToRgb =
