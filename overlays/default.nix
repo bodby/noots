@@ -35,7 +35,7 @@ final: prev: {
         owner = "dawsers";
         repo = "hyprscroller";
         rev = "964aced89f5711e1d2fce17fc990c1148da42145";
-        hash = "";
+        hash = "sha256-buiRq+OZq7GWwucyqAhqFEfYdzmQi+dONsccohhzTVM=";
       };
     });
 
