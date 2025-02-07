@@ -13,11 +13,10 @@ in
 
     profiles.bodby = {
       isDefault = true;
-      # extensions = with inputs.nur.legacyPackages.${system}.repos.rycee.firefox-addons; [
       extensions = with pkgs.firefox-addons; [
-        # vimium-ff
+        vimium-ff
         ublock-origin
-        tridactyl
+        # tridactyl
       ];
 
       # FIXME: Actually work on this because everything is unreadable right now.
