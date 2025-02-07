@@ -15,8 +15,9 @@ in
       isDefault = true;
       # extensions = with inputs.nur.legacyPackages.${system}.repos.rycee.firefox-addons; [
       extensions = with pkgs.firefox-addons; [
-        vimium
+        # vimium-ff
         ublock-origin
+        tridactyl
       ];
 
       # FIXME: Actually work on this because everything is unreadable right now.
