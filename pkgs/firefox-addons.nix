@@ -114,7 +114,7 @@ in
     addonId = "tridactyl.vim@cmcaine.co.uk";
 
     url = "https://addons.mozilla.org/firefox/downloads/file/4405615/tridactyl_vim-${version}.xpi";
-    sha256 = "";
+    sha256 = "sha256-gHkl8mqrVqsZoo5mOt5zdDoDPjt3qgnt0/d7+S5fs24=";
 
     permissions = [
       "activeTab"
