@@ -17,21 +17,21 @@
     bg = "131720";
 
     base01 = "0e1119";
-    base02 = "f75f7b";
-    base03 = "c4ef86";
+    base02 = "f75f8d";
+    base03 = "bbef86";
     base04 = "ffba6b";
     base05 = "809fff";
-    base06 = "b282fa";
-    base07 = "89d8ff";
+    base06 = "b17dff";
+    base07 = "89c8ff";
     base08 = "9fadc6";
-    base09 = "212732";
-    base10 = "f75f7b";
-    base11 = "c4ef86";
+    base09 = "1e232e";
+    base10 = "f75f8d";
+    base11 = "bbef86";
     base12 = "ffba6b";
     base13 = "809fff";
-    base14 = "b282fa";
-    base15 = "89d8ff";
-    base16 = "cddefa";
+    base14 = "b17dff";
+    base15 = "89c8ff";
+    base16 = "ccddfb";
   };
 
   hexToRgb =
