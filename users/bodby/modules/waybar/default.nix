@@ -131,6 +131,9 @@ in
         format-disconnected = "down";
         format-stopped = "stopped";
         tooltip = false;
+        on-click = "${pkgs.mpc}/bin/mpc toggle";
+        on-scroll-up = "${pkgs.mpc}/bin/mpc seek -00:00:10";
+        on-scroll-down = "${pkgs.mpc}/bin/mpc seek +00:00:10";
       };
     }];
   };
