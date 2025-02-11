@@ -41,4 +41,22 @@ in
       alsa-utils
     ];
   };
+
+  # FIXME: Just make this a part of Hyprland's 'exec-once'??
+  #        I have a systemd unit for this RN in modules/mpd.nix.
+  mpc-init = final.writeShellApplication {
+    name = "mpc-init";
+    text = /* bash */ ''
+      #!/usr/bin/env bash
+      mpc consume on
+      mpc repeat on
+      mpc random on
+      mpc add /
+    '';
+    runtimeInputs = with final; [
+      bash
+      mpc
+      mpd
+    ];
+  };
 }
