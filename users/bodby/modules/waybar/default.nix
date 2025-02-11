@@ -132,6 +132,7 @@ in
         format-stopped = "stopped";
         tooltip = false;
         on-click = "${pkgs.mpc}/bin/mpc toggle";
+        on-click-right = "${pkgs.mpc}/bin/mpc next";
         on-scroll-up = "${pkgs.mpc}/bin/mpc seek +00:00:10";
         on-scroll-down = "${pkgs.mpc}/bin/mpc seek -00:00:10";
       };
