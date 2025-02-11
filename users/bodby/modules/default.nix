@@ -11,5 +11,6 @@
     ./neovide.nix
     ./cabal.nix
     ./fzf.nix
+    ./mpd.nix
   ];
 }

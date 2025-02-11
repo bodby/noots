@@ -33,6 +33,7 @@ with lib;
         # slurp
         # swaybg
         mpv
+        mpc
         imv
         brightnessctl
       ]
