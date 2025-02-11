@@ -114,12 +114,14 @@ in
 
       # render.expand_undersized_textures = false;
 
+      # TODO: Add MPC mappings. Maybe in a submap (Win+N)?
+      #       I moved 'exit' to Win+Ctrl+Shift+M.
       bind = [
         "$mod, Q, exec, foot"
         "$mod, V, exec, neovide"
         "$mod, E, exec, librewolf"
         "$mod, C, killactive"
-        "$mod SHIFT, M, exit"
+        "$mod CTRL SHIFT, M, exit"
         # 61 is forward slash. You can get this using either 'wev' or 'xev'.
         "$mod, code:61, exec, $grimsec"
         "$mod SHIFT, code:61, exec, $grimscr"

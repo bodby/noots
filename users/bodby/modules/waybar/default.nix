@@ -131,13 +131,6 @@ in
         format-disconnected = "";
         format-stopped = "00:00/00:00";
 
-        consume-icons.on = "<span font_weight='bold' color='#${theme.palette.base16}'>C</span>";
-        consume-icons.off = "c";
-        random-icons.on = "<span font_weight='bold' color='#${theme.palette.base16}'>R</span>";
-        random-icons.off = "r";
-        repeat-icons.on = "<span font_weight='bold' color='#${theme.palette.base16}'>L</span>";
-        repeat-icons.off = "l";
-
         tooltip = false;
         on-click = "${pkgs.mpc}/bin/mpc toggle";
         on-click-right = "${pkgs.mpc}/bin/mpc next";
