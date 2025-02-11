@@ -13,7 +13,8 @@
         }
       '';
     };
-    systemd.user.services.swaybg = {
+
+    systemd.user.services.mpc-init = {
       Unit = {
         Description = "Because MPD's config isn't enough";
         PartOf = [ "sound.target" ];
