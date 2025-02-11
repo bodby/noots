@@ -34,7 +34,6 @@ with lib;
         # swaybg
         mpv
         mpc
-        mpc-init
         imv
         brightnessctl
       ]
