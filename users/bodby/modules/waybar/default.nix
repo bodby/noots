@@ -21,7 +21,7 @@ in
           border: 1px solid #${theme.palette.base01};
         }
 
-        #temperature, #cpu, #battery, #memory, #network, #wireplumber {
+        #temperature, #cpu, #battery, #memory, #network, #wireplumber, #mpd {
           color: #${theme.palette.base08};
         }
 
@@ -53,6 +53,7 @@ in
       modules-center = [ "hyprland/workspaces" ];
 
       modules-right = [
+        "mpd"
         "network"
         "battery"
         "wireplumber"
@@ -112,7 +113,7 @@ in
         interval = 240;
         # format = "{essid}";
         format = "";
-        format-disconnected = "down";
+        format-disconnected = "d/c";
         tooltip = false;
       };
 
@@ -121,6 +122,14 @@ in
         format-icons.default = "◦";
         format-icons.active = "◉";
         persistent-workspaces."*" = 5;
+        tooltip = false;
+      };
+
+      mpd = {
+        interval = 20;
+        format = "{elapsedTime:%M:%S}/{totalTime:%M:%S}";
+        format-disconnected = "down";
+        format-stopped = "stopped";
         tooltip = false;
       };
     }];
