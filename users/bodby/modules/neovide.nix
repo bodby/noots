@@ -14,9 +14,11 @@
         normal = [ "JetBrains Mono" ];
         size = 13.5;
         features."JetBrains Mono" = [
-          "+cv06"
           "+cv01"
+          "+cv06"
           "+cv07"
+          "+cv11"
+          "+cv12"
         ];
       };
     };
