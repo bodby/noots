@@ -3,16 +3,21 @@
   ...
 }:
 {
-  home-manager.users.bodby.xdg.configFile."neovide/config.toml".source = (pkgs.formats.toml { }).generate "config.toml" {
-    idle = true;
-    tabs = false;
-    fork = true;
-    no-multigrid = false;
+  home-manager.users.bodby.xdg.configFile."neovide/config.toml".source =
+    (pkgs.formats.toml { }).generate "config.toml" {
+      idle = true;
+      tabs = false;
+      fork = true;
+      no-multigrid = false;
 
-    font = {
-      normal = [ "JetBrains Mono" ];
-      size = 13.5;
-      features."JetBrains Mono" = [ "cv06=1" ];
+      font = {
+        normal = [ "JetBrains Mono" ];
+        size = 13.5;
+        features."JetBrains Mono" = [
+          "+cv06"
+          "+cv01"
+          "+cv07"
+        ];
+      };
     };
-  };
 }

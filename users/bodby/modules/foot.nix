@@ -18,7 +18,9 @@ in
 
       main = {
         shell = "bash";
-        font = "${theme.fonts.monospace}:pixelsize=18:fontfeatures=cv06";
+        # FIXME: Can I not separate font features with commas?
+        # TODO: Also freeze these features so you can use them in browser and GTK.
+        font = "${theme.fonts.monospace}:pixelsize=18:fontfeatures=cv06:fontfeatures=cv01:fontfeatures=cv07";
         underline-thickness = "1px";
         strikeout-thickness = "1px";
         line-height = "28px";
