@@ -44,11 +44,20 @@ with lib;
           default = -0.2;
         };
 
-        border. radius = mkOption {
+        border.radius = mkOption {
           type = types.int;
           description = "Border rounding";
           default = 12;
         };
+      };
+
+      wallpaper = mkOption {
+        type = types.str;
+        description = ''
+          Wallpaper file to use.
+          See modules/wallpapers/default.nix for a list of valid strings to use
+        '';
+        default = "house.jpg";
       };
 
       waybar.cpuTemp = mkOption {

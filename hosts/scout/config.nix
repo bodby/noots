@@ -31,6 +31,7 @@
         border.radius = 16;
       };
 
+      wallpaper = "lighthouse.png";
       waybar.cpuTemp = "/sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input";
     };
   };

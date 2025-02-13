@@ -13,9 +13,10 @@
 
   users.mutableUsers = true;
   modules.users.bodby = {
-    desktop.enable = true;
     gaming.enable = true;
     creative.enable = true;
+    desktop.enable = true;
+    desktop.wallpaper = "castle.jpg";
   };
 
   time.timeZone = "UTC";
