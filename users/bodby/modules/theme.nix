@@ -22,7 +22,7 @@
     base04 = "ffbf6b";
     base05 = "809fff";
     base06 = "a87dff";
-    base07 = "89c1ff";
+    base07 = "89b6ff";
     base08 = "9fadc6";
     base09 = "1e232e";
     base10 = "f75f8d";
@@ -30,7 +30,7 @@
     base12 = "ffbf6b";
     base13 = "809fff";
     base14 = "a87dff";
-    base15 = "89c1ff";
+    base15 = "89b6ff";
     base16 = "ccddfb";
   };
 
