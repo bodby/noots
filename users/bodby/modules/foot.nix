@@ -22,7 +22,7 @@ in
         # TODO: Also freeze these features so you can use them in browser and GTK.
         font = "${theme.fonts.monospace}:pixelsize=18:fontfeatures=${
           lib.strings.concatStringsSep ":fontfeatures="
-            [ "cv01" "cv06" "cv07" "cv11" "cv12" ]
+            [ "cv01" "cv06" "cv07" "cv10" "cv11" "cv12" ]
         }";
         underline-thickness = "1px";
         strikeout-thickness = "1px";
