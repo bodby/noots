@@ -41,6 +41,7 @@ in
         enable = true;
         userName = "Baraa Homsi";
         userEmail = "baraa.homsi@proton.me";
+        signing.format = "ssh";
 
         extraConfig = {
           init.defaultBranch = "master";
