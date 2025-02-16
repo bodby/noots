@@ -19,18 +19,18 @@
     base01 = "0e1119";
     base02 = "f75f8d";
     base03 = "bbef86";
-    base04 = "ffbf6b";
+    base04 = "ffb06b";
     base05 = "809fff";
     base06 = "a87dff";
-    base07 = "89b6ff";
+    base07 = "89bcff";
     base08 = "9fadc6";
     base09 = "1e232e";
     base10 = "f75f8d";
     base11 = "bbef86";
-    base12 = "ffbf6b";
+    base12 = "ffb06b";
     base13 = "809fff";
     base14 = "a87dff";
-    base15 = "89b6ff";
+    base15 = "89bcff";
     base16 = "ccddfb";
   };
 
