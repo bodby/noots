@@ -34,7 +34,7 @@ in
       cursor = {
         style = "block";
         unfocused-style = "none";
-        color = "0c1018 89d8ff";
+        color = "${theme.palette.base01} ${theme.palette.base15}";
       };
 
       colors = {
