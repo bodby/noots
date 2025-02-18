@@ -35,6 +35,7 @@ with lib;
         mpv
         mpc
         imv
+        texliveSmall
         brightnessctl
       ]
       ++ optionals cfg.gaming.enable [

@@ -10,6 +10,7 @@
     ./iamb.nix
     ./neovide.nix
     ./cabal.nix
+    ./zathura.nix
     ./fzf.nix
     ./mpd.nix
   ];
