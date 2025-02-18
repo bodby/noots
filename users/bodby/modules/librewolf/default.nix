@@ -13,7 +13,8 @@ in
 
     profiles.bodby = {
       isDefault = true;
-      extensions = with pkgs.firefox-addons; [
+      # TODO: Add settings for extensions if possible.
+      extensions.packages = with pkgs.firefox-addons; [
         vimium-ff
         ublock-origin
         # tridactyl
