@@ -16,7 +16,7 @@
     gaming.enable = true;
     creative.enable = true;
     desktop.enable = true;
-    desktop.wallpaper = "castle.jpg";
+    desktop.wallpaper = "lighthouse.png";
   };
 
   time.timeZone = "UTC";
