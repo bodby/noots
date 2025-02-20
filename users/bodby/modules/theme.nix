@@ -14,24 +14,24 @@
   };
 
   palette = {
-    bg = "13151b";
+    bg = "131720";
 
-    base01 = "0f1017";
+    base01 = "0e1119";
     base02 = "f75f8d";
     base03 = "bbef86";
     base04 = "ffb06b";
     base05 = "809fff";
     base06 = "a87dff";
     base07 = "89bcff";
-    base08 = "a3aac2";
-    base09 = "21242b";
+    base08 = "9ca9c4";
+    base09 = "1e232e";
     base10 = "f75f8d";
     base11 = "bbef86";
     base12 = "ffb06b";
     base13 = "809fff";
     base14 = "a87dff";
     base15 = "89bcff";
-    base16 = "cdd7fa";
+    base16 = "ccddfb";
   };
 
   hexToRgb =
