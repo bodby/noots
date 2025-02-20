@@ -7,13 +7,12 @@
 let
   wallDir = "${config.home-manager.users.bodby.xdg.userDirs.pictures}/wallpapers";
 
-  mkWallFiles =
-    fileSet:
-    lib.attrsets.mapAttrs' (filename: dir: rec {
+  mkWallFiles = xs:
+    lib.attrsets.mapAttrs' (filename: dir: {
       name = filename;
       value.source = dir;
-      value.target = wallDir + "/" + name;
-    }) fileSet;
+      value.target = wallDir + "/" + filename;
+    }) xs;
 in
 {
   home-manager.users.bodby = {
