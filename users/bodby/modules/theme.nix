@@ -6,11 +6,13 @@
   fonts = {
     packages = with pkgs; [
       jetbrains-mono
+      nerd-fonts.jetbrains-mono
       ubuntu-sans
     ];
 
     sans = "Ubuntu Sans";
     monospace = "JetBrains Mono";
+    monospace' = "JetBrains Mono Nerd Font";
   };
 
   palette = {

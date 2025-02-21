@@ -1,7 +1,11 @@
 {
+  lib,
   pkgs,
   ...
 }:
+let
+  theme = import ./theme.nix { inherit lib pkgs; };
+in
 {
   home-manager.users.bodby.xdg.configFile."neovide/config.toml".source =
     (pkgs.formats.toml { }).generate "config.toml" {
@@ -11,9 +15,9 @@
       no-multigrid = false;
 
       font = {
-        normal = [ "JetBrains Mono" ];
+        normal = [ "${theme.fonts.monospace'}" ];
         size = 13.5;
-        features."JetBrains Mono" = [
+        features."${theme.fonts.monospace'}" = [
           "+cv01"
           "+cv06"
           "+cv07"

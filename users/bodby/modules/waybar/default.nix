@@ -15,7 +15,7 @@ in
 
     style = (builtins.readFile ./style.css)
       + /* css */ ''
-        * { font-family: ${theme.fonts.monospace}; }
+        * { font-family: ${theme.fonts.sans}, ${theme.fonts.monospace'}; }
 
         .modules-left, .modules-right, .modules-center {
           border: 1px solid #${theme.palette.base01};
