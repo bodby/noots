@@ -12,7 +12,7 @@
 
     sans = "Ubuntu Sans";
     monospace = "JetBrains Mono";
-    monospace' = "JetBrains Mono Nerd Font";
+    monospace' = "JetBrainsMono Nerd Font";
   };
 
   palette = {
