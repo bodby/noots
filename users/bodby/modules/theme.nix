@@ -12,6 +12,7 @@
 
     sans = "Ubuntu Sans";
     monospace = "JetBrains Mono";
+    # This should not be "Mono" or "Propo"; just "Nerd Font".
     monospace' = "JetBrainsMono Nerd Font";
   };
 

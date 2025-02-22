@@ -15,54 +15,141 @@ in
 
     style = (builtins.readFile ./style.css)
       + /* css */ ''
-        * { font-family: ${theme.fonts.sans}, ${theme.fonts.monospace'}; }
-
-        .modules-left, .modules-right, .modules-center {
-          border: 1px solid #${theme.palette.base01};
-        }
-
-        #temperature, #cpu, #battery, #memory, #network, #wireplumber, #mpd {
-          color: #${theme.palette.base08};
-        }
-
-        #workspaces button { color: #${theme.palette.base09}; }
-        #workspaces button:hover { color: #${theme.palette.base08}; }
-        #workspaces button.active { color: #${theme.palette.base16}; }
-        #clock.date, #clock.time { color: #${theme.palette.base16}; }
+        * { font-family: ${theme.fonts.sans}, ${theme.fonts.monospace' + " Propo"}; }
       '';
 
     settings = [{
-      # width = 960;
-      margin-left = 240;
-      margin-right = 240;
       # https://github.com/hyprwm/hyprland-plugins/issues/280
-      margin-top = 1;
+      # margin-top = 1;
       height = 48;
       position = "bottom";
       exclusive = true;
       layer = "top";
-      spacing = 10;
+      spacing = 12;
 
       modules-left = [
-        "clock#date"
-        "cpu"
-        "temperature"
+        "group/hyprland"
+        "custom/separator"
+        "group/audio"
+      ];
+
+      modules-center = [ "clock" ];
+
+      modules-right = [
+        "network"
+        "battery"
+        "group/processor"
         "memory"
       ];
 
-      modules-center = [ "hyprland/workspaces" ];
+      "custom/separator" = {
+        format = "│";
+        tooltip = false;
+      };
 
-      modules-right = [
-        "mpd"
-        "network"
-        "battery"
-        "wireplumber"
-        "clock#time"
-      ];
+      "group/hyprland" = {
+        orientation = "vertical";
+        modules = [
+          "hyprland/workspaces"
+          "hyprland/window"
+        ];
+      };
+
+      "group/audio" = {
+        orientation = "horizontal";
+        modules = [
+          "wireplumber"
+          "mpd"
+        ];
+      };
+
+      "group/processor" = {
+        orientation = "horizontal";
+        modules = [
+          "cpu"
+          "temperature"
+        ];
+      };
+
+      "hyprland/workspaces" = {
+        format = "{icon}";
+        format-icons = {
+          "1" = "Misc";
+          "2" = "Work";
+          "3" = "Social";
+          "4" = "Games";
+          "5" = "Extra";
+        };
+        active-only = true;
+        tooltip = false;
+      };
+
+      "hyprland/window" = {
+        format = "{class}";
+        rewrite = {
+          "org.pwmt.zathura" = "Zathura";
+
+          "librewolf" = "LibreWolf";
+          "neovide" = "Neovide";
+          "steam" = "Steam";
+          "foot" = "Foot";
+
+          "" = "Desktop";
+        };
+        tooltip = false;
+      };
+
+      wireplumber = {
+        format = "<span alpha='25%'>  </span>{volume}% ";
+        format-muted = "<span alpha='25%'>  </span>{volume}% ";
+        max-volume = 60;
+        scroll-step = 2;
+        on-click = "${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_SINK@ toggle";
+        tooltip = false;
+      };
+
+      mpd = {
+        format = "{elapsedTime:%M:%S}/{totalTime:%M:%S}";
+        format-disconnected = "";
+        format-stopped = "--:--/--:--";
+
+        on-click = "${pkgs.mpc}/bin/mpc toggle";
+        on-click-right = "${pkgs.mpc}/bin/mpc next";
+        on-scroll-up = "${pkgs.mpc}/bin/mpc seek +00:00:10";
+        on-scroll-down = "${pkgs.mpc}/bin/mpc seek -00:00:10";
+
+        interval = 20;
+        tooltip = false;
+      };
+
+      clock = {
+        interval = 60;
+        format = "{:%A %Y-%m-%d, %H:%M}";
+        max-length = -1;
+        tooltip = false;
+      };
+
+      network = {
+        format = "<span alpha='25%'>{icon}</span> {essid}";
+        format-icons = [ "󰤟  " "󰤢  " "󰤥  " "󰤨  " ];
+        format-ethernet = "";
+        format-disconnected = "󰤫";
+        interval = 240;
+        tooltip = false;
+      };
+
+      battery = {
+        format = "<span alpha='25%'>{icon}</span> {capacity}% {time}";
+        format-icons = [ "󰁺 " "󰁻 " "󰁼 " "󰁽 " "󰁾 " "󰁿 " "󰂀 " "󰂁 " "󰂂 " "󰁹 " ];
+        format-charging = "<span alpha='25%'>󰂄 </span> {capacity}% <span alpha='25%'>{time}</span>";
+        format-time = "{H}:{m}";
+        interval = 20;
+        tooltip = false;
+      };
 
       cpu = {
+        format = "<span alpha='25%'>  </span> {usage}% ";
         interval = 20;
-        format = "{usage}%";
         tooltip = false;
       };
 
@@ -76,66 +163,9 @@ in
       };
 
       memory = {
+        format = "<span alpha='25%'>  </span> {used}GiB";
         interval = 20;
-        format = "{used}GiB";
         tooltip = false;
-      };
-
-      "clock#date" = {
-        interval = 2400;
-        format = "{:%Y-%m-%d}";
-        tooltip = false;
-      };
-
-      "clock#time" = {
-        interval = 60;
-        format = "{:%H:%M}";
-        max-length = -1;
-        tooltip = false;
-      };
-
-      battery = {
-        interval = 20;
-        format = "{time}-{capacity}%";
-        format-time = "<span font_weight='bold' color='#${theme.palette.base16}'>{H}h {m}m</span> ";
-        format-charging = "{time}+{capacity}%";
-        tooltip = false;
-      };
-
-      wireplumber = {
-        format = "{volume}%";
-        max-volume = 60;
-        scroll-step = 2;
-        tooltip = false;
-      };
-
-      network = {
-        interval = 240;
-        # format = "{essid}";
-        format = "";
-        format-disconnected = "";
-        tooltip = false;
-      };
-
-      "hyprland/workspaces" = {
-        format = "{icon}";
-        format-icons.default = "◦";
-        format-icons.active = "◉";
-        persistent-workspaces."*" = 5;
-        tooltip = false;
-      };
-
-      mpd = {
-        interval = 20;
-        format = "{elapsedTime:%M:%S}/{totalTime:%M:%S}";
-        format-disconnected = "";
-        format-stopped = "00:00/00:00";
-
-        tooltip = false;
-        on-click = "${pkgs.mpc}/bin/mpc toggle";
-        on-click-right = "${pkgs.mpc}/bin/mpc next";
-        on-scroll-up = "${pkgs.mpc}/bin/mpc seek +00:00:10";
-        on-scroll-down = "${pkgs.mpc}/bin/mpc seek -00:00:10";
       };
     }];
   };

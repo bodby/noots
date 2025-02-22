@@ -6,29 +6,41 @@
 }
 
 window#waybar {
-  /* Visual artifacts when alpha is 1. :( */
-  background: rgba(0, 0, 0, 0.9999);
-  border-radius: 16px 16px 0 0;
+  /* Visual artifacts when alpha is 1. Especially when in "overview" (Win+Tab). */
+  /* background: rgba(0, 0, 0, 0.9999); */
+  background: #000000;
 }
 
-.modules-left,
-.modules-right,
-.modules-center {
-  padding: 0 18px;
-  margin: 6px 0;
-  border-radius: 18px;
+.modules-left { margin-left: 1em; }
+.modules-right { margin-right: 1em; }
+
+#custom-separator { color: rgba(216, 225, 229, 0.1); }
+
+#audio, #network, #battery, #processor, #memory {
+  color: #d8e1e5;
+  padding: 0 1em;
+  margin: 0.4em 0;
+  background: rgba(216, 225, 229, 0.06);
+  border-radius: 1em;
 }
 
-.modules-left { margin-left: 24px; }
-.modules-right { margin-right: 24px; }
+#mpd, #temperature { color: rgba(216, 225, 229, 0.5); }
+
+#clock, #window label {
+  color: #d8e1e5;
+  font-weight: bold;
+}
 
 #workspaces button {
-  padding: 0 4px;
+  padding: 0;
+  margin: 3px 0 0 0;
   border: none;
+  min-height: 0;
   background: none;
 }
 
-#workspaces button.active { font-weight: 900; }
-
-#clock.date,
-#clock.time { font-weight: bold; }
+#workspaces button label {
+  font-size: 0.85em;
+  color: rgba(216, 225, 229, 0.75);
+  opacity: 0.5;
+}
