@@ -154,6 +154,8 @@ in
 
         "$mod, U, workspace, e-1"
         "$mod, D, workspace, e+1"
+        "$mod, mouse_up, workspace, e-1"
+        "$mod, mouse_down, workspace, e+1"
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
