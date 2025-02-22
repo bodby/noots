@@ -26,7 +26,7 @@
     base05 = "809fff";
     base06 = "a87dff";
     base07 = "89bcff";
-    base08 = "9ca9c4";
+    base08 = "99a7c2";
     base09 = "1e232e";
     base10 = "f75f8d";
     base11 = "bbef86";
@@ -34,7 +34,7 @@
     base13 = "809fff";
     base14 = "a87dff";
     base15 = "89bcff";
-    base16 = "ccddfb";
+    base16 = "ccdbfb";
   };
 
   hexToRgb =
