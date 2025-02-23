@@ -83,8 +83,6 @@
       Storage=none
     '';
 
-    # FIXME: Why does networking take so long while booting?
-    extraConfig = "DefaultTimeoutStopSec=10s";
     tmpfiles.settings = {
       "00-home-mode"."/home/*".Z.mode = "~0700";
       "00-nixos-mode"."/etc/nixos/*".Z = {
