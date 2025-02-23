@@ -39,9 +39,19 @@ final: prev: {
   });
 
   # https://github.com/pwmt/zathura/issues/591
-  zathura' = prev.zathura.override (finalAttrs: {
-    useMupdf = true;
-  });
+  zathura' = prev.zathura.overrideAttrs (finalAttrs:
+    {
+      patches ? [ ],
+      ...
+    }:
+    {
+      patches = patches ++ [
+        (prev.fetchpatch {
+          url = "https://raw.githubusercontent.com/jwangac/zathura-mod/master/0005-fix-reload-crash.patch";
+          # hash = "";
+        })
+      ];
+    });
 
   # rofi-wayland-unwrapped = prev.rofi-wayland-unwrapped.overrideAttrs (
   #   {
