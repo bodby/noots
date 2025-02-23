@@ -41,6 +41,6 @@ window#waybar {
 
 #workspaces button label {
   font-size: 0.85em;
-  color: rgba(216, 225, 229, 0.75);
+  color: rgba(216, 225, 229, 0.8);
   opacity: 0.5;
 }

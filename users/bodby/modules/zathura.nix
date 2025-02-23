@@ -11,6 +11,7 @@ in
 {
   home-manager.users.bodby.programs.zathura = {
     enable = cfg.enable;
+    package = pkgs.zathura';
     options = {
       recolor = true;
       font = "${theme.fonts.monospace} normal 13.5";

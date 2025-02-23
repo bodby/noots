@@ -28,16 +28,20 @@ final: prev: {
 
 
   # FIXME: Remove after a week.
-  hyprscroller' = prev.hyprlandPlugins.hyprscroller.overrideAttrs(finalAttrs:
-    {
-      version = "964aced";
-      src = final.fetchFromGitHub {
-        owner = "dawsers";
-        repo = "hyprscroller";
-        rev = "964aced89f5711e1d2fce17fc990c1148da42145";
-        hash = "sha256-buiRq+OZq7GWwucyqAhqFEfYdzmQi+dONsccohhzTVM=";
-      };
-    });
+  hyprscroller' = prev.hyprlandPlugins.hyprscroller.overrideAttrs (finalAttrs: {
+    version = "964aced";
+    src = final.fetchFromGitHub {
+      owner = "dawsers";
+      repo = "hyprscroller";
+      rev = "964aced89f5711e1d2fce17fc990c1148da42145";
+      hash = "sha256-buiRq+OZq7GWwucyqAhqFEfYdzmQi+dONsccohhzTVM=";
+    };
+  });
+
+  # https://github.com/pwmt/zathura/issues/591
+  zathura' = prev.zathura.override (finalAttrs: {
+    useMupdf = false;
+  });
 
   # rofi-wayland-unwrapped = prev.rofi-wayland-unwrapped.overrideAttrs (
   #   {
