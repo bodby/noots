@@ -132,8 +132,8 @@ in
       network = {
         format = "<span alpha='25%'>{icon}</span> {essid}";
         format-icons = [ "󰤟  " "󰤢  " "󰤥  " "󰤨  " ];
-        format-ethernet = "";
-        format-disconnected = "󰤫";
+        format-ethernet = "<span alpha='25%'></span>";
+        format-disconnected = "<span alpha='25%'>󰤫</span>";
         interval = 240;
         tooltip = false;
       };

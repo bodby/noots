@@ -92,9 +92,9 @@
 
   # networking.useDHCP = true;
   # networking.interfaces.enp8s0.useDHCP = lib.mkDefault true;
-  # Handled by IWD instead.
+  # Handled by IWD instead of DHCPCD.
   # TODO: Move IWD config to 'hardware.nix'.
-  networking.interfaces.wlp7s0.useDHCP = false;
+  networking.interfaces.wlp7s0.useDHCP = true;
 
   services = {
     xserver.videoDrivers = [ "nvidia" ];
