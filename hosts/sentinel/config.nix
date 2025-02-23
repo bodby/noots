@@ -22,8 +22,34 @@
   time.timeZone = "UTC";
 
   networking = {
-    wireless.enable = true;
-    wireless.userControlled.enable = false;
+    resolvconf.enable = true;
+    resolved.enable = false;
+
+    wireless.enable = false;
+    # wireless.userControlled.enable = false;
+
+    iwd = {
+      enable = true;
+      settings = {
+        IPv6.Enabled = true;
+        Network = {
+          EnableIPv6 = true;
+          RoutePriorityOffset = 200;
+          NameResolvingService = "resolvconf";
+        };
+        Settings = {
+          AutoConnect = true;
+          TransitionDisable = true;
+          DisabledTransitionModes = "personal,enterprise,open";
+        };
+        General = {
+          EnableNetworkConfiguration = true;
+          # "disabled", "once", or "network".
+          AddressRandomization = "network";
+          AddressRandomizationRange = "nic";
+        };
+      };
+    };
 
     # I don't even have these configured; they are useless right now.
     firewall.enable = true;

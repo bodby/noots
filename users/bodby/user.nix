@@ -8,9 +8,7 @@
 }:
 let
   cfg = config.modules.users.bodby;
-in
-with lib;
-{
+in with lib; {
   users.users.bodby = {
     packages =
       with pkgs;
@@ -35,7 +33,8 @@ with lib;
         mpv
         mpc
         imv
-        texliveSmall
+        # 'Medium' gives 'latexmk' for 'latexmk -pdf -pvc'/live changes in PDF.
+        texliveMedium
         brightnessctl
       ]
       ++ optionals cfg.gaming.enable [
