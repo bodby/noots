@@ -28,7 +28,7 @@
     wireless.enable = false;
     # wireless.userControlled.enable = false;
 
-    iwd = {
+    wireless.iwd = {
       enable = true;
       settings = {
         IPv6.Enabled = true;
