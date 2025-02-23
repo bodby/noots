@@ -20,7 +20,7 @@ window#waybar {
   color: #d8e1e5;
   padding: 0 1em;
   margin: 0.4em 0;
-  background: rgba(216, 225, 229, 0.06);
+  background: rgba(216, 225, 229, 0.08);
   border-radius: 1em;
 }
 
