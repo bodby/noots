@@ -40,7 +40,7 @@ final: prev: {
 
   # https://github.com/pwmt/zathura/issues/591
   zathura' = prev.zathura.override (finalAttrs: {
-    useMupdf = false;
+    useMupdf = true;
   });
 
   # rofi-wayland-unwrapped = prev.rofi-wayland-unwrapped.overrideAttrs (
