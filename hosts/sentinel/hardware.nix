@@ -29,11 +29,10 @@
         "usbhid"
         "usb_storage"
         "sd_mod"
+        # FIXME: Do I need to add this? Driver for my wireless card.
+        "rtw89_8852ce"
       ];
       kernelModules = [ ];
-
-      systemd.network.wait-online.enable = false;
-      systemd.network.wait-online.timeout = 1;
     };
 
     kernelModules = [
@@ -94,10 +93,10 @@
   }];
 
   # networking.useDHCP = true;
-  # networking.interfaces.enp8s0.useDHCP = lib.mkDefault true;
+  networking.interfaces.enp8s0.useDHCP = false;
   # Handled by IWD instead of DHCPCD.
   # TODO: Move IWD config to 'hardware.nix'.
-  networking.interfaces.wlp7s0.useDHCP = true;
+  networking.interfaces.wlan0.useDHCP = true;
 
   services = {
     xserver.videoDrivers = [ "nvidia" ];
