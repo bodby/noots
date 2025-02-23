@@ -70,6 +70,9 @@ in
         "https://github.com"
         "https://discord.com"
         "https://design.penpot.app"
+        "https://codeberg.org"
+        "https://mail.proton.me"
+        "https://account.proton.me"
       ];
     };
   };
