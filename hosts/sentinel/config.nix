@@ -90,6 +90,10 @@
         group = "root";
       };
     };
+
+    network.enable = false;
+    network.wait-online.enable = false;
+    network.wait-online.timeout = 1;
   };
 
   security.pam.services.su.requireWheel = true;
