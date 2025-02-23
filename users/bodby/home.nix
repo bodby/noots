@@ -59,9 +59,11 @@ in
           receive.fsckobjects = true;
 
           url = {
-            "git@github.com:".insteadOf = [
-              "github:"
-              "https://github.com/"
+            "git@github.com:".insteadOf = [ "github:" ];
+
+            "git@codeberg.org".insteadOf = [
+              "codeberg:"
+              "cb:"
             ];
 
             "https://gitlab.com/".insteadOf = "gitlab:";
