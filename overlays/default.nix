@@ -38,20 +38,10 @@ final: prev: {
     };
   });
 
-  # https://github.com/pwmt/zathura/issues/591
-  zathura' = prev.zathura.overrideAttrs (finalAttrs:
-    {
-      patches ? [ ],
-      ...
-    }:
-    {
-      patches = patches ++ [
-        (prev.fetchpatch {
-          url = "https://raw.githubusercontent.com/jwangac/zathura-mod/master/0005-fix-reload-crash.patch";
-          hash = "sha256-wFtHXf0+xQUeU7ZMMThT/YliFDu6c6iHiNbscryvjiE=";
-        })
-      ];
-    });
+  # https://github.com/pwmt/zathura/issues/729
+  zathura' = prev.zathura.override (finalAttrs: {
+    useMupdf = true;
+  });
 
   # rofi-wayland-unwrapped = prev.rofi-wayland-unwrapped.overrideAttrs (
   #   {
