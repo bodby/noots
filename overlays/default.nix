@@ -48,7 +48,7 @@ final: prev: {
       patches = patches ++ [
         (prev.fetchpatch {
           url = "https://raw.githubusercontent.com/jwangac/zathura-mod/master/0005-fix-reload-crash.patch";
-          # hash = "";
+          hash = "sha256-wFtHXf0+xQUeU7ZMMThT/YliFDu6c6iHiNbscryvjiE=";
         })
       ];
     });
