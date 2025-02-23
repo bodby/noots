@@ -23,8 +23,6 @@
 
   networking = {
     resolvconf.enable = true;
-    resolved.enable = false;
-
     wireless.enable = false;
     # wireless.userControlled.enable = false;
 
@@ -114,6 +112,7 @@
     };
 
     getty.greetingLine = "";
+    resolved.enable = false;
   };
 
   programs = {
