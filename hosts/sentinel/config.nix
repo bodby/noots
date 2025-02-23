@@ -55,6 +55,7 @@
     firewall.enable = true;
     nftables.enable = true;
 
+    dhcpcd.enable = false;
     dhcpcd.wait = "if-carrier-up";
   };
 
