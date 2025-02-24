@@ -85,6 +85,7 @@ in
       "$grimscr" = "${pkgs.grim}/bin/grim -t png ${dirs.pictures}/screenshots/$(date -dnow +%Y-%m-%d_%H-%M-%S).png";
       "$grimsec" = "${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp)\" -t png ${dirs.pictures}/screenshots/$(date -dnow +%Y-%m-%d_%H-%M-%S).png";
 
+      binds.scroll_event_delay = 225;
       input = {
         kb_layout = "us";
         kb_options = "grp:caps_switch";
@@ -154,8 +155,6 @@ in
 
         "$mod, U, workspace, e-1"
         "$mod, D, workspace, e+1"
-        "$mod, mouse_up, workspace, e-1"
-        "$mod, mouse_down, workspace, e+1"
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
@@ -183,6 +182,9 @@ in
         "$mod SHIFT, right, resizeactive, 16 0"
         "$mod SHIFT, up, resizeactive, 0 -16"
         "$mod SHIFT, down, resizeactive, 0 16"
+
+        "$mod, mouse_up, workspace, e-1"
+        "$mod, mouse_down, workspace, e+1"
       ];
 
       bindm = [
