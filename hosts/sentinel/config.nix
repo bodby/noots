@@ -23,7 +23,7 @@
   networking = {
     resolvconf.enable = true;
     wireless.enable = true;
-    # wireless.userControlled.enable = false;
+    wireless.userControlled.enable = true;
 
     # I don't even have these configured; they are useless right now.
     firewall.enable = true;
