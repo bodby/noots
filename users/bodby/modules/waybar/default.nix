@@ -22,7 +22,7 @@ in
       # https://github.com/hyprwm/hyprland-plugins/issues/280
       # margin-top = 1;
       height = 48;
-      position = "bottom";
+      position = "top";
       exclusive = true;
       layer = "top";
       spacing = 12;

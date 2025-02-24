@@ -32,7 +32,7 @@
         IPv6.Enabled = true;
         Network = {
           EnableIPv6 = true;
-          RoutePriorityOffset = 200;
+          RoutePriorityOffset = 100;
           NameResolvingService = "resolvconf";
         };
         Settings = {
