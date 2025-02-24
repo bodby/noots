@@ -20,16 +20,43 @@
   };
 
   time.timeZone = "UTC";
+
   networking = {
     resolvconf.enable = true;
-    wireless.enable = true;
-    wireless.userControlled.enable = true;
+    wireless.enable = false;
+    # wireless.userControlled.enable = false;
+
+    wireless.iwd = {
+      enable = true;
+      settings = {
+        IPv6.Enabled = true;
+        Network = {
+          EnableIPv6 = true;
+          RoutePriorityOffset = 100;
+          NameResolvingService = "resolvconf";
+        };
+        Settings = {
+          AutoConnect = true;
+          TransitionDisable = true;
+          DisabledTransitionModes = "personal,enterprise,open";
+        };
+        General = {
+          EnableNetworkConfiguration = false;
+          # "disabled", "once", or "network".
+          # I want to use "network" but I don't know if this is somehow causing the slowness.
+          # Ever since I got IWD my internet just decided to stop functioning.
+          # Even when I switched back to wpa_supplicant.
+          AddressRandomization = "network";
+          AddressRandomizationRange = "nic";
+        };
+      };
+    };
 
     # I don't even have these configured; they are useless right now.
     firewall.enable = true;
     nftables.enable = true;
 
-    dhcpcd.enable = false;
+    dhcpcd.enable = true;
     dhcpcd.wait = "if-carrier-up";
   };
 

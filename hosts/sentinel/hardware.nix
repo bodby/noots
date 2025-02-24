@@ -30,7 +30,7 @@
         "usb_storage"
         "sd_mod"
         # FIXME: Do I need to add this? Driver for my wireless card.
-        # "rtw89_8852ce"
+        "rtw89_8852ce"
       ];
       kernelModules = [ ];
     };
