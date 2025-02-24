@@ -37,13 +37,14 @@
         };
         Settings = {
           AutoConnect = true;
-          TransitionDisable = true;
-          DisabledTransitionModes = "personal,enterprise,open";
+          # TransitionDisable = true;
+          # DisabledTransitionModes = "personal,enterprise,open";
         };
         General = {
           EnableNetworkConfiguration = true;
           # "disabled", "once", or "network".
-          AddressRandomization = "network";
+          # I want to use "network" but I don't know if this is somehow causing the slowness.
+          AddressRandomization = "disabled";
           AddressRandomizationRange = "nic";
         };
       };
