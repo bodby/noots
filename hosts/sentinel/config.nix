@@ -26,14 +26,18 @@
     wireless.enable = false;
     # wireless.userControlled.enable = false;
 
+    # Ever since I got IWD my internet just decided to stop functioning.
+    # Even when I switched back to wpa_supplicant.
     wireless.iwd = {
       enable = true;
       settings = {
         IPv6.Enabled = true;
         Network = {
           EnableIPv6 = true;
-          RoutePriorityOffset = 100;
           NameResolvingService = "resolvconf";
+          # FIXME: What does this do??
+          #        Magic number, therefore I touch.
+          RoutePriorityOffset = 50;
         };
         Settings = {
           AutoConnect = true;
@@ -41,13 +45,12 @@
           DisabledTransitionModes = "personal,enterprise,open";
         };
         General = {
-          EnableNetworkConfiguration = false;
-          # "disabled", "once", or "network".
-          # I want to use "network" but I don't know if this is somehow causing the slowness.
-          # Ever since I got IWD my internet just decided to stop functioning.
-          # Even when I switched back to wpa_supplicant.
+          EnableNetworkConfiguration = true;
           AddressRandomization = "network";
           AddressRandomizationRange = "nic";
+          # I can't find the link for this but this was somebody's solution to random disconnects.
+          # FIXME: Remove this, most likely unneeded.
+          ControlPortOverNL80211 = false;
         };
       };
     };
@@ -56,7 +59,7 @@
     firewall.enable = true;
     nftables.enable = true;
 
-    dhcpcd.enable = true;
+    dhcpcd.enable = false;
     dhcpcd.wait = "if-carrier-up";
   };
 
