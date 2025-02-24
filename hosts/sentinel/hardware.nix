@@ -30,7 +30,7 @@
         "usb_storage"
         "sd_mod"
         # FIXME: Do I need to add this? Driver for my wireless card.
-        "rtw89_8852ce"
+        # "rtw89_8852ce"
       ];
       kernelModules = [ ];
     };
@@ -94,8 +94,7 @@
 
   # networking.useDHCP = true;
   networking.interfaces.enp8s0.useDHCP = false;
-  # Handled by IWD instead of DHCPCD.
-  # TODO: Move IWD config to 'hardware.nix'.
+  # IWD changed this to wlan0 and I don't know what to do about it.
   networking.interfaces.wlan0.useDHCP = true;
 
   services = {

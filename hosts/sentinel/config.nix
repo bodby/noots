@@ -20,35 +20,10 @@
   };
 
   time.timeZone = "UTC";
-
   networking = {
     resolvconf.enable = true;
-    wireless.enable = false;
+    wireless.enable = true;
     # wireless.userControlled.enable = false;
-
-    wireless.iwd = {
-      enable = true;
-      settings = {
-        IPv6.Enabled = true;
-        Network = {
-          EnableIPv6 = true;
-          RoutePriorityOffset = 100;
-          NameResolvingService = "resolvconf";
-        };
-        Settings = {
-          AutoConnect = true;
-          # TransitionDisable = true;
-          # DisabledTransitionModes = "personal,enterprise,open";
-        };
-        General = {
-          EnableNetworkConfiguration = true;
-          # "disabled", "once", or "network".
-          # I want to use "network" but I don't know if this is somehow causing the slowness.
-          AddressRandomization = "disabled";
-          AddressRandomizationRange = "nic";
-        };
-      };
-    };
 
     # I don't even have these configured; they are useless right now.
     firewall.enable = true;

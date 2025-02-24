@@ -37,7 +37,6 @@
   };
 
   time.timeZone = "UTC";
-  # TODO: Get iwd.
   networking = {
     wireless.enable = true;
     wireless.userControlled.enable = false;
@@ -48,6 +47,7 @@
 
     # FIXME: 15 second startup time.
     #        Or just no WiFi entirely if this is set to "background" of "if-carrier-up" then.
+    #        Fun!
     # dhcpcd.wait = "if-carrier-up";
   };
 
