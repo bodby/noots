@@ -139,10 +139,11 @@ in
       };
 
       battery = {
-        format = "<span alpha='25%'>{icon}</span> {capacity}% {time}";
+        format = "<span alpha='25%'>{icon}</span> {capacity}%<span alpha='50%'>{time}</span>";
         format-icons = [ "󰁺 " "󰁻 " "󰁼 " "󰁽 " "󰁾 " "󰁿 " "󰂀 " "󰂁 " "󰂂 " "󰁹 " ];
-        format-charging = "<span alpha='25%'>󰂄 </span> {capacity}% <span alpha='25%'>{time}</span>";
-        format-time = "{H}:{m}";
+        format-charging =
+          "<span alpha='25%'>󰂄 </span> {capacity}%<span alpha='50%'>{time}</span>";
+        format-time = " {H}:{m}";
         interval = 20;
         tooltip = false;
       };

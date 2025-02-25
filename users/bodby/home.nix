@@ -59,9 +59,9 @@ in
           receive.fsckobjects = true;
 
           url = {
-            "git@github.com:".insteadOf = [ "github:" ];
+            "git@github.com:".insteadOf = "github:";
 
-            "git@codeberg.org".insteadOf = [
+            "git@codeberg.org:".insteadOf = [
               "codeberg:"
               "cb:"
             ];
@@ -74,6 +74,11 @@ in
       # https://github.com/FiloSottile/whoami.filippo.io
       ssh.matchBlocks = {
         "github.com" = lib.hm.dag.entryBefore [ "*" ] {
+          extraOptions.PubkeyAuthentication = true;
+          identityFile = "/home/bodby/.ssh/id_ed25519";
+        };
+
+        "codeberg.org" = lib.hm.dag.entryBefore [ "*" ] {
           extraOptions.PubkeyAuthentication = true;
           identityFile = "/home/bodby/.ssh/id_ed25519";
         };
@@ -123,7 +128,7 @@ in
       pointerCursor = {
         gtk.enable = cfg.desktop.enable;
         x11.enable = cfg.desktop.enable;
-        name = "Bibata-Modern-Classic";
+        name = "Bibata-Modern-Ice";
         package = pkgs.bibata-cursors;
         size = 24;
       };
