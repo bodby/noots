@@ -117,7 +117,6 @@ in
       # render.expand_undersized_textures = false;
 
       # TODO: Add MPC mappings. Maybe in a submap (Win+N)?
-      #       I moved 'exit' to Win+Ctrl+Shift+M.
       bind = [
         "$mod, Q, exec, foot"
         "$mod, V, exec, neovide"
