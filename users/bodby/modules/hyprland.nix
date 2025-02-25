@@ -7,6 +7,7 @@
 let
   cfg = config.modules.users.bodby.desktop;
   dirs = config.home-manager.users.bodby.xdg.userDirs;
+  cursor = config.home-manager.users.bodby.home.pointerCursor.name;
 in
 {
   home-manager.users.bodby.wayland.windowManager.hyprland = {
@@ -243,9 +244,9 @@ in
       };
 
       env = [
-        "XCURSOR_THEME,Bibata-Modern-Classic"
+        "XCURSOR_THEME,${cursor}"
         "XCURSOR_SIZE,24"
-        "HYPRCURSOR_THEME,Bibata-Modern-Classic"
+        "HYPRCURSOR_THEME,${cursor}"
         "HYPRCURSOR_SIZE,24"
         "MOZ_USE_XINPUT2,1"
       ]
