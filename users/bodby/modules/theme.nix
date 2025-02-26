@@ -26,8 +26,8 @@
     base05 = "809fff";
     base06 = "a87dff";
     base07 = "89bcff";
-    base08 = "99a7c2";
-    base09 = "1c2330";
+    base08 = "95a6c6";
+    base09 = "1d232f";
     base10 = "f75f8d";
     base11 = "bbef86";
     base12 = "ffb06b";
