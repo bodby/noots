@@ -12,6 +12,8 @@
 
     nvim-btw.url = "github:bodby/nvim-btw";
     nvim-btw.inputs.nixpkgs.follows = "nixpkgs";
+
+    templates.url = "github:bodby/templates";
   };
 
   outputs =

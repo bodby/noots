@@ -13,6 +13,6 @@
     ./zathura.nix
     ./fzf.nix
     ./mpd.nix
-    ./templates.nix
+    # ./templates.nix
   ];
 }

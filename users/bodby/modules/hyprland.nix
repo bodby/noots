@@ -108,7 +108,7 @@ in
       gestures.workspace_swipe_touch = false;
 
       cursor = {
-        hide_on_key_press = true;
+        hide_on_key_press = false;
         no_warps = true;
         no_hardware_cursors = lib.mkIf (builtins.elem "nvidia" (config.services.xserver.videoDrivers)) true;
         zoom_rigid = true;
