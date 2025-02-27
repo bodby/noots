@@ -34,7 +34,7 @@ in with lib; {
         mpc
         imv
         # 'Medium' gives 'latexmk' for 'latexmk -pdf -pvc'/live changes in PDF.
-        texliveMedium
+        # texliveSmall
         brightnessctl
       ]
       ++ optionals cfg.gaming.enable [
