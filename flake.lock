@@ -61,7 +61,8 @@
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "nvim-btw": "nvim-btw",
-        "sops-nix": "sops-nix"
+        "sops-nix": "sops-nix",
+        "templates": "templates"
       }
     },
     "sops-nix": {
@@ -81,6 +82,21 @@
       "original": {
         "owner": "Mic92",
         "repo": "sops-nix",
+        "type": "github"
+      }
+    },
+    "templates": {
+      "locked": {
+        "lastModified": 1740679811,
+        "narHash": "sha256-N7Hwc+5JXt72I6Us6jYM6sbbvKt45PQ/Jun+2NvfVBE=",
+        "owner": "bodby",
+        "repo": "templates",
+        "rev": "3b3804e57928ae27baa2ee98a951d1927a0a4e26",
+        "type": "github"
+      },
+      "original": {
+        "owner": "bodby",
+        "repo": "templates",
         "type": "github"
       }
     }
