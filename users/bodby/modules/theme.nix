@@ -18,21 +18,22 @@
 
   palette = {
     bg = "131720";
+    bgDark = "0e1119";
 
     base01 = "1d232f";
-    base02 = "f75f8d";
+    base02 = "f75fa8";
     base03 = "bbef86";
-    base04 = "ffb06b";
-    base05 = "809fff";
-    base06 = "a87dff";
+    base04 = "ffb96b";
+    base05 = "809cff";
+    base06 = "9d7dff";
     base07 = "89bcff";
     base08 = "95a6c6";
     base09 = "4e596f";
-    base10 = "f75f8d";
+    base10 = "f75fa8";
     base11 = "bbef86";
-    base12 = "ffb06b";
-    base13 = "809fff";
-    base14 = "a87dff";
+    base12 = "ffb96b";
+    base13 = "809cff";
+    base14 = "9d7dff";
     base15 = "89bcff";
     base16 = "c2d5ff";
   };

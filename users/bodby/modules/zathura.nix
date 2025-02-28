@@ -18,12 +18,12 @@ in
       recolor-lightcolor = "rgba(0,0,0,0.0)";
       recolor-darkcolor = "#${theme.palette.base16}";
       default-bg = "#${theme.palette.bg}";
-      inputbar-bg = "#${theme.palette.base01}";
-      notification-bg = "#${theme.palette.base01}";
+      inputbar-bg = "#${theme.palette.bgDark}";
+      notification-bg = "#${theme.palette.bgDark}";
       notification-fg = "#${theme.palette.base16}";
-      notification-error-bg = "#${theme.palette.base01}";
+      notification-error-bg = "#${theme.palette.bgDark}";
       notification-error-fg = "#${theme.palette.base10}";
-      notification-warning-bg = "#${theme.palette.base01}";
+      notification-warning-bg = "#${theme.palette.bgDark}";
       notification-warning-fg = "#${theme.palette.base12}";
       inputbar-fg = "#${theme.palette.base16}";
       guioptions = "none";
