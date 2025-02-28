@@ -87,11 +87,11 @@
     },
     "templates": {
       "locked": {
-        "lastModified": 1740767211,
-        "narHash": "sha256-QeNd86zEra/JK6XZ7WLHN/sUlTgcVJCrM2zgM0dQUk4=",
+        "lastModified": 1740769381,
+        "narHash": "sha256-7ZREIPUjVp54JAggr/WBMtUO5napruUniaZZFc+/8aw=",
         "owner": "bodby",
         "repo": "templates",
-        "rev": "024f89e9e89a4988655b83b781612cb55a58c923",
+        "rev": "52e0e0c0bddc19414ccd7c121b10995d25077366",
         "type": "github"
       },
       "original": {
