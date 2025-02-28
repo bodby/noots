@@ -5,8 +5,8 @@
       historyControl = [ "erasedups" ];
       historyFile = null;
       shellAliases.ls = "ls --color=always -h -A -p --time-style=long-iso";
-      # FIXME: Don't use a command and just set $PS1 directoy if this doesn't carry over to root shells.
-      #        Or create a custom bin/ for this.
+      # FIXME: Don't use a command and just set $PS1 directly (no function) if this doesn't carry
+      # over to root shells. Or create a custom binary for this in pkgs/.
       initExtra = builtins.readFile ./prompt.bash;
     };
 
@@ -19,8 +19,9 @@
         DIR = "00;37";
         FILE = "00;97";
         LINK = "00;35";
-        # FIXME: Maybe not?
-        RESET = "\\033[00;96";
+        # FIXME: Can I make the directory slashes cyan without doing this? Maybe get a custom 'ls'
+        #        command with more customization options?
+        # RESET = "\\033[00;96";
         EXEC = "01;97";
       };
     };

@@ -11,7 +11,7 @@
     ./neovide.nix
     ./cabal.nix
     ./zathura.nix
-    ./fzf.nix
+    # ./fzf.nix
     ./mpd.nix
     # ./templates.nix
   ];

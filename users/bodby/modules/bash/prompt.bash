@@ -2,21 +2,18 @@ set -o vi
 
 __bash_prompt() {
   local status="$?"
-  local first_separator=1
 
-  local user_col='\[\e[0;34m\]'
-  local dir_col='\[\e[0;35m\]'
-  local git_col='\[\e[1;97m\]'
-  local nix_col='\[\e[0;96m\]'
-  local diff_col='\[\e[0;37m\]'
-  local punc_col='\[\e[0;96m\]'
-  local err_col='\[\e[0;31m\]'
-  local reset='\[\e[m\]'
+  local user_col='\e[0;34m'
+  local dir_col='\e[0;37m'
+  local git_col='\e[1;97m'
+  local nix_col='\e[0;36m'
+  local diff_col='\e[0;37m'
+  local punc_col='\e[0;36m'
+  local err_col='\e[0;31m'
+  local reset='\e[0m'
 
-  local separator_a="${punc_col} : ${reset}"
-  local separator_b=" ${reset}"
-  local separator_c=""
-  local separator_d="${reset}"
+  local separator="${punc_col} : ${reset}"
+  local arrow="${punc_col}>${reset} "
 
   local user="${user_col}\u${clear}"
 
@@ -27,6 +24,8 @@ __bash_prompt() {
     formatted_dir="${PWD/$HOME\//''}"
   fi
 
+  # formatted_dir="${formatted_dir//\//${punc_col}\/${dir_col}}"
+
   local cwd="${dir_col}${formatted_dir}${reset}"
 
   local git=""
@@ -36,14 +35,8 @@ __bash_prompt() {
   local branch="$(git branch --show-current 2>/dev/null)"
 
   if [ -n "$branch" ]; then
-    branch="#${branch}"
-    local prefix="$separator_c"
-
-    if [ "$first_separator" = 1 ]; then
-      prefix="$separator_b"
-      first_separator=0
-    fi
-    git="${prefix}${git_col}${branch}${reset}"
+    branch=" #${branch}"
+    git="${git_col}${branch}${reset}"
 
     while read line; do
       local file_status=${line:0:1}
@@ -66,9 +59,8 @@ __bash_prompt() {
   fi
 
   local nix_shell=""
-  # [ -n "$name" ] ||
-  if [ -n "$IN_NIX_SHELL" ]; then
-    nix_shell="${nix_col}!${reset}"
+  if [ -n "$name" ] || [ -n "$IN_NIX_SHELL" ]; then
+    nix_shell="${nix_col}?${reset}"
   fi
 
   local prompt_status=""
@@ -76,15 +68,8 @@ __bash_prompt() {
     prompt_status="${err_col}${status} ${reset}"
   fi
 
-  local arrow="${punc_col}>${reset} "
-
-  local end=""
-  if [ "$first_separator" = 0 ]; then
-    end="${separator_d}"
-  fi
-
-  export PS1="${user}${separator_a}${cwd}${nix_shell}${git}${end}\n${prompt_status}${arrow}"
+  export PS1="${user}${nix_shell}${separator}${cwd}${git}${end}\n${prompt_status}${arrow}"
+  export PS2="${punc_col}|${reset} "
 }
 
-export PROMPT_COMMAND='__bash_prompt'
-export PS2='\[\e[0;97m\]> \[\e[m\]'
+# export PROMPT_COMMAND='__bash_prompt'
