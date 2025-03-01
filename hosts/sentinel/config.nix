@@ -56,7 +56,12 @@
     };
 
     # I don't even have these configured; they are useless right now.
-    firewall.enable = true;
+    firewall = {
+      enable = true;
+      # MC.
+      allowedTCPPorts = [ 63645 ];
+      allowedUDPPorts = [ 63645 ];
+    };
     nftables.enable = true;
 
     dhcpcd.enable = false;
