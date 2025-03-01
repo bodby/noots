@@ -3,14 +3,14 @@ set -o vi
 __bash_prompt() {
   local status="$?"
 
-  local user_col='\e[0;34m'
-  local dir_col='\e[0;37m'
-  local git_col='\e[1;97m'
-  local nix_col='\e[0;36m'
-  local diff_col='\e[0;37m'
-  local punc_col='\e[0;36m'
-  local err_col='\e[0;31m'
-  local reset='\e[0m'
+  local user_col='\[\e[0;34m\]'
+  local dir_col='\[\e[0;37m\]'
+  local git_col='\[\e[1;97m\]'
+  local nix_col='\[\e[0;36m\]'
+  local diff_col='\[\e[0;37m\]'
+  local punc_col='\[\e[0;36m\]'
+  local err_col='\[\e[0;31m\]'
+  local reset='\[\e[0m\]'
 
   local separator="${punc_col} : ${reset}"
   local arrow="${punc_col}>${reset} "
