@@ -72,4 +72,4 @@ __bash_prompt() {
   export PS2="${punc_col}|${reset} "
 }
 
-# export PROMPT_COMMAND='__bash_prompt'
+export PROMPT_COMMAND='__bash_prompt'

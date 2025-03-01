@@ -60,11 +60,11 @@
       package = pkgs.sudo';
       execWheelOnly = true;
 
+      # Defaults env_keep += "PS1 PS2 PROMPT_COMMAND"
       extraConfig = ''
         Defaults insults
         Defaults lecture=never
         Defaults passprompt="Enter passphrase for user '%p': "
-        Defaults env_keep += "PS1 PS2 PROMPT_COMMAND"
       '';
     };
 
