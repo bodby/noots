@@ -4,7 +4,7 @@ __bash_prompt() {
   local status="$?"
 
   local user_col='\[\e[0;34m\]'
-  local dir_col='\[\e[0;37m\]'
+  local dir_col='\[\e[3;37m\]'
   local git_col='\[\e[1;97m\]'
   local nix_col='\[\e[0;36m\]'
   local diff_col='\[\e[0;37m\]'
