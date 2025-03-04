@@ -6,9 +6,8 @@
 }:
 let
   cfg = config.modules.users.bodby.desktop;
-  theme = import ./theme.nix { inherit lib pkgs; };
-in
-{
+  theme = import ./theme.nix { inherit pkgs; };
+in {
   home-manager.users.bodby.programs.foot = {
     enable = cfg.enable;
     server.enable = false;
@@ -21,11 +20,11 @@ in
         # FIXME: Can I not separate font features with commas?
         # TODO: Also freeze these features so you can use them in browser and GTK.
         font = "${theme.fonts.monospace}:pixelsize=18:fontfeatures=${
-          lib.strings.concatStringsSep ":fontfeatures="
-            [ "cv01" "cv06" "cv07" "cv10" "cv11" "cv12" ]
+          lib.strings.concatStringsSep ":fontfeatures=" [ "ss01" "ss02" ]
         }";
         underline-thickness = "1px";
         strikeout-thickness = "1px";
+        # TODO: Line height for Cascadia Code.
         line-height = "28px";
         font-size-adjustment = "1px";
         pad = "24x24 center";

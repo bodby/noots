@@ -1,19 +1,20 @@
 {
-  lib,
   pkgs,
 }:
-{
+let
+  inherit (pkgs) lib;
+in {
   fonts = {
     packages = with pkgs; [
-      jetbrains-mono
+      # jetbrains-mono
+      cascadia-code
       nerd-fonts.jetbrains-mono
       ubuntu-sans
     ];
 
     sans = "Ubuntu Sans";
-    monospace = "JetBrains Mono";
-    # This should not be "Mono" or "Propo"; just "Nerd Font".
-    monospace' = "JetBrainsMono Nerd Font";
+    monospace = "Cascadia Code NF";
+    icons = "JetBrainsMono Nerd Font Propo";
   };
 
   palette = {

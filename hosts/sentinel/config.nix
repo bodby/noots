@@ -95,7 +95,8 @@
     '';
 
     tmpfiles.settings = {
-      "00-home-mode"."/home/*".Z.mode = "~0700";
+      # NOTE: This adds an extra ~10 seconds to my startup time.
+      # "00-home-mode"."/home/*".Z.mode = "~0700";
       "00-nixos-mode"."/etc/nixos/*".Z = {
         mode = "0000";
         user = "root";

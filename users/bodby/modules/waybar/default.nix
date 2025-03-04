@@ -1,12 +1,11 @@
 {
   config,
-  lib,
   pkgs,
   ...
 }:
 let
   cfg = config.modules.users.bodby.desktop;
-  theme = import ../theme.nix { inherit lib pkgs; };
+  theme = import ../theme.nix { inherit pkgs; };
 in
 {
   home-manager.users.bodby.programs.waybar = {
@@ -15,7 +14,7 @@ in
 
     style = (builtins.readFile ./style.css)
       + /* css */ ''
-        * { font-family: ${theme.fonts.sans}, ${theme.fonts.monospace' + " Propo"}; }
+        * { font-family: ${theme.fonts.sans}, ${theme.fonts.icons}; }
       '';
 
     settings = [{

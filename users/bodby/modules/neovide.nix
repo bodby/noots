@@ -1,12 +1,10 @@
 {
-  lib,
   pkgs,
   ...
 }:
 let
-  theme = import ./theme.nix { inherit lib pkgs; };
-in
-{
+  theme = import ./theme.nix { inherit pkgs; };
+in {
   home-manager.users.bodby.xdg.configFile."neovide/config.toml".source =
     (pkgs.formats.toml { }).generate "config.toml" {
       idle = true;
@@ -15,16 +13,9 @@ in
       no-multigrid = false;
 
       font = {
-        normal = [ "${theme.fonts.monospace'}" ];
-        size = 13.5;
-        features."${theme.fonts.monospace'}" = [
-          "+cv01"
-          "+cv06"
-          "+cv07"
-          "+cv10"
-          "+cv11"
-          "+cv12"
-        ];
+        normal = [ "${theme.fonts.monospace}" ];
+        size = 14;
+        features."${theme.fonts.monospace}" = [ "+ss01" "+ss02" ];
       };
     };
 }
