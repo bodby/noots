@@ -19,7 +19,7 @@ in {
         shell = "bash";
         # FIXME: Can I not separate font features with commas?
         # TODO: Also freeze these features so you can use them in browser and GTK.
-        font = "${theme.fonts.monospace}:pixelsize=18:fontfeatures=${
+        font = "${theme.fonts.monospace}:size=14:fontfeatures=${
           lib.strings.concatStringsSep ":fontfeatures=" [ "ss01" "ss02" ]
         }";
         underline-thickness = "1px";

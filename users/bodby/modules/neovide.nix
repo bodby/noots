@@ -15,7 +15,7 @@ in {
 
       font = {
         normal = [ "${theme.fonts.monospace}" ];
-        size = 13.5;
+        size = 14;
         features."${theme.fonts.monospace}" = [ "+ss01" "+ss02" ];
       };
     };
