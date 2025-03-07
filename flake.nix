@@ -10,7 +10,7 @@
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
 
-    nvim-btw.url = "github:bodby/nvim-btw";
+    nvim-btw.url = "github:bodby/nvim-btw/refactor";
     nvim-btw.inputs.nixpkgs.follows = "nixpkgs";
 
     templates.url = "github:bodby/templates";
