@@ -22,8 +22,7 @@ in {
         font = "${theme.fonts.monospace}:size=14:fontfeatures=${
           lib.strings.concatStringsSep ":fontfeatures=" [ "ss01" "ss02" ]
         }";
-        underline-thickness = "1px";
-        strikeout-thickness = "1px";
+        underline-offset = 2;
         # TODO: Line height for Cascadia Code.
         line-height = "28px";
         font-size-adjustment = "1px";

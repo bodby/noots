@@ -28,15 +28,15 @@ in {
     base05 = "809cff";
     base06 = "9d7dff";
     base07 = "89bcff";
-    base08 = "95a6c6";
-    base09 = "4e596f";
+    base08 = "93a5c8";
+    base09 = "4c5771";
     base10 = "f75fa8";
     base11 = "bbef86";
     base12 = "ffb96b";
     base13 = "809cff";
     base14 = "9d7dff";
     base15 = "89bcff";
-    base16 = "c2d5ff";
+    base16 = "bfd3ff";
   };
 
   hexToRgb =
