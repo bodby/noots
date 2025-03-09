@@ -15,8 +15,11 @@
   modules.users.bodby = {
     gaming.enable = true;
     creative.enable = true;
-    desktop.enable = true;
-    desktop.wallpaper = "lighthouse.png";
+    desktop = {
+      enable = true;
+      wallpaper = "lighthouse.png";
+      hyprland.border.radius = 16;
+    };
   };
 
   time.timeZone = "UTC";
