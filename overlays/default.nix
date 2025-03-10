@@ -26,15 +26,15 @@ final: prev: {
       });
     };
 
-
-  # FIXME: Remove after a week.
+  # I did not remove this after a week.
+  # NOTE: 'nurl' is great for writing these fetches.
   hyprscroller' = prev.hyprlandPlugins.hyprscroller.overrideAttrs (finalAttrs: {
-    version = "964aced";
+    version = "2025-03-10";
     src = final.fetchFromGitHub {
       owner = "dawsers";
       repo = "hyprscroller";
-      rev = "964aced89f5711e1d2fce17fc990c1148da42145";
-      hash = "sha256-buiRq+OZq7GWwucyqAhqFEfYdzmQi+dONsccohhzTVM=";
+      rev = "fb3b2ec63c85f22a107bd635890fcb1afc30b01f";
+      hash = "sha256-FErWOeUmyFWPNjE+EYWVvVwXGO7+4lVqZBwiapXa6Yw=";
     };
   });
 

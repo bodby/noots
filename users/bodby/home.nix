@@ -6,7 +6,7 @@
 }:
 let
   cfg = config.modules.users.bodby;
-  theme = import ./modules/theme.nix { inherit pkgs; };
+  theme = import ./modules/theme.nix pkgs;
   # sopsSecrets = config.home-manager.users.bodby.sops.secrets;
 in
 {
