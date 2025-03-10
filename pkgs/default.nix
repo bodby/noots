@@ -25,7 +25,7 @@ in
   firefox-addons = final.callPackage ./firefox-addons.nix { };
 
   fix-laptop-speakers = final.writeShellApplication {
-    name = "fix-laptop-speakers";
+    name = "no-audio";
     text = builtins.readFile ./bin/fix-laptop-speakers.sh;
     runtimeInputs = with final; [
       bash
@@ -34,7 +34,7 @@ in
   };
 
   fix-g6-mic = final.writeShellApplication {
-    name = "fix-g6-mic";
+    name = "no-audio";
     text = builtins.readFile ./bin/fix-g6-mic.sh;
     runtimeInputs = with final; [
       bash
