@@ -5,7 +5,7 @@
 }:
 let
   cfg = config.modules.users.bodby.desktop;
-  theme = import ./theme.nix { inherit pkgs; };
+  theme = import ./theme.nix pkgs;
 in
 {
   home-manager.users.bodby.programs.zathura = {

@@ -13,7 +13,6 @@ in
   home-manager.users.bodby.wayland.windowManager.hyprland = {
     enable = cfg.enable;
     xwayland.enable = cfg.enable;
-    # TODO: Fix this after a week.
     plugins = with pkgs; [
       hyprscroller'
       # borders-plus-plus
@@ -32,7 +31,7 @@ in
         layout = "scroller";
         no_focus_fallback = false;
         gaps_in = 4;
-        gaps_out = 32;
+        gaps_out = 16;
         border_size = 0;
       };
 

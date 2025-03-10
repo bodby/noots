@@ -1,6 +1,4 @@
-{
-  pkgs,
-}:
+pkgs:
 let
   inherit (pkgs) lib;
 in {
@@ -13,7 +11,7 @@ in {
     ];
 
     sans = "Ubuntu Sans";
-    monospace = "Cascadia Code NF";
+    monospace = "Cascadia Code";
     icons = "JetBrainsMono Nerd Font Propo";
   };
 
