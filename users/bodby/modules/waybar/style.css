@@ -5,30 +5,26 @@
   transition: none;
 }
 
-window#waybar {
-  /* Visual artifacts when alpha is 1. Especially when in "overview" (Win+Tab). */
-  /* background: rgba(0, 0, 0, 0.9999); */
-  background: #000000;
-}
+window#waybar { background: #000000; }
 
 .modules-left { margin-left: 1em; }
 .modules-right { margin-right: 1em; }
 
-#custom-separator { color: rgba(216, 225, 229, 0.1); }
+#custom-separator { color: rgba(207, 219, 231, 0.1); }
 
 #audio, #network, #battery, #processor, #memory {
-  color: #d8e1e5;
+  color: #cfdbe7;
   padding: 0 1em;
   margin: 0.4em 0;
-  background: rgba(216, 225, 229, 0.08);
-  border: 1px solid rgba(216, 225, 229, 0.08);
+  background: rgba(207, 219, 231, 0.08);
+  border: 1px solid rgba(207, 219, 231, 0.08);
   border-radius: 1em;
 }
 
-#mpd, #temperature { color: rgba(216, 225, 229, 0.5); }
+#mpd, #temperature { color: rgba(207, 219, 231, 0.5); }
 
 #clock, #window label {
-  color: #d8e1e5;
+  color: #cfdbe7;
   font-weight: bold;
 }
 
@@ -42,6 +38,5 @@ window#waybar {
 
 #workspaces button label {
   font-size: 0.85em;
-  color: rgba(216, 225, 229, 0.8);
-  opacity: 0.5;
+  color: rgba(207, 219, 231, 0.5);
 }

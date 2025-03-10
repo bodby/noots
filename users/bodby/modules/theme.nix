@@ -37,8 +37,7 @@ in {
     base16 = "bfd3ff";
   };
 
-  hexToRgb =
-    hex:
+  hexToRgb = hex:
     let
       hexToInt =
         str: index:
@@ -56,8 +55,7 @@ in {
           ))
           (lib.foldl (acc: x: acc * 8 + x) 0)
         ];
-      in
-      {
+      in {
         r = hexToInt hex 0;
         g = hexToInt hex 2;
         b = hexToInt hex 4;
