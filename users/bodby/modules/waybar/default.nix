@@ -18,8 +18,6 @@ in
       '';
 
     settings = [{
-      # https://github.com/hyprwm/hyprland-plugins/issues/280
-      # margin-top = 1;
       height = 48;
       position = "top";
       exclusive = true;
@@ -32,13 +30,14 @@ in
         "group/audio"
       ];
 
-      modules-center = [ "clock" ];
+      modules-center = [ "clock#time" ];
 
       modules-right = [
         "network"
         "battery"
         "group/processor"
         "memory"
+        "clock#date"
       ];
 
       "custom/separator" = {
@@ -121,9 +120,16 @@ in
         tooltip = false;
       };
 
-      clock = {
+      "clock#time" = {
+        format = "{:%A %H:%M}";
         interval = 60;
-        format = "{:%A %Y-%m-%d, %H:%M}";
+        max-length = -1;
+        tooltip = false;
+      };
+
+      "clock#date" = {
+        format = "{:%Y-%m-%d}";
+        interval = 2400;
         max-length = -1;
         tooltip = false;
       };

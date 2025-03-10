@@ -31,6 +31,7 @@ in
         layout = "scroller";
         no_focus_fallback = false;
         gaps_in = 4;
+        # TODO: 24?
         gaps_out = 16;
         border_size = 0;
       };
