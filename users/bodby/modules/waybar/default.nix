@@ -37,6 +37,7 @@ in
         "battery"
         "group/processor"
         "memory"
+        "custom/separator"
         "clock#date"
       ];
 
