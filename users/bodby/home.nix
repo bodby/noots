@@ -108,7 +108,7 @@ in
         videos = "${documents}/videos";
 
         extraConfig = {
-          screenshots = "${documents}/screenshots";
+          screenshots = "${pictures}/screenshots";
           projects = "${h}/dev";
           vault = "${h}/vault";
         };
