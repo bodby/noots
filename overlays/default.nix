@@ -29,7 +29,7 @@ final: prev: {
   # I did not remove this after a week.
   # NOTE: 'nurl' is great for writing these fetches.
   hyprscroller' = prev.hyprlandPlugins.hyprscroller.overrideAttrs (finalAttrs: {
-    version = "2025-03-10";
+    version = "0-unstable-2025-03-07";
     src = final.fetchFromGitHub {
       owner = "dawsers";
       repo = "hyprscroller";

@@ -73,7 +73,7 @@ in
       "hyprland/workspaces" = {
         format = "{icon}";
         format-icons = {
-          "1" = "Misc";
+          "1" = "Home";
           "2" = "Work";
           "3" = "Social";
           "4" = "Games";

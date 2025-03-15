@@ -10,7 +10,7 @@ window#waybar { background: #000000; }
 .modules-left { margin-left: 1em; }
 .modules-right { margin-right: 1em; }
 
-#custom-separator { color: rgba(207, 219, 231, 0.1); }
+#custom-separator { color: rgba(207, 219, 231, 0.2); }
 
 #audio, #network, #battery, #processor, #memory {
   color: #cfdbe7;
@@ -38,5 +38,5 @@ window#waybar { background: #000000; }
 
 #workspaces button label {
   font-size: 0.85em;
-  color: rgba(207, 219, 231, 0.5);
+  color: rgba(207, 219, 231, 0.6);
 }
