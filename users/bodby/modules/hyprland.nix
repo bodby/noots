@@ -84,8 +84,8 @@ in
 
       "$mod" = "SUPER";
 
-      "$grimscr" = "${pkgs.grim}/bin/grim -t png ${dirs.pictures}/screenshots/$(date -dnow +%Y-%m-%d_%H-%M-%S).png";
-      "$grimsec" = "${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp)\" -t png ${dirs.pictures}/screenshots/$(date -dnow +%Y-%m-%d_%H-%M-%S).png";
+      "$grimscr" = "${pkgs.grim}/bin/grim -t png ${dirs.pictures}/screenshots/$(date -dnow +%Y%m%d-%H%M%S).png";
+      "$grimsec" = "${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp)\" -t png ${dirs.pictures}/screenshots/$(date -dnow +%Y%m%d-%H%M%S).png";
 
       binds.scroll_event_delay = 225;
       input = {
