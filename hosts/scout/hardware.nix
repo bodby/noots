@@ -11,7 +11,7 @@
   boot = {
     # Apparently 'nix-collect-garbage -d' doesn't remove old kernels in /boot.
     # You have to remove them manually.
-    kernelPackages = pkgs.linuxPackages_6_12_hardened;
+    kernelPackages = pkgs.linuxPackages_6_13_hardened;
     loader = {
       efi.canTouchEfiVariables = true;
       grub = {
