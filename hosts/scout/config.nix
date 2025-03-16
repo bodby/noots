@@ -341,9 +341,8 @@
           install gfs2 ${binFalse}
           install ksmbd ${binFalse}
 
-          install cifs ${binFalse}
-          install cifs_arc4 ${binFalse}
-          install cifs_md4 ${binFalse}
+          # install cifs_arc4 ${binFalse}
+          # install cifs_md4 ${binFalse}
 
           install cramfs ${binFalse}
           install freevxfs ${binFalse}
@@ -398,7 +397,7 @@
           install video1394 ${binFalse}
 
           # FIXME: Disable once I have a NAS server.
-          install cifs ${binFalse}
+          # install cifs ${binFalse}
           install nfs ${binFalse}
           install nfsv3 ${binFalse}
           install nfsv4 ${binFalse}
