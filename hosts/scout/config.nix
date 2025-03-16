@@ -402,7 +402,7 @@
           install nfs ${binFalse}
           install nfsv3 ${binFalse}
           install nfsv4 ${binFalse}
-          install ksmbd ${binFalse}
+          # install ksmbd ${binFalse}
           install gfs2 ${binFalse}
 
           # FIXME: I don't normally use my webcam, but remove this if you need it.
