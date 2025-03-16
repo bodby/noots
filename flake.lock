@@ -43,11 +43,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1742142101,
-        "narHash": "sha256-OxYT5gCT2gtM3tvdFm0+qnJGvomnh8wdiCx4n70ljao=",
+        "lastModified": 1742145508,
+        "narHash": "sha256-irxaCf2/U1qjygz3tO/idh3I91h/oI2AAEuk95dWT6w=",
         "ref": "refs/heads/master",
-        "rev": "dddab9c4523a828892c9b771c3b759eb23483ad5",
-        "revCount": 349,
+        "rev": "72905929418f6f40751f7ae647f0e11252b546ea",
+        "revCount": 351,
         "type": "git",
         "url": "https://codeberg.org/bodby/nvim-btw.git"
       },
