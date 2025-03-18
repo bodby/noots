@@ -26,8 +26,8 @@ in {
     base05 = "809cff";
     base06 = "9d7dff";
     base07 = "89bcff";
-    base08 = "93a5c8";
-    base09 = "4c5771";
+    base08 = "91a4ca";
+    base09 = "495674";
     base10 = "f75fa8";
     base11 = "bbef86";
     base12 = "ffb96b";
