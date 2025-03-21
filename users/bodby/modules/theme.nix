@@ -6,13 +6,14 @@ in {
     packages = with pkgs; [
       # jetbrains-mono
       cascadia-code
-      nerd-fonts.jetbrains-mono
+      # nerd-fonts.jetbrains-mono
+      nerd-fonts.symbols-only
       ubuntu-sans
     ];
 
     sans = "Ubuntu Sans";
     monospace = "Cascadia Code";
-    icons = "JetBrainsMono Nerd Font Propo";
+    icons = "Symbols Nerd Font";
   };
 
   palette = {
