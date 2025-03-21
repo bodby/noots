@@ -205,7 +205,6 @@ in
         "suppressevent maximize, class:.*"
         "rounding 0, class:^steam$"
         "float, class:^librewolf$, title:^Picture-in-Picture$"
-        "persistentsize, class:^librewolf$, title:^Picture-in-Picture$"
         # TODO: Change this size?
         "size 640 360, class:^librewolf$, title:^Picture-in-Picture$"
         # "noshadow on, class:^(steam)$"
