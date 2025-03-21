@@ -204,8 +204,12 @@ in
       windowrulev2 = [
         "suppressevent maximize, class:.*"
         "rounding 0, class:^steam$"
+        "float, class:^librewolf$, title:^Picture-in-Picture$"
+        "persistentsize, class:^librewolf$, title:^Picture-in-Picture$"
+        # TODO: Change this size?
+        "size 640 360, class:^librewolf$, title:^Picture-in-Picture$"
         # "noshadow on, class:^(steam)$"
-        "prop noblur, floating:1"
+        # "prop noblur, floating:1"
         # "opacity 1.0 override, floating:1"
         "workspace 4 silent, class:^steam$"
         "workspace 4 silent, class:^steam_app_.*$"
