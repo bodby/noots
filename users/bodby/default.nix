@@ -63,7 +63,7 @@ with lib;
       waybar.cpuTemp = mkOption {
         type = types.path;
         description = "Absolute path to the hwmon CPU temp file";
-        default = "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp3_input";
+        default = "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon3/temp3_input";
       };
     };
   };
