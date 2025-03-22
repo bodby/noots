@@ -35,7 +35,7 @@ in {
     base13 = "809cff";
     base14 = "9d7dff";
     base15 = "89bcff";
-    base16 = "bfd3ff";
+    base16 = "aec5f2";
   };
 
   hexToRgb = hex:
