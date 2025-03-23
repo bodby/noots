@@ -24,7 +24,7 @@ in
       # userContent = builtins.readFile ./userContent.css;
       # userChrome = builtins.readFile ./userChrome.css;
 
-      search.default = "DuckDuckGo";
+      search.default = "ddg";
       search.force = true;
 
       settings = {
