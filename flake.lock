@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1742756669,
-        "narHash": "sha256-55QHo/lETkGO4lUfxhJ6TUs5OLOz5Ks7JDNAKDzpt4I=",
+        "lastModified": 1742825959,
+        "narHash": "sha256-wgnQZMrLLQJlZ+htTXzoQtoz9EzL15Z2crH3+OnRmMk=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "0e75a40458d065d1e5c6a10d0b74b9e35b550ae6",
+        "rev": "908e055e157a0b35466faf4125d7e7410ff56160",
         "type": "github"
       },
       "original": {
@@ -43,11 +43,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1742759150,
-        "narHash": "sha256-9RzB/k8ytplLbsXSjcSQMEFxtiwBKMdkxpiaxq3ldXA=",
+        "lastModified": 1742828597,
+        "narHash": "sha256-EjD0Up7Q+3e0Nse9iZLtmO//8hmi/Wm47tQgYsTolAY=",
         "ref": "refs/heads/master",
-        "rev": "9cc103a2bfa714615e0a9cd3644edc39ace0c342",
-        "revCount": 411,
+        "rev": "3a2ad40115ae0b0a8b4154c1f47e7023851798b6",
+        "revCount": 412,
         "type": "git",
         "url": "https://codeberg.org/bodby/nvim-btw.git"
       },
