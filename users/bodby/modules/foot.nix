@@ -34,6 +34,7 @@ in {
         style = "block";
         unfocused-style = "none";
         color = "${theme.palette.base01} ${theme.palette.base15}";
+        underline-thickness = 1.5;
       };
 
       colors = {
