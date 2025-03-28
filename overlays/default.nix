@@ -26,15 +26,14 @@ final: prev: {
       });
     };
 
-  # I did not remove this after a week.
-  # NOTE: 'nurl' is great for writing these fetches.
+  # FIXME: Remove when nixpkgs version reaches 2025-03-24.
   hyprscroller' = prev.hyprlandPlugins.hyprscroller.overrideAttrs (finalAttrs: {
-    version = "0-unstable-2025-03-07";
+    version = "0-unstable-2025-03-25";
     src = final.fetchFromGitHub {
       owner = "dawsers";
       repo = "hyprscroller";
-      rev = "fb3b2ec63c85f22a107bd635890fcb1afc30b01f";
-      hash = "sha256-FErWOeUmyFWPNjE+EYWVvVwXGO7+4lVqZBwiapXa6Yw=";
+      rev = "5b62ca58790f8c2961da79af95efa458f6a814fe";
+      hash = "sha256-monOoefLpK2cUAPBlJlVt9BkoSELQmYVysj81zJ74i0=";
     };
   });
 
