@@ -16,6 +16,7 @@
 
     # templates.url = "github:bodby/templates";
     flakes.url = "git+https://codeberg.org/bodby/flakes.git";
+    flakes.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
