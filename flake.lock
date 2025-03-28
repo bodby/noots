@@ -1,5 +1,23 @@
 {
   "nodes": {
+    "flakes": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1743105242,
+        "narHash": "sha256-vAkQ7K5LQhz1W/tg+ULxpr7nHevxjN4xjgscPehh5wM=",
+        "ref": "refs/heads/master",
+        "rev": "5e5dd223727494ef4628fc3f5136bfc8da25b56e",
+        "revCount": 5,
+        "type": "git",
+        "url": "https://codeberg.org/bodby/flakes.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://codeberg.org/bodby/flakes.git"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -21,6 +39,22 @@
       }
     },
     "nixpkgs": {
+      "locked": {
+        "lastModified": 1742889210,
+        "narHash": "sha256-hw63HnwnqU3ZQfsMclLhMvOezpM7RSB0dMAtD5/sOiw=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "698214a32beb4f4c8e3942372c694f40848b360d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
       "locked": {
         "lastModified": 1742669843,
         "narHash": "sha256-G5n+FOXLXcRx+3hCJ6Rt6ZQyF1zqQ0DL0sWAMn2Nk0w=",
@@ -58,11 +92,11 @@
     },
     "root": {
       "inputs": {
+        "flakes": "flakes",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": "nixpkgs_2",
         "nvim-btw": "nvim-btw",
-        "sops-nix": "sops-nix",
-        "templates": "templates"
+        "sops-nix": "sops-nix"
       }
     },
     "sops-nix": {
@@ -82,21 +116,6 @@
       "original": {
         "owner": "Mic92",
         "repo": "sops-nix",
-        "type": "github"
-      }
-    },
-    "templates": {
-      "locked": {
-        "lastModified": 1741631280,
-        "narHash": "sha256-Gm1ryvDypZm1gR1AwZ9CagAhsheAlfUobq+IPZM+9ac=",
-        "owner": "bodby",
-        "repo": "templates",
-        "rev": "81343af3818b52808c265d376b755fd262038c79",
-        "type": "github"
-      },
-      "original": {
-        "owner": "bodby",
-        "repo": "templates",
         "type": "github"
       }
     }
