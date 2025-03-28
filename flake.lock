@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1743166966,
-        "narHash": "sha256-4oRo/HG5bkvLvajDv7VX3YeFshSiOl967pKtenN+EJw=",
+        "lastModified": 1743173013,
+        "narHash": "sha256-imJ+vNvqZxZ7QCZVVCLVz9MjUrGMNEoq13pEbUK9lrQ=",
         "ref": "refs/heads/master",
-        "rev": "446b91ccd8a87f936fd9d8323be1389a09c0c7c6",
-        "revCount": 12,
+        "rev": "8bab1926e89da36c199645203b3c7d69c61a3cd7",
+        "revCount": 17,
         "type": "git",
         "url": "https://codeberg.org/bodby/flakes.git"
       },
