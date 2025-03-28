@@ -28,6 +28,7 @@ in {
         line-height = "28px";
         font-size-adjustment = "1px";
         pad = "24x24 center";
+        gamma-correct-blending = false;
       };
 
       cursor = {
