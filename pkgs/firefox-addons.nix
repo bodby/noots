@@ -40,8 +40,7 @@ in
     addonId = "uBlock0@raymondhill.net";
 
     url = "https://addons.mozilla.org/firefox/downloads/file/4458450/ublock_origin-${version}.xpi";
-    # FIXME
-    sha256 = "8a9e02aa838c302fb14e2b5bc88a6036d36358aadd6f95168a145af2018ef1a3";
+    sha256 = "sha256-2TF2zvTcBC5BulAKoqkOXVe1vndEnL1SIRFYXjoM0Vg=";
 
     permissions = [
       "alarms"
