@@ -83,8 +83,7 @@ in
     addonId = "{d7742d87-e61d-4b78-b8a1-b469842139fa}";
 
     url = "https://addons.mozilla.org/firefox/downloads/file/4458679/vimium_ff-${version}.xpi";
-    # FIXME
-    sha256 = "3b9d43ee277ff374e3b1153f97dc20cb06e654116a833674c79b43b8887820e1";
+    sha256 = "sha256-kGHHUVEUp43N2tu/3p53Egl1FAM30bKGleMDzu2vYYI=";
 
     permissions = [
       "tabs"

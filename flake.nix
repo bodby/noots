@@ -32,7 +32,7 @@
         hostnameSet:
         nixpkgs.lib.attrsets.mapAttrs (hostname: system:
           nixpkgs.lib.nixosSystem {
-            specialArgs = { inherit inputs; };
+            specialArgs = { inherit inputs system; };
 
             modules = [
               home-manager.nixosModules.home-manager
