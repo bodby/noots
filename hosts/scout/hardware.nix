@@ -6,7 +6,9 @@
   ...
 }:
 {
-  imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
+  imports = [
+    (modulesPath + "/installer/scan/not-detected.nix")
+  ];
 
   boot = {
     # Apparently 'nix-collect-garbage -d' doesn't remove old kernels in /boot.
@@ -46,7 +48,7 @@
       "kernel.dmesg_restrict" = 1;
       "kernel.printk" = "3 3 3 3";
       # Disable core dumps. These are so annoying.
-      "kernel.core_pattern" = "|/bin/false";
+      "kernel.core_pattern" = "/bin/false";
       "fs.suid_dumpable" = 0;
       "kernel.unprivileged_bpf_disabled" = 1;
       # "net.core.bpf_jit_harden" = 2;
