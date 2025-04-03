@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1743173013,
-        "narHash": "sha256-imJ+vNvqZxZ7QCZVVCLVz9MjUrGMNEoq13pEbUK9lrQ=",
+        "lastModified": 1743678869,
+        "narHash": "sha256-WOQam65hkXcUQ9f19XZgvyKiVJUsK840wTJipo5uO3c=",
         "ref": "refs/heads/master",
-        "rev": "8bab1926e89da36c199645203b3c7d69c61a3cd7",
-        "revCount": 17,
+        "rev": "fe4de5ac3573763816e8d43dd3a5421cd6d86091",
+        "revCount": 47,
         "type": "git",
         "url": "https://codeberg.org/bodby/flakes.git"
       },
@@ -42,11 +42,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1742889210,
-        "narHash": "sha256-hw63HnwnqU3ZQfsMclLhMvOezpM7RSB0dMAtD5/sOiw=",
+        "lastModified": 1743583204,
+        "narHash": "sha256-F7n4+KOIfWrwoQjXrL2wD9RhFYLs2/GGe/MQY1sSdlE=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "698214a32beb4f4c8e3942372c694f40848b360d",
+        "rev": "2c8d3f48d33929642c1c12cd243df4cc7d2ce434",
         "type": "github"
       },
       "original": {
