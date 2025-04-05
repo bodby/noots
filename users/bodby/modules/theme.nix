@@ -17,10 +17,10 @@ in {
   };
 
   palette = {
-    bg = "131720";
-    bgDark = "0e1119";
+    bg = "0e1119";
+    bgDark = "0a0d14";
 
-    base01 = "1d232f";
+    base01 = "141924";
     base02 = "f75fa8";
     base03 = "bbef86";
     base04 = "ffb96b";
