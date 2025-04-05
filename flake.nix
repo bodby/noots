@@ -1,6 +1,4 @@
 {
-  description = "Boilerplate";
-
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
@@ -10,11 +8,9 @@
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
 
-    # Mirror at https://github.com/bodby/nvim-btw.
-    nvim-btw.url = "git+https://codeberg.org/bodby/nvim-btw.git";
-    nvim-btw.inputs.nixpkgs.follows = "nixpkgs";
+    nvim.url = "git+https://codeberg.org/bodby/nvim.git";
+    nvim.inputs.nixpkgs.follows = "nixpkgs";
 
-    # templates.url = "github:bodby/templates";
     flakes.url = "git+https://codeberg.org/bodby/flakes.git";
     flakes.inputs.nixpkgs.follows = "nixpkgs";
   };

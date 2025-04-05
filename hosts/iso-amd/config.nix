@@ -59,7 +59,7 @@
       age
       sops
 
-      inputs.nvim-btw.packages.${system}.default
+      inputs.nvim.packages.${system}.default
 
       (haskellPackages.ghcWithPackages (pkgs: with pkgs; [
         cabal-install

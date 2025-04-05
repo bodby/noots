@@ -22,7 +22,7 @@ in with lib; {
         age
         sops
 
-        inputs.nvim-btw.packages.${system}.default
+        inputs.nvim.packages.${system}.default
       ]
       ++ optionals cfg.desktop.enable [
         wl-clipboard

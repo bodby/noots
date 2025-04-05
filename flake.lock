@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1743678869,
-        "narHash": "sha256-WOQam65hkXcUQ9f19XZgvyKiVJUsK840wTJipo5uO3c=",
+        "lastModified": 1743849788,
+        "narHash": "sha256-lsLeEAx6Or1S4NMbWkNOIlfvo0NTewlYem4guSxcBWw=",
         "ref": "refs/heads/master",
-        "rev": "fe4de5ac3573763816e8d43dd3a5421cd6d86091",
-        "revCount": 47,
+        "rev": "df49457069c3a364df43289937145bef17aff575",
+        "revCount": 53,
         "type": "git",
         "url": "https://codeberg.org/bodby/flakes.git"
       },
@@ -27,11 +27,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1742871411,
-        "narHash": "sha256-F3xBdOs5m0SE6Gq3jz+JxDOPvsLs22vbGfD05uF6xEc=",
+        "lastModified": 1743788974,
+        "narHash": "sha256-2LeVyQZI2wTkSzMLvnN/kJjXVWp4HCVUoq17Bv8TNTk=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "869f2ec2add75ce2a70a6dbbf585b8399abec625",
+        "rev": "0f5908daf890c3d7e7052bef1d6deb0f2710aaa1",
         "type": "github"
       },
       "original": {
@@ -56,24 +56,24 @@
         "type": "github"
       }
     },
-    "nvim-btw": {
+    "nvim": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1742898607,
-        "narHash": "sha256-5IFT7w7iAfADO45PPLGh6ZX3S6FEXVFRIoQrsZJWrNs=",
+        "lastModified": 1743851889,
+        "narHash": "sha256-rsXiykIrXLo7b9ZbBOpCC/UogQzHSredDPIwecNgVDI=",
         "ref": "refs/heads/master",
-        "rev": "ffe134e6223db848955f1a6947af4db62262bf81",
-        "revCount": 420,
+        "rev": "4fa82ecf203daad74c11882f813f0b95e430aa40",
+        "revCount": 1,
         "type": "git",
-        "url": "https://codeberg.org/bodby/nvim-btw.git"
+        "url": "https://codeberg.org/bodby/nvim.git"
       },
       "original": {
         "type": "git",
-        "url": "https://codeberg.org/bodby/nvim-btw.git"
+        "url": "https://codeberg.org/bodby/nvim.git"
       }
     },
     "root": {
@@ -81,7 +81,7 @@
         "flakes": "flakes",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "nvim-btw": "nvim-btw",
+        "nvim": "nvim",
         "sops-nix": "sops-nix"
       }
     },
@@ -92,11 +92,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1742700801,
-        "narHash": "sha256-ZGlpUDsuBdeZeTNgoMv+aw0ByXT2J3wkYw9kJwkAS4M=",
+        "lastModified": 1743756170,
+        "narHash": "sha256-2b11EYa08oqDmF3zEBLkG1AoNn9rB1k39ew/T/mSvbU=",
         "owner": "Mic92",
         "repo": "sops-nix",
-        "rev": "67566fe68a8bed2a7b1175fdfb0697ed22ae8852",
+        "rev": "cff8437c5fe8c68fc3a840a21bf1f4dc801da40d",
         "type": "github"
       },
       "original": {
