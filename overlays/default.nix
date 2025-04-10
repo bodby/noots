@@ -32,8 +32,8 @@ final: prev: {
     src = final.fetchFromGitHub {
       owner = "dawsers";
       repo = "hyprscroller";
-      rev = "5b62ca58790f8c2961da79af95efa458f6a814fe";
-      hash = "sha256-monOoefLpK2cUAPBlJlVt9BkoSELQmYVysj81zJ74i0=";
+      rev = "b14552ac3a62e24b059eb7569077c75547d5cc69";
+      hash = "sha256-e3AFZnfTqaqExi9eBGTcTDV7IghJ9fisJPKxgPG+h0g=";
     };
   });
 
