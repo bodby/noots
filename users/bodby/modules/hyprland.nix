@@ -32,21 +32,23 @@ in
         no_focus_fallback = false;
         gaps_in = 4;
         gaps_out = 24;
-        border_size = 0;
+        border_size = 1;
+        "col.active_border" = "rgba(ffffff06)";
+        "col.inactive_border" = "rgba(ffffff06)";
       };
 
       decoration = {
         rounding = cfg.hyprland.border.radius;
         rounding_power = 4;
-        active_opacity = 1.0;
+        inactive_opacity = 0.95;
         # inactive_opacity = 0.85;
-        dim_inactive = true;
+        dim_inactive = false;
         dim_strength = 0.25;
 
         shadow.enabled = false;
         blur = {
-          enabled = false;
-          size = 16;
+          enabled = true;
+          size = 20;
           passes = 3;
           noise = 0.0;
           contrast = 1.0;
