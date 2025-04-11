@@ -1,17 +1,17 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "git+https://github.com/NixOS/nixpkgs?shallow=1&ref=nixos-unstable";
 
-    home-manager.url = "github:nix-community/home-manager";
+    home-manager.url = "git+https://github.com/nix-community/home-manager?shallow=1&ref=master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix.url = "git+https://github.com/Mic92/sops-nix?shallow=1&ref=master";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
 
-    nvim.url = "git+https://codeberg.org/bodby/nvim.git";
+    nvim.url = "git+https://codeberg.org/bodby/nvim?shallow=1&ref=master";
     nvim.inputs.nixpkgs.follows = "nixpkgs";
 
-    flakes.url = "git+https://codeberg.org/bodby/flakes.git";
+    flakes.url = "git+https://codeberg.org/bodby/flakes?shallow=1&ref=master";
     flakes.inputs.nixpkgs.follows = "nixpkgs";
   };
 

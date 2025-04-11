@@ -7,17 +7,19 @@
         ]
       },
       "locked": {
-        "lastModified": 1744289828,
-        "narHash": "sha256-Wd2fwzr1d/4I58yu7RruRVa3l4gLliBY62FA7/1svok=",
-        "ref": "refs/heads/master",
-        "rev": "38520c5240aefab85a6fcf748069058596170eaf",
-        "revCount": 68,
+        "lastModified": 1744375549,
+        "narHash": "sha256-5OOSt9qpIqLqusQhHDqtcNGXRRDoYYBnE0oQrimiHY0=",
+        "ref": "master",
+        "rev": "7ce881071d256964efd26991abfc805eab532cb4",
+        "shallow": true,
         "type": "git",
-        "url": "https://codeberg.org/bodby/flakes.git"
+        "url": "https://codeberg.org/bodby/flakes"
       },
       "original": {
+        "ref": "master",
+        "shallow": true,
         "type": "git",
-        "url": "https://codeberg.org/bodby/flakes.git"
+        "url": "https://codeberg.org/bodby/flakes"
       }
     },
     "home-manager": {
@@ -27,33 +29,36 @@
         ]
       },
       "locked": {
-        "lastModified": 1744223888,
-        "narHash": "sha256-reYpe0J1J+wH34JFs7KKp0G5nP7+XSQ5z0ZLFJcfJr8=",
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "rev": "79461936709b12e17adb9c91dd02d1c66d577f09",
-        "type": "github"
+        "lastModified": 1744377435,
+        "narHash": "sha256-zT3zbkZjeKsjMktV7MAdruXQWpzpM7iVWHuhknYOuwY=",
+        "ref": "master",
+        "rev": "6bccb54a4f98408f22d2e45921bb401f393f2174",
+        "shallow": true,
+        "type": "git",
+        "url": "https://github.com/nix-community/home-manager"
       },
       "original": {
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "type": "github"
+        "ref": "master",
+        "shallow": true,
+        "type": "git",
+        "url": "https://github.com/nix-community/home-manager"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1744098102,
-        "narHash": "sha256-tzCdyIJj9AjysC3OuKA+tMD/kDEDAF9mICPDU7ix0JA=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "c8cd81426f45942bb2906d5ed2fe21d2f19d95b7",
-        "type": "github"
+        "lastModified": 1744232761,
+        "narHash": "sha256-gbl9hE39nQRpZaLjhWKmEu5ejtQsgI5TWYrIVVJn30U=",
+        "ref": "nixos-unstable",
+        "rev": "f675531bc7e6657c10a18b565cfebd8aa9e24c14",
+        "shallow": true,
+        "type": "git",
+        "url": "https://github.com/NixOS/nixpkgs"
       },
       "original": {
-        "owner": "NixOS",
         "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://github.com/NixOS/nixpkgs"
       }
     },
     "nvim": {
@@ -63,17 +68,19 @@
         ]
       },
       "locked": {
-        "lastModified": 1744289867,
-        "narHash": "sha256-6DZlgHLwjb3d9T2rh6Ma9IKbh1G51xHLCjlyQUQdklw=",
-        "ref": "refs/heads/master",
-        "rev": "aa9c347725f6029c7c676ffd606e1301ca8731af",
-        "revCount": 26,
+        "lastModified": 1744365812,
+        "narHash": "sha256-ClMfy7Am6OPNpCNlfjW5WTChfwjxiedow49s3Nw/t4E=",
+        "ref": "master",
+        "rev": "63da5b5bf90b5c07a8c0b8915bb746173df13b1e",
+        "shallow": true,
         "type": "git",
-        "url": "https://codeberg.org/bodby/nvim.git"
+        "url": "https://codeberg.org/bodby/nvim"
       },
       "original": {
+        "ref": "master",
+        "shallow": true,
         "type": "git",
-        "url": "https://codeberg.org/bodby/nvim.git"
+        "url": "https://codeberg.org/bodby/nvim"
       }
     },
     "root": {
@@ -94,15 +101,17 @@
       "locked": {
         "lastModified": 1744103455,
         "narHash": "sha256-SR6+qjkPjGQG+8eM4dCcVtss8r9bre/LAxFMPJpaZeU=",
-        "owner": "Mic92",
-        "repo": "sops-nix",
+        "ref": "master",
         "rev": "69d5a5a4635c27dae5a742f36108beccc506c1ba",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://github.com/Mic92/sops-nix"
       },
       "original": {
-        "owner": "Mic92",
-        "repo": "sops-nix",
-        "type": "github"
+        "ref": "master",
+        "shallow": true,
+        "type": "git",
+        "url": "https://github.com/Mic92/sops-nix"
       }
     }
   },
