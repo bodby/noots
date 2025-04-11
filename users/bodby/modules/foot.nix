@@ -39,9 +39,9 @@ in {
       };
 
       colors = {
-        # alpha = 0.85;
+        alpha = 0.98;
         foreground = theme.palette.base16;
-        background = theme.palette.bg;
+        background = theme.palette.bgTranslucent;
 
         regular0 = theme.palette.base01;
         regular1 = theme.palette.base02;

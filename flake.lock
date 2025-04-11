@@ -7,10 +7,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1744391361,
-        "narHash": "sha256-tpBjhagwJDyyBlC6P5OYobekFvl2ROXQNQsFuc7D3uI=",
+        "lastModified": 1744391524,
+        "narHash": "sha256-uGvfEvNJMpTUVHdtzUNy2hwbSo322zwTY8OOYEfasb4=",
         "ref": "master",
-        "rev": "6bfa7579ab3d85a3b363c15a7823f398b526755e",
+        "rev": "ea319c5bc8bbb60da81a593f6224b31dba04479a",
         "shallow": true,
         "type": "git",
         "url": "https://codeberg.org/bodby/flakes"
@@ -68,10 +68,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1744391271,
-        "narHash": "sha256-w8eTvcFemSkGXM0ri59B/2IaqEYohL9AHZgpG6thMZU=",
+        "lastModified": 1744391948,
+        "narHash": "sha256-GZBB9qxf5k3PYl8R90c/fkLq9VjAVmqtatNlN0A65UU=",
         "ref": "master",
-        "rev": "a5ddc19db94fe561049612ecb0a328fea12620c7",
+        "rev": "f05b496ae9a6cc11ac3b3fe356b638cf3332bd2b",
         "shallow": true,
         "type": "git",
         "url": "https://codeberg.org/bodby/nvim"
