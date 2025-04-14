@@ -39,7 +39,7 @@ in {
       };
 
       colors = {
-        alpha = 0.98;
+        # alpha = 0.98;
         foreground = theme.palette.base16;
         background = theme.palette.bgTranslucent;
 
