@@ -214,6 +214,7 @@ in
         # "opacity 1.0 override, floating:1"
         "workspace 4 silent, class:^steam$"
         "workspace 4 silent, class:^steam_app_.*$"
+        "opacity 0.92, class:^foot$"
         # "workspace 3 silent, class:^(WebCord)$"
       ];
 
