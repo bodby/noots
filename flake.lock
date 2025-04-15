@@ -7,10 +7,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1744621895,
-        "narHash": "sha256-Tb/dOBRTvsZN2RHdzplLurKKjI29gIjv8OKWFHZEjoA=",
+        "lastModified": 1744702809,
+        "narHash": "sha256-qrSpU/k46P6F0RIUgZillp7Rd7jcdJiFnU2z9cyb/wA=",
         "ref": "master",
-        "rev": "7b749f144045a6ffd23796242182734ddac1d6f3",
+        "rev": "61915cf4fbc7dedfbbb996ea7aab9fd066d342e1",
         "shallow": true,
         "type": "git",
         "url": "https://codeberg.org/bodby/flakes"
@@ -29,10 +29,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1744618730,
-        "narHash": "sha256-n3gN7aHwVRnnBZI64EDoKyJnWidNYJ0xezhqQtdjH2Q=",
+        "lastModified": 1744663884,
+        "narHash": "sha256-a6QGaZMDM1miK8VWzAITsEPOdmLk+xTPyJSTjVs3WhI=",
         "ref": "master",
-        "rev": "85dd758c703ffbf9d97f34adcef3a898b54b4014",
+        "rev": "d5cdf55bd9f19a3debd55b6cb5d38f7831426265",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/nix-community/home-manager"
@@ -68,10 +68,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1744623147,
-        "narHash": "sha256-gaQbHWThsXELiBhf80yZNj6c/TkWYsHYa62H2FoYRM8=",
+        "lastModified": 1744706660,
+        "narHash": "sha256-98av9uclrG6wSuRmb8cBpbBt+Z6UQDIJGTyDQp1iduc=",
         "ref": "master",
-        "rev": "6d7e405d2a5df10f5542537ea5925d569e219521",
+        "rev": "417abfb4d51392d731984761b744b15858744595",
         "shallow": true,
         "type": "git",
         "url": "https://codeberg.org/bodby/nvim"
@@ -99,10 +99,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1744518500,
-        "narHash": "sha256-lv52pnfiRGp5+xkZEgWr56DWiRgkMFXpiGba3eJ3krE=",
+        "lastModified": 1744669848,
+        "narHash": "sha256-pXyanHLUzLNd3MX9vsWG+6Z2hTU8niyphWstYEP3/GU=",
         "ref": "master",
-        "rev": "7e147a1ae90f0d4a374938cdc3df3cdaecb9d388",
+        "rev": "61154300d945f0b147b30d24ddcafa159148026a",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/Mic92/sops-nix"
