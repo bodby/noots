@@ -68,10 +68,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1745505540,
-        "narHash": "sha256-5+qjvQd2bInw50prWh79LjUShrRoN5awbrvCSkFV0G4=",
+        "lastModified": 1745513500,
+        "narHash": "sha256-VJuE2lrPoEyhNCjdm5rOzfEyYhJX1r1V5ljzFA0AZ00=",
         "ref": "master",
-        "rev": "f0082080b31c6d2bd0fb4205a4f955c2344785e6",
+        "rev": "bda8d66406c2b9a067178a0d222cc7b85724c159",
         "shallow": true,
         "type": "git",
         "url": "https://codeberg.org/bodby/nvim"
