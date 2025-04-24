@@ -16,7 +16,7 @@
           "nix-command"
           "flakes"
         ];
-        flake-registry = "";
+        flake-registry = "/etc/nix/registry.json";
         fallback = true;
         auto-optimise-store = true;
         # https://github.com/NixOS/nix/issues/9574
