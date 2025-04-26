@@ -7,10 +7,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1744702809,
-        "narHash": "sha256-qrSpU/k46P6F0RIUgZillp7Rd7jcdJiFnU2z9cyb/wA=",
+        "lastModified": 1745683279,
+        "narHash": "sha256-HqW1Zp4Y2FcMZDm1FLFg5pOM7hgiB0TvlcFGSGwMbFk=",
         "ref": "master",
-        "rev": "61915cf4fbc7dedfbbb996ea7aab9fd066d342e1",
+        "rev": "7b3065d2a4771ec20ecf7c14ed36082b801069fe",
         "shallow": true,
         "type": "git",
         "url": "https://codeberg.org/bodby/flakes"
@@ -29,10 +29,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1745494811,
-        "narHash": "sha256-YZCh2o9Ua1n9uCvrvi5pRxtuVNml8X2a03qIFfRKpFs=",
+        "lastModified": 1745627989,
+        "narHash": "sha256-mOCdFmxocBPae7wg7RYWOtJzWMJk34u9493ItY0dVqw=",
         "ref": "master",
-        "rev": "abfad3d2958c9e6300a883bd443512c55dfeb1be",
+        "rev": "4d2d32231797bfa7213ae5e8ac89d25f8caaae82",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/nix-community/home-manager"
@@ -46,10 +46,10 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1745391562,
-        "narHash": "sha256-sPwcCYuiEopaafePqlG826tBhctuJsLx/mhKKM5Fmjo=",
+        "lastModified": 1745526057,
+        "narHash": "sha256-ITSpPDwvLBZBnPRS2bUcHY3gZSwis/uTe255QgMtTLA=",
         "ref": "nixos-unstable",
-        "rev": "8a2f738d9d1f1d986b5a4cd2fd2061a7127237d7",
+        "rev": "f771eb401a46846c1aebd20552521b233dd7e18b",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/NixOS/nixpkgs"
