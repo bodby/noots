@@ -29,10 +29,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1745627989,
-        "narHash": "sha256-mOCdFmxocBPae7wg7RYWOtJzWMJk34u9493ItY0dVqw=",
+        "lastModified": 1745858959,
+        "narHash": "sha256-B1FQwPCFLL3cbHc2nxT3/UI1uprHp2h1EA6M2JVe0oQ=",
         "ref": "master",
-        "rev": "4d2d32231797bfa7213ae5e8ac89d25f8caaae82",
+        "rev": "d0d9d0a1454d5a0200693570618084d80a8b336c",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/nix-community/home-manager"
@@ -68,10 +68,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1745683788,
-        "narHash": "sha256-VlEZ8oM58Uy9V4d3OSTLcpZ7Bu+5RbzeCIHYlc/xo3E=",
+        "lastModified": 1745859796,
+        "narHash": "sha256-BOIcffCTbKTdMHYpSB+9zAGptTKG7lX9Lsg64mxogww=",
         "ref": "master",
-        "rev": "b47792fb067df18eb97b21f9ade49b7db4d9cd06",
+        "rev": "33e04a2efc81a8566ea170588496c84ba3f4ac80",
         "shallow": true,
         "type": "git",
         "url": "https://codeberg.org/bodby/nvim"
